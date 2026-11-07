@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
@@ -8,11 +7,7 @@
       "destination": "/api"
     },
     {
-      "source": "/api",
-      "destination": "/api"
-    },
-    {
-      "source": "/((?!api/).*)",
+      "source": "/((?!api/|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]
