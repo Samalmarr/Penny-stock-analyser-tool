@@ -15,6 +15,17 @@ const PORT = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 
+// Enable CORS for API requests
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  next();
+});
+
 // Initialize Gemini if API key is provided
 let aiClient: GoogleGenAI | null = null;
 if (process.env.GEMINI_API_KEY) {
@@ -525,7 +536,10 @@ interface VisitorEvent {
   device: 'desktop' | 'mobile';
 }
 
-const ANALYTICS_FILE = path.resolve(__dirname, 'data', 'real_analytics.json');
+const isVercelEnv = !!process.env.VERCEL || !!process.env.AWS_LAMBDA_FUNCTION_NAME;
+const ANALYTICS_FILE = isVercelEnv
+  ? path.join('/tmp', 'real_analytics.json')
+  : path.resolve(__dirname, 'data', 'real_analytics.json');
 
 // Ensure data folder exists
 try {
@@ -534,7 +548,7 @@ try {
     fs.mkdirSync(dir, { recursive: true });
   }
 } catch (e) {
-  console.warn('Could not create analytics data directory:', e);
+  // Safe ignore in serverless environments
 }
 
 // Load real logs from file (strictly NO mock entries)
@@ -546,9 +560,19 @@ function loadRealLogs(): VisitorEvent[] {
       if (Array.isArray(parsed)) {
         return parsed;
       }
+    } else if (isVercelEnv) {
+      // Fallback check static data file if available
+      const staticFile = path.resolve(__dirname, 'data', 'real_analytics.json');
+      if (fs.existsSync(staticFile)) {
+        const content = fs.readFileSync(staticFile, 'utf-8');
+        const parsed = JSON.parse(content);
+        if (Array.isArray(parsed)) {
+          return parsed;
+        }
+      }
     }
   } catch (err) {
-    console.warn('Failed to load existing real analytics, starting fresh:', err);
+    // Fail silently in serverless, start clean
   }
   return [];
 }
@@ -557,7 +581,7 @@ function saveRealLogs(logs: VisitorEvent[]) {
   try {
     fs.writeFileSync(ANALYTICS_FILE, JSON.stringify(logs.slice(0, 2000), null, 2), 'utf-8');
   } catch (err) {
-    console.warn('Failed to persist analytics to disk:', err);
+    // In serverless, catch and ignore if write is restricted
   }
 }
 
