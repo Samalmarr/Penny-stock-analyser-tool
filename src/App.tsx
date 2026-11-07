@@ -21,7 +21,6 @@ import {
   BookOpen,
   Lock
 } from 'lucide-react';
-import { StockChart } from './components/StockChart';
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
 import { formatCurrency, formatLargeNumber, formatMarketCap } from './utils/formatters';
@@ -618,22 +617,126 @@ export default function App() {
               </div>
             </div>
 
-            {/* Real Interactive Candlestick Chart (NO FAKE CHARTS) */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl">
-              <div className="flex items-center justify-between mb-3 font-mono text-xs">
-                <span className="font-bold text-white flex items-center gap-1.5">
-                  <TrendingUp className="w-4 h-4 text-emerald-400" />
-                  Real Market Candlestick Chart (Yahoo Finance Feed)
-                </span>
-                <span className="text-slate-500 text-[11px]">No simulated data</span>
-              </div>
+            {/* Official Live Charts & Financial Filings Hub */}
+         <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl font-mono text-xs space-y-4">
+           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-800 gap-2">
+             <div>
+               <span className="font-bold text-sm text-white flex items-center gap-2">
+                 <TrendingUp className="w-4 h-4 text-emerald-400" />
+                 Official Live Charts & Financial Filings for {result.symbol}
+               </span>
+               <p className="text-slate-400 text-[11px] mt-0.5">
+                 Real-time exchange candlesticks, technical depth, and verified balance sheets are hosted directly on official market sources.
+               </p>
+             </div>
+             <span className="text-[10px] px-2 py-0.5 rounded font-bold bg-emerald-950/80 border border-emerald-600/60 text-emerald-300 self-start sm:self-center">
+               OFFICIAL DATA FEEDS
+             </span>
+           </div>
 
-              <StockChart
-                ticker={result.symbol}
-                history={result.chart || []}
-                currentPrice={result.price}
-              />
-            </div>
+           {/* Real Financial & Chart Portals Grid */}
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+             {/* Yahoo Finance Live Chart */}
+             <a
+               href={result.links.yahoo}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-all group"
+             >
+               <div>
+                 <div className="flex items-center justify-between mb-1.5">
+                   <span className="font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs">
+                     Yahoo Finance
+                   </span>
+                   <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                 </div>
+                 <p className="text-[11px] text-slate-400 leading-relaxed">
+                   Live real-time candlestick charts, multi-timeframe technical indicators, Level 2 bids, and community board.
+                 </p>
+               </div>
+               <span className="text-[10px] text-emerald-400 font-bold mt-3 flex items-center gap-1">
+                 Open Yahoo Live Chart →
+               </span>
+             </a>
+
+             {/* Google Finance */}
+             <a
+               href={result.links.google}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-all group"
+             >
+               <div>
+                 <div className="flex items-center justify-between mb-1.5">
+                   <span className="font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs">
+                     Google Finance
+                   </span>
+                   <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                 </div>
+                 <p className="text-[11px] text-slate-400 leading-relaxed">
+                   Instant interactive price performance, day/year range metrics, and financial news stream.
+                 </p>
+               </div>
+               <span className="text-[10px] text-emerald-400 font-bold mt-3 flex items-center gap-1">
+                 Open Google Finance →
+               </span>
+             </a>
+
+             {/* OTC Markets */}
+             <a
+               href={result.links.otc}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-all group"
+             >
+               <div>
+                 <div className="flex items-center justify-between mb-1.5">
+                   <span className="font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs">
+                     OTC Markets Group
+                   </span>
+                   <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                 </div>
+                 <p className="text-[11px] text-slate-400 leading-relaxed">
+                   Official tier verification (Pink / OTCQB), transfer-agent verified share structure, and Caveat Emptor audit.
+                 </p>
+               </div>
+               <span className="text-[10px] text-emerald-400 font-bold mt-3 flex items-center gap-1">
+                 View OTC Markets Quote →
+               </span>
+             </a>
+
+             {/* SEC EDGAR */}
+             <a
+               href={result.links.sec}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-all group"
+             >
+               <div>
+                 <div className="flex items-center justify-between mb-1.5">
+                   <span className="font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs">
+                     SEC EDGAR Filings
+                   </span>
+                   <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                 </div>
+                 <p className="text-[11px] text-slate-400 leading-relaxed">
+                   Audited Form 10-K balance sheets, 10-Q quarterlies, 8-K material events, and Chapter 11 bankruptcy filings.
+                 </p>
+               </div>
+               <span className="text-[10px] text-emerald-400 font-bold mt-3 flex items-center gap-1">
+                 Search SEC Disclosures →
+               </span>
+             </a>
+           </div>
+
+           {/* Informational Transparency Note */}
+           <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-[11px] text-slate-400 flex items-start gap-2.5">
+             <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+             <p className="leading-relaxed">
+               <strong>Zero Synthetic Data Guarantee:</strong> Real-time candlestick charting, Level 2 order book depth, and audited balance sheet reports are officially hosted on <strong>Yahoo Finance</strong> and <strong>Google Finance</strong>. We never display simulated or estimated chart graphs.
+             </p>
+           </div>
+         </div>
 
             {/* Dilution & Diligence Checklist */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 font-mono text-xs space-y-3">
