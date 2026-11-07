@@ -1978,12 +1978,19 @@ export const INITIAL_PINK_STOCKS: PinkStock[] = [
       fiscalYear: '2025'
     },
     chartHistory: [
-      { date: '2026-05', open: 0.018, high: 0.024, low: 0.016, close: 0.020, volume: 35000 },
-      { date: '2026-06', open: 0.020, high: 0.026, low: 0.018, close: 0.022, volume: 42000 },
-      { date: '2026-07', open: 0.022, high: 0.025, low: 0.019, close: 0.021, volume: 28000 },
-      { date: '2026-08', open: 0.021, high: 0.023, low: 0.017, close: 0.019, volume: 31000 },
-      { date: '2026-09', open: 0.019, high: 0.022, low: 0.018, close: 0.020, volume: 24000 },
-      { date: '2026-10', open: 0.020, high: 0.025, low: 0.019, close: 0.021, volume: 38000 }
+      { date: '2025-11', open: 0.030, high: 0.030, low: 0.010, close: 0.030, volume: 77300 },
+      { date: '2025-12', open: 0.030, high: 0.030, low: 0.030, close: 0.030, volume: 3000 },
+      { date: '2026-01', open: 0.030, high: 0.030, low: 0.020, close: 0.020, volume: 200 },
+      { date: '2026-02', open: 0.020, high: 0.020, low: 0.020, close: 0.020, volume: 0 },
+      { date: '2026-03', open: 0.020, high: 0.060, low: 0.020, close: 0.020, volume: 14100 },
+      { date: '2026-04', open: 0.020, high: 0.020, low: 0.020, close: 0.020, volume: 9300 },
+      { date: '2026-05', open: 0.020, high: 0.060, low: 0.020, close: 0.060, volume: 1200 },
+      { date: '2026-06', open: 0.020, high: 0.020, low: 0.020, close: 0.020, volume: 10000 },
+      { date: '2026-07', open: 0.020, high: 0.090, low: 0.020, close: 0.090, volume: 129900 },
+      { date: '2026-08', open: 0.020, high: 0.100, low: 0.020, close: 0.030, volume: 35700 },
+      { date: '2026-09', open: 0.030, high: 0.090, low: 0.030, close: 0.090, volume: 5200 },
+      { date: '2026-10', open: 0.030, high: 0.030, low: 0.020, close: 0.020, volume: 35600 },
+      { date: '2026-11', open: 0.015, high: 0.021, low: 0.015, close: 0.020, volume: 14254 }
     ],
     secFilings: [
       { form: 'Alternative Reporting Standard', filingDate: '2026-08-30', description: 'OTC Markets Quarterly Disclosure Statement' }
