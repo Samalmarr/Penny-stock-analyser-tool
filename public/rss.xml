@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Penny Stock Analyser – Weekly OTC Diligence Blog</title>
+  <link>https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/</link>
+  <description>Weekly deep-dive forensic research, bankruptcy Q-suffix guides, and dilution red flags for OTC and Pink Sheet traders.</description>
+  <language>en-us</language>
+  <lastBuildDate>Sat, 07 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <atom:link href="https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Tell if a Penny Stock is Bankrupt: The Q-Suffix & Court Guide]]></title>
+    <link>https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/how-to-tell-if-penny-stock-is-bankrupt-q-suffix</link>
+    <guid isPermaLink="true">https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/how-to-tell-if-penny-stock-is-bankrupt-q-suffix</guid>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Weekly forensic breakdown and diligence report on how to spot OTC bankruptcy proceedings and why Q-tickers face 100% equity wipeouts.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[Understanding Stock Dilution in OTC & Sub-Penny Stocks: Toxic Notes Explained]]></title>
+    <link>https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/understanding-stock-dilution-toxic-convertible-debt</link>
+    <guid isPermaLink="true">https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/understanding-stock-dilution-toxic-convertible-debt</guid>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[How floorless convertible promissory notes generate billions of newly printed shares that collapse penny stock valuations.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[How to Verify OTC Share Structure & Transfer Agent Reports]]></title>
+    <link>https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/how-to-verify-otc-share-structure-transfer-agents</link>
+    <guid isPermaLink="true">https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/how-to-verify-otc-share-structure-transfer-agents</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Step-by-step verification guide for TA-verified share counts on OTC Markets, DTCC chill checks, and float disclosures.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[Fannie Mae (FNMA) on OTCQB: Capital Structure & Treasury Warrant Dilution]]></title>
+    <link>https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/fannie-mae-fnma-otc-capital-structure-gse-analysis</link>
+    <guid isPermaLink="true">https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/fannie-mae-fnma-otc-capital-structure-gse-analysis</guid>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Deep audit into Fannie Mae's conservatorship status, senior preferred stock liquidation preferences, and 79.9% Treasury warrant overhang.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[YANGAROO Inc. (YOOIF / YOO.V): Canadian Interlisted Media Tech Breakdown]]></title>
+    <link>https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/yangaroo-yooif-canadian-dual-listing-filings-analysis</link>
+    <guid isPermaLink="true">https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app/guides/yangaroo-yooif-canadian-dual-listing-filings-analysis</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Comprehensive forensic analysis of Canadian TSX-V: YOO and OTC: YOOIF dual-listing arbitrage, SEDAR+ filings, and broadcast SaaS revenues.]]></description>
+  </item>
+</channel>
+</rss>

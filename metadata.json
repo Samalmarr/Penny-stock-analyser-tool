@@ -1,0 +1,6 @@
+{
+  "name": "PinkScan - OTC & Pink Sheet Stock Forensic Screener",
+  "description": "Forensic research scanner for OTC and Pink Sheet stocks. Track operating status, bankruptcy risk, website activity, dilution red flags, insider history, financials, and share structure with high-speed filters and copy tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

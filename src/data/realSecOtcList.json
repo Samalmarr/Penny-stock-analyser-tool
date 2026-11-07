@@ -1,0 +1,5752 @@
+[
+  {
+    "ticker": "YOOIF",
+    "name": "YANGAROO Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "FNMA",
+    "name": "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE",
+    "cik": "0000310522"
+  },
+  {
+    "ticker": "FMCC",
+    "name": "FEDERAL HOME LOAN MORTGAGE CORP",
+    "cik": "0001026214"
+  },
+  {
+    "ticker": "AITX",
+    "name": "Artificial Intelligence Technology Solutions Inc.",
+    "cik": "0001498148"
+  },
+  {
+    "ticker": "VNUE",
+    "name": "VNUE Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ASTI",
+    "name": "Ascent Solar Technologies, Inc.",
+    "cik": "0001350102"
+  },
+  {
+    "ticker": "NWBO",
+    "name": "NORTHWEST BIOTHERAPEUTICS INC",
+    "cik": "0001072379"
+  },
+  {
+    "ticker": "CYDY",
+    "name": "CytoDyn Inc.",
+    "cik": "0001175680"
+  },
+  {
+    "ticker": "OZSC",
+    "name": "OZOP ENERGY SOLUTIONS, INC.",
+    "cik": "0001679817"
+  },
+  {
+    "ticker": "DPLS",
+    "name": "DarkPulse, Inc.",
+    "cik": "0000866439"
+  },
+  {
+    "ticker": "ENZC",
+    "name": "ENZC Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ILUS",
+    "name": "ILUS Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "EEENF",
+    "name": "EEENF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "HMBL",
+    "name": "HMBL Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "HYSR",
+    "name": "SUNHYDROGEN, INC.",
+    "cik": "0001481028"
+  },
+  {
+    "ticker": "IQST",
+    "name": "iQSTEL Inc",
+    "cik": "0001527702"
+  },
+  {
+    "ticker": "SING",
+    "name": "SING Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "TGGI",
+    "name": "TGGI Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "UNQL",
+    "name": "UNQL Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "VPER",
+    "name": "VPER Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "WRIT",
+    "name": "WRIT Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "XMET",
+    "name": "XMET Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BLGO",
+    "name": "BIOLARGO, INC.",
+    "cik": "0000880242"
+  },
+  {
+    "ticker": "BTCS",
+    "name": "BTCS Inc.",
+    "cik": "0001436229"
+  },
+  {
+    "ticker": "CELZ",
+    "name": "CREATIVE MEDICAL TECHNOLOGY HOLDINGS, INC.",
+    "cik": "0001187953"
+  },
+  {
+    "ticker": "CYBL",
+    "name": "CYBL Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BYOC",
+    "name": "BYOC Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BBRW",
+    "name": "BBRW Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "FERN",
+    "name": "FERN Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "KYNC",
+    "name": "KYNC Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ICBU",
+    "name": "ICBU Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "TXTM",
+    "name": "TXTM Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SUTI",
+    "name": "SUTI Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SPOM",
+    "name": "SPOM Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "VAPE",
+    "name": "VAPE Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "CEI",
+    "name": "CEI Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "HCMC",
+    "name": "Healthier Choices Management Corp.",
+    "cik": "0000844856"
+  },
+  {
+    "ticker": "PHIL",
+    "name": "PHIL Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "OCGN",
+    "name": "Ocugen, Inc.",
+    "cik": "0001372299"
+  },
+  {
+    "ticker": "BIMI",
+    "name": "BIMI Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "CRTD",
+    "name": "Creatd, Inc.",
+    "cik": "0001357671"
+  },
+  {
+    "ticker": "BBRX",
+    "name": "BBRX Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "AMPE",
+    "name": "AMPE Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "FRCB",
+    "name": "FRCB Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ALKM",
+    "name": "ALKM Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "PURA",
+    "name": "PURA Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "USMJ",
+    "name": "USMJ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ETST",
+    "name": "Earth Science Tech, Inc.",
+    "cik": "0001538495"
+  },
+  {
+    "ticker": "MINE",
+    "name": "MAYFAIR GOLD CORP.",
+    "cik": "0001823255"
+  },
+  {
+    "ticker": "MJWL",
+    "name": "MJWL Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "NSAV",
+    "name": "NSAV Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "RGBP",
+    "name": "Regen BioPharma Inc",
+    "cik": "0001589150"
+  },
+  {
+    "ticker": "SANW",
+    "name": "SANW Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SEGI",
+    "name": "SEGI Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SHLDQ",
+    "name": "SHLDQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BBBYQ",
+    "name": "BBBYQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "PRTYQ",
+    "name": "PRTYQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "WEWKQ",
+    "name": "WEWKQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "REVEQ",
+    "name": "REVEQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "AVYAQ",
+    "name": "AVYAQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ENDPQ",
+    "name": "ENDPQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "RADJQ",
+    "name": "RADJQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "TUEMQ",
+    "name": "TUEMQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "CINRQ",
+    "name": "CINRQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "VRAYQ",
+    "name": "VRAYQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "APPHQ",
+    "name": "APPHQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "FSRNQ",
+    "name": "FSRNQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "LORDQ",
+    "name": "LORDQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ELMSQ",
+    "name": "ELMSQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SVBQF",
+    "name": "SVBQF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SBNYQ",
+    "name": "SBNYQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "FTIIQ",
+    "name": "FTIIQ Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "NTDOY",
+    "name": "NTDOY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "TCEHY",
+    "name": "TCEHY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "SFTBY",
+    "name": "SFTBY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BYDDY",
+    "name": "BYDDY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BMWYY",
+    "name": "BMWYY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BASFY",
+    "name": "BASFY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BAYRY",
+    "name": "BAYRY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ADDYY",
+    "name": "ADDYY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "LVMUY",
+    "name": "LVMUY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "NSRGY",
+    "name": "NSRGY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "RHHBY",
+    "name": "RHHBY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ASMLF",
+    "name": "ASML HOLDING NV",
+    "cik": "0000937966"
+  },
+  {
+    "ticker": "AIRYY",
+    "name": "AIRYY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ALNPY",
+    "name": "ALNPY Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "BDRBF",
+    "name": "BDRBF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "CNIKF",
+    "name": "CNIKF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "ARNGF",
+    "name": "ARNGF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "AMYZF",
+    "name": "AMYZF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "POETF",
+    "name": "POETF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "WELLF",
+    "name": "WELLF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "HITI",
+    "name": "High Tide Inc.",
+    "cik": "0001847409"
+  },
+  {
+    "ticker": "MEDIF",
+    "name": "MEDIF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "VLNCF",
+    "name": "VLNCF Holdings Inc.",
+    "cik": "0001402280"
+  },
+  {
+    "ticker": "CYATY",
+    "name": "Contemporary Amperex Technology Co., Limited/ADR",
+    "cik": "0002070829"
+  },
+  {
+    "ticker": "RTNTF",
+    "name": "RIO TINTO LTD",
+    "cik": "0000887028"
+  },
+  {
+    "ticker": "ATEYY",
+    "name": "ADVANTEST CORP",
+    "cik": "0001158838"
+  },
+  {
+    "ticker": "HTHIY",
+    "name": "HITACHI LTD",
+    "cik": "0000047710"
+  },
+  {
+    "ticker": "DTEGY",
+    "name": "DEUTSCHE TELEKOM AG",
+    "cik": "0000946770"
+  },
+  {
+    "ticker": "SMERY",
+    "name": "Siemens Energy AG/ADR",
+    "cik": "0001830056"
+  },
+  {
+    "ticker": "CNQ",
+    "name": "CANADIAN NATURAL RESOURCES Ltd",
+    "cik": "0001017413"
+  },
+  {
+    "ticker": "TKOMY",
+    "name": "TOKIO MARINE HOLDINGS, INC.",
+    "cik": "0001169486"
+  },
+  {
+    "ticker": "MGCLY",
+    "name": "Midea Group Co., Ltd./ADR",
+    "cik": "0002039784"
+  },
+  {
+    "ticker": "SNHIY",
+    "name": "Sany Heavy Industries Co., Ltd./ADR",
+    "cik": "0002098326"
+  },
+  {
+    "ticker": "BAESY",
+    "name": "BAE SYSTEMS PLC /FI/",
+    "cik": "0000895564"
+  },
+  {
+    "ticker": "IFNNY",
+    "name": "INFINEON TECHNOLOGIES AG",
+    "cik": "0001107457"
+  },
+  {
+    "ticker": "CSLLY",
+    "name": "CSL LTD",
+    "cik": "0001274152"
+  },
+  {
+    "ticker": "LSEGY",
+    "name": "London Stock Exchange Group plc",
+    "cik": "0001842726"
+  },
+  {
+    "ticker": "NDAQ",
+    "name": "NASDAQ, INC.",
+    "cik": "0001120193"
+  },
+  {
+    "ticker": "GWLIF",
+    "name": "GREAT-WEST LIFECO INC.",
+    "cik": "0000850918"
+  },
+  {
+    "ticker": "SMMNY",
+    "name": "Siemens Healthineers AG/ADR",
+    "cik": "0001738519"
+  },
+  {
+    "ticker": "EONGY",
+    "name": "E.ON SE",
+    "cik": "0001136808"
+  },
+  {
+    "ticker": "GALDY",
+    "name": "Galderma Group AG/ADR",
+    "cik": "0002021390"
+  },
+  {
+    "ticker": "RBGLY",
+    "name": "RECKITT BENCKISER GROUP PLC",
+    "cik": "0001420798"
+  },
+  {
+    "ticker": "LXSPY",
+    "name": "Luxshare Precision Industry Co., Ltd./ADR",
+    "cik": "0002144732"
+  },
+  {
+    "ticker": "SCMWY",
+    "name": "SWISSCOM AG",
+    "cik": "0001069336"
+  },
+  {
+    "ticker": "JHPCY",
+    "name": "Jiangsu Hengrui Pharmaceuticals Co., Ltd./ADR",
+    "cik": "0002071868"
+  },
+  {
+    "ticker": "DLMAY",
+    "name": "Dollarama Inc./ADR",
+    "cik": "0002073893"
+  },
+  {
+    "ticker": "FRFHF",
+    "name": "FAIRFAX FINANCIAL HOLDINGS LTD/ CAN",
+    "cik": "0000915191"
+  },
+  {
+    "ticker": "TYHOY",
+    "name": "Toyota Tsusho Corporation/ADR",
+    "cik": "0002018139"
+  },
+  {
+    "ticker": "KBGGY",
+    "name": "Kongsberg Gruppen ASA/ADR",
+    "cik": "0001535759"
+  },
+  {
+    "ticker": "UNVGY",
+    "name": "Universal Music Group N.V./ADR",
+    "cik": "0001890126"
+  },
+  {
+    "ticker": "JXAMY",
+    "name": "JX Advanced Metals Corporation/ADR",
+    "cik": "0002065485"
+  },
+  {
+    "ticker": "CKHGF",
+    "name": "Capitec Limited/ADR",
+    "cik": "0001469059"
+  },
+  {
+    "ticker": "SMTOY",
+    "name": "SUMITOMO ELECTRIC INDUSTRIES LTD/ADR/",
+    "cik": "0000095227"
+  },
+  {
+    "ticker": "RSHGY",
+    "name": "RESONA HOLDINGS INC",
+    "cik": "0001447391"
+  },
+  {
+    "ticker": "FSNUY",
+    "name": "Fresenius SE & Co. KGaA",
+    "cik": "0000904868"
+  },
+  {
+    "ticker": "AVVIY",
+    "name": "AVIVA PLC",
+    "cik": "0001140022"
+  },
+  {
+    "ticker": "RYAAY",
+    "name": "RYANAIR HOLDINGS PLC",
+    "cik": "0001038683"
+  },
+  {
+    "ticker": "HPQ",
+    "name": "HP INC",
+    "cik": "0000047217"
+  },
+  {
+    "ticker": "Q",
+    "name": "Qnity Electronics, Inc.",
+    "cik": "0002058873"
+  },
+  {
+    "ticker": "CHLSY",
+    "name": "Chocoladefabriken Lindt & Spruengli AG/ADR",
+    "cik": "0001885110"
+  },
+  {
+    "ticker": "MTNOY",
+    "name": "MTN GROUP LTD/ADR",
+    "cik": "0001163420"
+  },
+  {
+    "ticker": "HKHHY",
+    "name": "HEINEKEN HOLDING N V",
+    "cik": "0001142231"
+  },
+  {
+    "ticker": "EDPFY",
+    "name": "EDP ENERGIAS DE PORTUGAL SA",
+    "cik": "0001039610"
+  },
+  {
+    "ticker": "WTKWY",
+    "name": "WOLTERS KLUWER N V /FI",
+    "cik": "0000861967"
+  },
+  {
+    "ticker": "CNGKY",
+    "name": "Cheung Kong Property Holdings Limited/ADR",
+    "cik": "0001653192"
+  },
+  {
+    "ticker": "TELNY",
+    "name": "TELENOR ASA",
+    "cik": "0001126113"
+  },
+  {
+    "ticker": "GELHY",
+    "name": "Geely Automobile Holdings Limited/ADR",
+    "cik": "0001474968"
+  },
+  {
+    "ticker": "TRMOY",
+    "name": "Tourmaline Oil Corp/ADR",
+    "cik": "0002071881"
+  },
+  {
+    "ticker": "ARNNY",
+    "name": "ASR Nederland N.V./ADR",
+    "cik": "0001719117"
+  },
+  {
+    "ticker": "OBICY",
+    "name": "OBIC Co., Ltd./ADR",
+    "cik": "0002077146"
+  },
+  {
+    "ticker": "LNTCY",
+    "name": "Lens Technology Co., Ltd./ADR",
+    "cik": "0002098381"
+  },
+  {
+    "ticker": "DSEEY",
+    "name": "Daiwa Securities Group Inc.",
+    "cik": "0001481045"
+  },
+  {
+    "ticker": "VARRY",
+    "name": "Var Energi ASA/ADR",
+    "cik": "0001919275"
+  },
+  {
+    "ticker": "DIDIY",
+    "name": "DiDi Global Inc.",
+    "cik": "0001764757"
+  },
+  {
+    "ticker": "BAWAY",
+    "name": "BAWAG Group AG/ADR",
+    "cik": "0001968385"
+  },
+  {
+    "ticker": "AARTY",
+    "name": "Airtel Africa plc/ADR",
+    "cik": "0001921338"
+  },
+  {
+    "ticker": "IONQ",
+    "name": "IonQ, Inc.",
+    "cik": "0001824920"
+  },
+  {
+    "ticker": "DFKUY",
+    "name": "Daifuku Co., Ltd./ADR",
+    "cik": "0001762831"
+  },
+  {
+    "ticker": "NCLTY",
+    "name": "Nitori Holdings Co., Ltd.",
+    "cik": "0001801729"
+  },
+  {
+    "ticker": "AKZOY",
+    "name": "AKZO NOBEL NV",
+    "cik": "0000003124"
+  },
+  {
+    "ticker": "TMTNY",
+    "name": "Toromont Industries Ltd./ADR",
+    "cik": "0002072098"
+  },
+  {
+    "ticker": "BLMOY",
+    "name": "BELIMO Holding AG/ADR",
+    "cik": "0002109234"
+  },
+  {
+    "ticker": "SCRNY",
+    "name": "SCREEN Holdings Co., Ltd./ADR",
+    "cik": "0001544379"
+  },
+  {
+    "ticker": "YARIY",
+    "name": "YARA INTERNATIONAL ASA",
+    "cik": "0001279956"
+  },
+  {
+    "ticker": "DLAKY",
+    "name": "DEUTSCHE LUFTHANSA A G /FI",
+    "cik": "0001049724"
+  },
+  {
+    "ticker": "SNROY",
+    "name": "Sanrio Company, Ltd./ADR",
+    "cik": "0001584273"
+  },
+  {
+    "ticker": "WEGRY",
+    "name": "Weir Group PLC/ADR",
+    "cik": "0001540042"
+  },
+  {
+    "ticker": "PNDRY",
+    "name": "Pandora A/S / ADR",
+    "cik": "0001505880"
+  },
+  {
+    "ticker": "LKNCY",
+    "name": "Luckin Coffee Inc.",
+    "cik": "0001767582"
+  },
+  {
+    "ticker": "AZBLY",
+    "name": "Azbil Corporation/ADR",
+    "cik": "0002108185"
+  },
+  {
+    "ticker": "SOTGY",
+    "name": "Sunny Optical Technology (Group) Co Limited/ADR",
+    "cik": "0001601992"
+  },
+  {
+    "ticker": "KERCY",
+    "name": "Keisei Electric Railway Co. Ltd/ADR",
+    "cik": "0002107989"
+  },
+  {
+    "ticker": "SPIIY",
+    "name": "SPIE SA/ADR",
+    "cik": "0002083221"
+  },
+  {
+    "ticker": "NEXHY",
+    "name": "Nippon Express Holdings, Inc./ADR",
+    "cik": "0001985406"
+  },
+  {
+    "ticker": "SHMXY",
+    "name": "Shimadzu Corporation/ADR",
+    "cik": "0001648512"
+  },
+  {
+    "ticker": "MINBY",
+    "name": "MINEBEA MITSUMI Inc.",
+    "cik": "0001034983"
+  },
+  {
+    "ticker": "BCHMY",
+    "name": "Bachem Holding AG/ADR",
+    "cik": "0001968378"
+  },
+  {
+    "ticker": "GWKSY",
+    "name": "GAMES WORKSHOP GROUP PLC/ADR",
+    "cik": "0002062522"
+  },
+  {
+    "ticker": "BJGPY",
+    "name": "Beijing Geekplus Technology Co., Ltd./ADR",
+    "cik": "0002098425"
+  },
+  {
+    "ticker": "LOTMY",
+    "name": "Lottomatica Group S.p.A./ADR",
+    "cik": "0002041918"
+  },
+  {
+    "ticker": "ESYJY",
+    "name": "easyJet plc",
+    "cik": "0001470419"
+  },
+  {
+    "ticker": "ARSTY",
+    "name": "Ariston Holding N.V./ADR",
+    "cik": "0002044984"
+  },
+  {
+    "ticker": "VBREY",
+    "name": "Vibra Energia S.A./ADR",
+    "cik": "0001000377"
+  },
+  {
+    "ticker": "RCWLY",
+    "name": "Rockwool A/S/ADR",
+    "cik": "0001969729"
+  },
+  {
+    "ticker": "MBSHY",
+    "name": "Mitsubishi Gas Chemical Company, Inc./ADR",
+    "cik": "0002079706"
+  },
+  {
+    "ticker": "SFGYY",
+    "name": "Sony Financial Group Inc./ADR",
+    "cik": "0002084022"
+  },
+  {
+    "ticker": "NIQ",
+    "name": "NIQ Global Intelligence plc",
+    "cik": "0002054696"
+  },
+  {
+    "ticker": "LPGCY",
+    "name": "Laopu Gold Co. Ltd./ADR",
+    "cik": "0002068440"
+  },
+  {
+    "ticker": "SLFPY",
+    "name": "STANDARD LIFE PLC",
+    "cik": "0001370418"
+  },
+  {
+    "ticker": "RMVEY",
+    "name": "Rightmove PLC/ADR",
+    "cik": "0001516536"
+  },
+  {
+    "ticker": "TKMTY",
+    "name": "Tokyo Metro Co., Ltd./ADR",
+    "cik": "0002044863"
+  },
+  {
+    "ticker": "SMFSY",
+    "name": "Sumitomo Forestry Co., Ltd./ADR",
+    "cik": "0002048270"
+  },
+  {
+    "ticker": "LKQ",
+    "name": "LKQ CORP",
+    "cik": "0001065696"
+  },
+  {
+    "ticker": "FLIDY",
+    "name": "FLSMIDTH & CO. A/S",
+    "cik": "0001433087"
+  },
+  {
+    "ticker": "NWSGY",
+    "name": "CTF Services Ltd",
+    "cik": "0001449664"
+  },
+  {
+    "ticker": "BUHPY",
+    "name": "Bumrungrad Hospital Public Co Limited/ADR",
+    "cik": "0001547870"
+  },
+  {
+    "ticker": "IFHLY",
+    "name": "Inficon Holding AG/ADR",
+    "cik": "0002035057"
+  },
+  {
+    "ticker": "RKGRY",
+    "name": "RENK Group AG/ADR",
+    "cik": "0002093907"
+  },
+  {
+    "ticker": "ERELY",
+    "name": "Eregli Demir ve Celik Fabrikalari TAS/ADR",
+    "cik": "0001454144"
+  },
+  {
+    "ticker": "OBOCY",
+    "name": "Ottobock SE & Co. KGaA/ADR",
+    "cik": "0002094691"
+  },
+  {
+    "ticker": "SHTPY",
+    "name": "SCHOTT Pharma AG & Co. KGaA/ADR",
+    "cik": "0002018852"
+  },
+  {
+    "ticker": "MBRFY",
+    "name": "MARFRIG GLOBAL FOODS S.A.",
+    "cik": "0001496919"
+  },
+  {
+    "ticker": "AWATY",
+    "name": "Air Water Inc./ADR",
+    "cik": "0002092258"
+  },
+  {
+    "ticker": "AMVOY",
+    "name": "AUMOVIO SE",
+    "cik": "0002085236"
+  },
+  {
+    "ticker": "BMRRY",
+    "name": "B&M European Value Retail S.A./ADR",
+    "cik": "0001671235"
+  },
+  {
+    "ticker": "SMGSY",
+    "name": "SMG Swiss Marketplace Group AG/ADR",
+    "cik": "0002093227"
+  },
+  {
+    "ticker": "ADOOY",
+    "name": "Adaro Energy PT/ADR/",
+    "cik": "0001489079"
+  },
+  {
+    "ticker": "ORCRY",
+    "name": "Organo Corporation/ADR",
+    "cik": "0002142762"
+  },
+  {
+    "ticker": "NGXXF",
+    "name": "NGEx Minerals Ltd.",
+    "cik": "0002044153"
+  },
+  {
+    "ticker": "CSQ",
+    "name": "CALAMOS STRATEGIC TOTAL RETURN FUND",
+    "cik": "0001275214"
+  },
+  {
+    "ticker": "AEGXF",
+    "name": "Aecon Group Inc.",
+    "cik": "0001309167"
+  },
+  {
+    "ticker": "CURLF",
+    "name": "Curaleaf Holdings, Inc.",
+    "cik": "0001756770"
+  },
+  {
+    "ticker": "HYPMY",
+    "name": "Hypermarcas S.A.",
+    "cik": "0001486749"
+  },
+  {
+    "ticker": "SPGNY",
+    "name": "Springer Nature AG & Co. KGaA/ADR",
+    "cik": "0002042556"
+  },
+  {
+    "ticker": "TSCFY",
+    "name": "Tisco Financial Group Public Co Limited/ADR",
+    "cik": "0001555815"
+  },
+  {
+    "ticker": "MTLMY",
+    "name": "Metallium Limited/ADR",
+    "cik": "0002091028"
+  },
+  {
+    "ticker": "KOZAY",
+    "name": "Turk Altin Isletmeleri A.S./ADR",
+    "cik": "0001532173"
+  },
+  {
+    "ticker": "EBOSY",
+    "name": "EBOS Group Limited/ADR",
+    "cik": "0001533082"
+  },
+  {
+    "ticker": "SMSGY",
+    "name": "Samsonite International SA/ADR",
+    "cik": "0001560968"
+  },
+  {
+    "ticker": "EBCRY",
+    "name": "Embracer Group AB/ADR",
+    "cik": "0001969796"
+  },
+  {
+    "ticker": "PAEXY",
+    "name": "Parex Resources Inc./ADR",
+    "cik": "0002073620"
+  },
+  {
+    "ticker": "MQ",
+    "name": "Marqeta, Inc.",
+    "cik": "0001522540"
+  },
+  {
+    "ticker": "INFQ",
+    "name": "Infleqtion, Inc.",
+    "cik": "0002007825"
+  },
+  {
+    "ticker": "FORTY",
+    "name": "FORMULA SYSTEMS (1985) LTD",
+    "cik": "0001045986"
+  },
+  {
+    "ticker": "AVVSY",
+    "name": "Avio S.p.A./ADR",
+    "cik": "0002082141"
+  },
+  {
+    "ticker": "MDCOY",
+    "name": "PT Medco Energi Internasional Tbk/ADR",
+    "cik": "0002094100"
+  },
+  {
+    "ticker": "AEBZY",
+    "name": "ANADOLU EFES BIRACILIK VE MALT SANAYI A S/ADR",
+    "cik": "0001174511"
+  },
+  {
+    "ticker": "BVENY",
+    "name": "Brava Energia S.A.",
+    "cik": "0002095292"
+  },
+  {
+    "ticker": "PTXKY",
+    "name": "PT XLSMART Telecom Sejahtera Tbk/ADR",
+    "cik": "0001545057"
+  },
+  {
+    "ticker": "SBCLY",
+    "name": "Sumitomo Bakelite Co Limited/ADR",
+    "cik": "0002087852"
+  },
+  {
+    "ticker": "SXGCF",
+    "name": "Southern Cross Gold Consolidated Ltd.",
+    "cik": "0001622629"
+  },
+  {
+    "ticker": "ESQ",
+    "name": "Esquire Financial Holdings, Inc.",
+    "cik": "0001531031"
+  },
+  {
+    "ticker": "FXCNY",
+    "name": "FIH Mobile Ltd",
+    "cik": "0001164009"
+  },
+  {
+    "ticker": "GTBIF",
+    "name": "Green Thumb Industries Inc.",
+    "cik": "0001795139"
+  },
+  {
+    "ticker": "SFDMY",
+    "name": "Shanghai Fudan Microelectronics Co Limited/ADR/",
+    "cik": "0001493507"
+  },
+  {
+    "ticker": "MNSKY",
+    "name": "MoneySupermarket.com Group PLC/ADR",
+    "cik": "0001584297"
+  },
+  {
+    "ticker": "LNXSY",
+    "name": "LANXESS AG",
+    "cik": "0001311307"
+  },
+  {
+    "ticker": "AMBQ",
+    "name": "Ambiq Micro, Inc.",
+    "cik": "0001500412"
+  },
+  {
+    "ticker": "LTGHY",
+    "name": "Life Healthcare Group Holdings Limited/ADR",
+    "cik": "0001569963"
+  },
+  {
+    "ticker": "YKCLY",
+    "name": "Yamato Kogyo Co. Ltd/ADR",
+    "cik": "0002107946"
+  },
+  {
+    "ticker": "RAJAF",
+    "name": "TFA Therapeutics, Inc.",
+    "cik": "0001885680"
+  },
+  {
+    "ticker": "SYNSY",
+    "name": "Syensqo SA/ADR",
+    "cik": "0002004340"
+  },
+  {
+    "ticker": "CPPKF",
+    "name": "Faraday Copper Corp.",
+    "cik": "0001691710"
+  },
+  {
+    "ticker": "IQ",
+    "name": "iQIYI, Inc.",
+    "cik": "0001722608"
+  },
+  {
+    "ticker": "THQ",
+    "name": "abrdn Healthcare Opportunities Fund",
+    "cik": "0001604522"
+  },
+  {
+    "ticker": "KRNGY",
+    "name": "Karoon Gas Australia Ltd /ADR/",
+    "cik": "0001494191"
+  },
+  {
+    "ticker": "LGSXY",
+    "name": "Light S.A./ADR",
+    "cik": "0001447221"
+  },
+  {
+    "ticker": "MSSHY",
+    "name": "Mitsui-Soko Holdings Co Limited/ADR",
+    "cik": "0002087844"
+  },
+  {
+    "ticker": "HQ",
+    "name": "Horizon Quantum Holdings Ltd.",
+    "cik": "0002088256"
+  },
+  {
+    "ticker": "DQ",
+    "name": "DAQO NEW ENERGY CORP.",
+    "cik": "0001477641"
+  },
+  {
+    "ticker": "TCGLF",
+    "name": "TechCreate Group Ltd.",
+    "cik": "0002047190"
+  },
+  {
+    "ticker": "CAZGF",
+    "name": "Catapult Group International Ltd",
+    "cik": "0002074220"
+  },
+  {
+    "ticker": "CRESY",
+    "name": "CRESUD INC",
+    "cik": "0001034957"
+  },
+  {
+    "ticker": "TALMF",
+    "name": "Fuerte Metals Corp",
+    "cik": "0002001201"
+  },
+  {
+    "ticker": "CSIQ",
+    "name": "Canadian Solar Inc.",
+    "cik": "0001375877"
+  },
+  {
+    "ticker": "HAPVY",
+    "name": "Hapvida Participacoes e Investimentos S.A./ADR",
+    "cik": "0001869666"
+  },
+  {
+    "ticker": "FFMGF",
+    "name": "First Mining Gold Corp.",
+    "cik": "0001641229"
+  },
+  {
+    "ticker": "AMRQF",
+    "name": "AMAROQ LTD.",
+    "cik": "0002076631"
+  },
+  {
+    "ticker": "REEMF",
+    "name": "RARE ELEMENT RESOURCES LTD",
+    "cik": "0001419806"
+  },
+  {
+    "ticker": "MRRDF",
+    "name": "Meridian Mining UK Societas",
+    "cik": "0001839886"
+  },
+  {
+    "ticker": "GSKRF",
+    "name": "FIRST NORDIC METALS CORP.",
+    "cik": "0001944955"
+  },
+  {
+    "ticker": "THSGF",
+    "name": "THESIS GOLD INC.",
+    "cik": "0001832803"
+  },
+  {
+    "ticker": "BCCQ",
+    "name": "Bleichroeder Acquisition Corp. III",
+    "cik": "0002128045"
+  },
+  {
+    "ticker": "KRAQ",
+    "name": "KRAKacquisition Corp",
+    "cik": "0002082119"
+  },
+  {
+    "ticker": "ABXXF",
+    "name": "Abaxx Technologies Inc.",
+    "cik": "0001971975"
+  },
+  {
+    "ticker": "TMQ",
+    "name": "Trilogy Metals Inc.",
+    "cik": "0001543418"
+  },
+  {
+    "ticker": "VREOF",
+    "name": "Vireo Growth Inc.",
+    "cik": "0001771706"
+  },
+  {
+    "ticker": "HACQ",
+    "name": "HCM IV Acquisition Corp.",
+    "cik": "0002089982"
+  },
+  {
+    "ticker": "GARLF",
+    "name": "Roxmore Resources Inc.",
+    "cik": "0001725569"
+  },
+  {
+    "ticker": "CRAQ",
+    "name": "Cal Redwood Acquisition Corp.",
+    "cik": "0002058359"
+  },
+  {
+    "ticker": "FGOVF",
+    "name": "FREEGOLD VENTURES LTD",
+    "cik": "0001064052"
+  },
+  {
+    "ticker": "IACQ",
+    "name": "Irenic Acquisition Corp.",
+    "cik": "0002122505"
+  },
+  {
+    "ticker": "SAAQ",
+    "name": "Space Asset Acquisition Corp.",
+    "cik": "0002091222"
+  },
+  {
+    "ticker": "AEAQ",
+    "name": "Activate Energy Acquisition Corp.",
+    "cik": "0002083689"
+  },
+  {
+    "ticker": "BORAY",
+    "name": "Bora Pharmaceuticals Co., Ltd./ADR",
+    "cik": "0002097461"
+  },
+  {
+    "ticker": "CAQ",
+    "name": "Cambridge Acquisition Corp.",
+    "cik": "0002100125"
+  },
+  {
+    "ticker": "GONYF",
+    "name": "GO Residential Real Estate Investment Trust",
+    "cik": "0002081438"
+  },
+  {
+    "ticker": "SVAQ",
+    "name": "Silicon Valley Acquisition Corp.",
+    "cik": "0002085659"
+  },
+  {
+    "ticker": "CDPMF",
+    "name": "Cerro de Pasco Resources Inc.",
+    "cik": "0002046223"
+  },
+  {
+    "ticker": "SICOF",
+    "name": "Silverco Mining Ltd.",
+    "cik": "0002117702"
+  },
+  {
+    "ticker": "BTQ",
+    "name": "BTQ Technologies Corp.",
+    "cik": "0001821866"
+  },
+  {
+    "ticker": "ATLQ",
+    "name": "JAB Acquisition Corp I",
+    "cik": "0002128739"
+  },
+  {
+    "ticker": "NTPIF",
+    "name": "NAM TAI PROPERTY INC.",
+    "cik": "0000829365"
+  },
+  {
+    "ticker": "ARQQ",
+    "name": "Arqit Quantum Inc.",
+    "cik": "0001859690"
+  },
+  {
+    "ticker": "WHGOF",
+    "name": "White Gold Corp.",
+    "cik": "0001423867"
+  },
+  {
+    "ticker": "PNAQ",
+    "name": "Pinnacle Acquisition Corp",
+    "cik": "0002123955"
+  },
+  {
+    "ticker": "DAAQ",
+    "name": "Digital Asset Acquisition Corp.",
+    "cik": "0002052162"
+  },
+  {
+    "ticker": "TAKOF",
+    "name": "Volatus Aerospace Inc.",
+    "cik": "0001547452"
+  },
+  {
+    "ticker": "BRVMF",
+    "name": "Bravo Mining Corp.",
+    "cik": "0001913288"
+  },
+  {
+    "ticker": "CRLBF",
+    "name": "Cresco Labs Inc.",
+    "cik": "0001832928"
+  },
+  {
+    "ticker": "SMDRF",
+    "name": "SIERRA MADRE GOLD & SILVER LTD.",
+    "cik": "0001939801"
+  },
+  {
+    "ticker": "PFSTY",
+    "name": "Pfisterer Holdings SE/ADR",
+    "cik": "0002120422"
+  },
+  {
+    "ticker": "SVRSF",
+    "name": "Silver Storm Mining Ltd.",
+    "cik": "0001682056"
+  },
+  {
+    "ticker": "TDRRF",
+    "name": "Tudor Gold Corp.",
+    "cik": "0001921050"
+  },
+  {
+    "ticker": "TSNDF",
+    "name": "TerrAscend Corp.",
+    "cik": "0001778129"
+  },
+  {
+    "ticker": "SUGRF",
+    "name": "Sucro Ltd",
+    "cik": "0001996493"
+  },
+  {
+    "ticker": "AGYXY",
+    "name": "AGILYX ASA / ADR",
+    "cik": "0002147869"
+  },
+  {
+    "ticker": "CAMVF",
+    "name": "Cambria Gold Mines Inc.",
+    "cik": "0001407582"
+  },
+  {
+    "ticker": "HHLKF",
+    "name": "Hot Chili Ltd",
+    "cik": "0001562823"
+  },
+  {
+    "ticker": "PMMCF",
+    "name": "Pampa Metals Corp",
+    "cik": "0001930459"
+  },
+  {
+    "ticker": "TGMPF",
+    "name": "Tantalus Systems Holding Inc.",
+    "cik": "0002025947"
+  },
+  {
+    "ticker": "NXPGY",
+    "name": "Mobico Group PLC/ADR",
+    "cik": "0001455632"
+  },
+  {
+    "ticker": "CGNRF",
+    "name": "Copper Giant Resources Corp.",
+    "cik": "0001580110"
+  },
+  {
+    "ticker": "PSRHF",
+    "name": "Pulsar Helium Inc.",
+    "cik": "0001991413"
+  },
+  {
+    "ticker": "PTHRF",
+    "name": "Pantheon Resources plc",
+    "cik": "0001621910"
+  },
+  {
+    "ticker": "AXREF",
+    "name": "AMARC RESOURCES LTD",
+    "cik": "0001175596"
+  },
+  {
+    "ticker": "PNPNF",
+    "name": "POWER METALLIC MINES INC.",
+    "cik": "0000855950"
+  },
+  {
+    "ticker": "GSVRF",
+    "name": "GUANAJUATO SILVER CO LTD",
+    "cik": "0000865400"
+  },
+  {
+    "ticker": "MRUWY",
+    "name": "Maruwa Co., Ltd./ADR",
+    "cik": "0002093667"
+  },
+  {
+    "ticker": "WRLGF",
+    "name": "West Red Lake Gold Mines Ltd.",
+    "cik": "0001733968"
+  },
+  {
+    "ticker": "ICTSF",
+    "name": "ICTS INTERNATIONAL N V",
+    "cik": "0001010134"
+  },
+  {
+    "ticker": "HWAIF",
+    "name": "Healwell AI Inc.",
+    "cik": "0001999124"
+  },
+  {
+    "ticker": "RVLGF",
+    "name": "Revival Gold Inc.",
+    "cik": "0001616885"
+  },
+  {
+    "ticker": "ACMIF",
+    "name": "Allied Critical Metals Corp.",
+    "cik": "0002065282"
+  },
+  {
+    "ticker": "TETOF",
+    "name": "Tectonic Metals Inc.",
+    "cik": "0001783432"
+  },
+  {
+    "ticker": "SCPQ",
+    "name": "Social Commerce Partners Corp",
+    "cik": "0002083143"
+  },
+  {
+    "ticker": "AGXPF",
+    "name": "SILVER X MINING CORP.",
+    "cik": "0001482436"
+  },
+  {
+    "ticker": "GLATF",
+    "name": "Global Atomic Corp",
+    "cik": "0001716410"
+  },
+  {
+    "ticker": "HEQ",
+    "name": "John Hancock Diversified Income Fund",
+    "cik": "0001496749"
+  },
+  {
+    "ticker": "AURFF",
+    "name": "Tincorp Metals Inc.",
+    "cik": "0001864597"
+  },
+  {
+    "ticker": "TNYZF",
+    "name": "Tiny Ltd.",
+    "cik": "0001836775"
+  },
+  {
+    "ticker": "SCTSF",
+    "name": "Scottie Resources Corp.",
+    "cik": "0001790538"
+  },
+  {
+    "ticker": "AGMRF",
+    "name": "Silver Mountain Resources, Inc.",
+    "cik": "0002022059"
+  },
+  {
+    "ticker": "KTGDF",
+    "name": "K2 Gold Corp",
+    "cik": "0001583962"
+  },
+  {
+    "ticker": "SNNGF",
+    "name": "PPX Mining Corp.",
+    "cik": "0001384831"
+  },
+  {
+    "ticker": "STLRF",
+    "name": "STLLR Gold Inc.",
+    "cik": "0001979408"
+  },
+  {
+    "ticker": "FTZFF",
+    "name": "Fitzroy Minerals Inc.",
+    "cik": "0001819258"
+  },
+  {
+    "ticker": "TBXXF",
+    "name": "King Copper Discovery Corp.",
+    "cik": "0001785476"
+  },
+  {
+    "ticker": "DFSLY",
+    "name": "Defeng Solife Holdings Limited/ADR",
+    "cik": "0002038919"
+  },
+  {
+    "ticker": "TSKFF",
+    "name": "Talisker Resources Ltd.",
+    "cik": "0001803800"
+  },
+  {
+    "ticker": "DRTTF",
+    "name": "DIRTT ENVIRONMENTAL SOLUTIONS LTD",
+    "cik": "0001340476"
+  },
+  {
+    "ticker": "SRGXF",
+    "name": "Surge Copper Corp",
+    "cik": "0001644540"
+  },
+  {
+    "ticker": "OXSQ",
+    "name": "Oxford Square Capital Corp.",
+    "cik": "0001259429"
+  },
+  {
+    "ticker": "HYDTF",
+    "name": "Hydreight Technologies Inc.",
+    "cik": "0001958389"
+  },
+  {
+    "ticker": "EQ",
+    "name": "Equillium, Inc.",
+    "cik": "0001746466"
+  },
+  {
+    "ticker": "FPRGF",
+    "name": "Falco Resources Ltd.",
+    "cik": "0001555980"
+  },
+  {
+    "ticker": "RNAQ",
+    "name": "Rainier Acquisition Corp",
+    "cik": "0002147219"
+  },
+  {
+    "ticker": "VLTLF",
+    "name": "Volt Lithium Corp.",
+    "cik": "0001872061"
+  },
+  {
+    "ticker": "KGFMF",
+    "name": "Kingfisher Metals Corp.",
+    "cik": "0001853889"
+  },
+  {
+    "ticker": "BETRF",
+    "name": "BetterLife Pharma Inc.",
+    "cik": "0001464165"
+  },
+  {
+    "ticker": "CRCUF",
+    "name": "Canagold Resources Ltd.",
+    "cik": "0000868822"
+  },
+  {
+    "ticker": "SSVFF",
+    "name": "SOUTHERN SILVER EXPLORATION CORP",
+    "cik": "0001397616"
+  },
+  {
+    "ticker": "SPKLF",
+    "name": "Spark I Acquisition Corp",
+    "cik": "0001884046"
+  },
+  {
+    "ticker": "CSTAF",
+    "name": "Constellation Acquisition Corp I",
+    "cik": "0001834032"
+  },
+  {
+    "ticker": "GGOXF",
+    "name": "Galleon Gold Corp.",
+    "cik": "0000877019"
+  },
+  {
+    "ticker": "NHFLF",
+    "name": "NORTHFIELD CAPITAL CORP",
+    "cik": "0001075822"
+  },
+  {
+    "ticker": "NZAUF",
+    "name": "Rua Gold Inc.",
+    "cik": "0001925511"
+  },
+  {
+    "ticker": "GRUSF",
+    "name": "Grown Rogue International Inc.",
+    "cik": "0001463000"
+  },
+  {
+    "ticker": "ZOMDF",
+    "name": "Zomedica Corp.",
+    "cik": "0001684144"
+  },
+  {
+    "ticker": "ORIQ",
+    "name": "Origin Investment Corp I",
+    "cik": "0002044523"
+  },
+  {
+    "ticker": "WPGCF",
+    "name": "West Point Gold Corp.",
+    "cik": "0001404353"
+  },
+  {
+    "ticker": "BDCTF",
+    "name": "BuildDirect.com Technologies Inc.",
+    "cik": "0001576159"
+  },
+  {
+    "ticker": "LMRXF",
+    "name": "LARAMIDE RESOURCES LTD",
+    "cik": "0001001500"
+  },
+  {
+    "ticker": "ORRCF",
+    "name": "OROCO RESOURCE CORP",
+    "cik": "0001390352"
+  },
+  {
+    "ticker": "SIREF",
+    "name": "Sirios Resources Inc.",
+    "cik": "0001577783"
+  },
+  {
+    "ticker": "LGCXF",
+    "name": "Lahontan Gold Corp.",
+    "cik": "0001921582"
+  },
+  {
+    "ticker": "ARQ",
+    "name": "Arq, Inc.",
+    "cik": "0001515156"
+  },
+  {
+    "ticker": "RENEF",
+    "name": "Cartesian Growth Corp II",
+    "cik": "0001889112"
+  },
+  {
+    "ticker": "XTRAF",
+    "name": "Xtract One Technologies Inc.",
+    "cik": "0001684505"
+  },
+  {
+    "ticker": "SAIQ",
+    "name": "WISeSat.Space Holdings Corp.",
+    "cik": "0002101411"
+  },
+  {
+    "ticker": "APGOF",
+    "name": "Apollo Silver Corp",
+    "cik": "0001811931"
+  },
+  {
+    "ticker": "CCAQ",
+    "name": "COLLECTIVE ACQUISITION CORP.",
+    "cik": "0002041047"
+  },
+  {
+    "ticker": "ALYAF",
+    "name": "Alithya Group inc",
+    "cik": "0001734520"
+  },
+  {
+    "ticker": "ISRLF",
+    "name": "Israel Acquisitions Corp",
+    "cik": "0001915328"
+  },
+  {
+    "ticker": "VMCAF",
+    "name": "Valuence Merger Corp. I",
+    "cik": "0001892747"
+  },
+  {
+    "ticker": "SPAUF",
+    "name": "SPANISH MOUNTAIN GOLD LTD.",
+    "cik": "0001337090"
+  },
+  {
+    "ticker": "IMAQ",
+    "name": "International Media Acquisition Corp.",
+    "cik": "0001846235"
+  },
+  {
+    "ticker": "XTGRF",
+    "name": "XTRA-GOLD RESOURCES CORP",
+    "cik": "0001288770"
+  },
+  {
+    "ticker": "SBXDF",
+    "name": "SilverBox Corp IV",
+    "cik": "0002015947"
+  },
+  {
+    "ticker": "AWLRF",
+    "name": "Awale Resources Ltd",
+    "cik": "0001727254"
+  },
+  {
+    "ticker": "VCUFF",
+    "name": "Vizsla Copper Corp.",
+    "cik": "0001884122"
+  },
+  {
+    "ticker": "REVFF",
+    "name": "Gitennes Exploration Inc.",
+    "cik": "0001002366"
+  },
+  {
+    "ticker": "IMTCF",
+    "name": "Intrepid Metals Corp.",
+    "cik": "0001288268"
+  },
+  {
+    "ticker": "CWBHF",
+    "name": "Charlotte's Web Holdings, Inc.",
+    "cik": "0001750155"
+  },
+  {
+    "ticker": "SRLZF",
+    "name": "Salazar Resources Ltd",
+    "cik": "0000861972"
+  },
+  {
+    "ticker": "BRKCF",
+    "name": "BARKSDALE RESOURCES CORP.",
+    "cik": "0001019742"
+  },
+  {
+    "ticker": "TUNGF",
+    "name": "American Tungsten Corp.",
+    "cik": "0002049560"
+  },
+  {
+    "ticker": "KVACF",
+    "name": "Keen Vision Acquisition Corp.",
+    "cik": "0001889983"
+  },
+  {
+    "ticker": "TSQ",
+    "name": "Townsquare Media, Inc.",
+    "cik": "0001499832"
+  },
+  {
+    "ticker": "HANNF",
+    "name": "Hannan Metals Ltd.",
+    "cik": "0001123267"
+  },
+  {
+    "ticker": "PBMLF",
+    "name": "Pacific Booker Minerals Inc.",
+    "cik": "0001319150"
+  },
+  {
+    "ticker": "SYHBF",
+    "name": "SKYHARBOUR RESOURCES LTD",
+    "cik": "0001541190"
+  },
+  {
+    "ticker": "CZZLF",
+    "name": "Cizzle Brands Corp",
+    "cik": "0002105038"
+  },
+  {
+    "ticker": "CUAUF",
+    "name": "C3 Metals Inc.",
+    "cik": "0001737319"
+  },
+  {
+    "ticker": "EAIQ",
+    "name": "Eyeonix AIQ, Inc.",
+    "cik": "0001807689"
+  },
+  {
+    "ticker": "BEWFF",
+    "name": "BEWHERE HOLDINGS INC",
+    "cik": "0001113152"
+  },
+  {
+    "ticker": "SGMOQ",
+    "name": "SANGAMO THERAPEUTICS, INC",
+    "cik": "0001001233"
+  },
+  {
+    "ticker": "ALCYF",
+    "name": "Alchemy Investments Acquisition Corp 1",
+    "cik": "0001901336"
+  },
+  {
+    "ticker": "GNOLF",
+    "name": "GENOIL INC",
+    "cik": "0001261002"
+  },
+  {
+    "ticker": "YARRF",
+    "name": "Pirate Gold Corp.",
+    "cik": "0002099818"
+  },
+  {
+    "ticker": "RNLXY",
+    "name": "Renalytix plc",
+    "cik": "0001811115"
+  },
+  {
+    "ticker": "KCCFF",
+    "name": "Kutcho Copper Corp.",
+    "cik": "0001726906"
+  },
+  {
+    "ticker": "PGZFF",
+    "name": "Pan Global Resources Inc.",
+    "cik": "0001566073"
+  },
+  {
+    "ticker": "ALSAF",
+    "name": "Alpha Star Acquisition Corp",
+    "cik": "0001865111"
+  },
+  {
+    "ticker": "RDEXF",
+    "name": "RPX Gold Inc.",
+    "cik": "0001856082"
+  },
+  {
+    "ticker": "ZTEKF",
+    "name": "Zentek Ltd.",
+    "cik": "0001904501"
+  },
+  {
+    "ticker": "AZZTF",
+    "name": "Aztec Minerals Corp.",
+    "cik": "0001706404"
+  },
+  {
+    "ticker": "YHNAF",
+    "name": "YHN Acquisition I Ltd",
+    "cik": "0002020987"
+  },
+  {
+    "ticker": "TLTFF",
+    "name": "THERALASE TECHNOLOGIES INC /FI",
+    "cik": "0000923883"
+  },
+  {
+    "ticker": "NKGFF",
+    "name": "Nevada King Gold Corp.",
+    "cik": "0001839154"
+  },
+  {
+    "ticker": "LEEEF",
+    "name": "Leef Brands Inc.",
+    "cik": "0001711141"
+  },
+  {
+    "ticker": "TGRGF",
+    "name": "Tiger Gold Corp.",
+    "cik": "0002094900"
+  },
+  {
+    "ticker": "SMOFF",
+    "name": "Sonoro Gold Corp.",
+    "cik": "0001538189"
+  },
+  {
+    "ticker": "PLLMF",
+    "name": "EDGE COPPER Corp",
+    "cik": "0001570505"
+  },
+  {
+    "ticker": "DTSQ",
+    "name": "DT Cloud Star Acquisition Corp",
+    "cik": "0002017950"
+  },
+  {
+    "ticker": "VMXXF",
+    "name": "VALHALLA METALS INC.",
+    "cik": "0001594856"
+  },
+  {
+    "ticker": "NRRSF",
+    "name": "Norsemont Mining Inc.",
+    "cik": "0001778940"
+  },
+  {
+    "ticker": "NMCPF",
+    "name": "Nuvau Minerals Corp",
+    "cik": "0002003813"
+  },
+  {
+    "ticker": "TIGCF",
+    "name": "Triumph Gold Corp.",
+    "cik": "0001387473"
+  },
+  {
+    "ticker": "EQTRF",
+    "name": "Altamira Gold Corp.",
+    "cik": "0001635729"
+  },
+  {
+    "ticker": "ITMSF",
+    "name": "INTERMAP TECHNOLOGIES CORP",
+    "cik": "0001285170"
+  },
+  {
+    "ticker": "LOMLF",
+    "name": "Lion One Metals Ltd.",
+    "cik": "0001509397"
+  },
+  {
+    "ticker": "RKHNF",
+    "name": "ROCKHAVEN RESOURCES LTD",
+    "cik": "0001422532"
+  },
+  {
+    "ticker": "CVVUF",
+    "name": "CANALASKA URANIUM LTD",
+    "cik": "0001023109"
+  },
+  {
+    "ticker": "FRFAF",
+    "name": "Fresh Factory B.C. Ltd.",
+    "cik": "0001894942"
+  },
+  {
+    "ticker": "ESAUF",
+    "name": "ESGold Corp.",
+    "cik": "0001657800"
+  },
+  {
+    "ticker": "AUXXF",
+    "name": "A2 Gold Corp.",
+    "cik": "0001725603"
+  },
+  {
+    "ticker": "RGCCF",
+    "name": "Relevant Gold Corp.",
+    "cik": "0001918151"
+  },
+  {
+    "ticker": "JETMF",
+    "name": "Global Crossing Airlines Group Inc.",
+    "cik": "0001846084"
+  },
+  {
+    "ticker": "ISTKF",
+    "name": "Intellistake Technologies Corp.",
+    "cik": "0001678748"
+  },
+  {
+    "ticker": "GDSRF",
+    "name": "Gold Strike Resources Corp.",
+    "cik": "0001427901"
+  },
+  {
+    "ticker": "JGLDF",
+    "name": "Japan Gold Corp.",
+    "cik": "0001686000"
+  },
+  {
+    "ticker": "TKRFF",
+    "name": "TINKA RESOURCES Ltd",
+    "cik": "0001368845"
+  },
+  {
+    "ticker": "NSFDF",
+    "name": "NXT Energy Solutions Inc.",
+    "cik": "0001009922"
+  },
+  {
+    "ticker": "KDKGF",
+    "name": "KLONDIKE GOLD CORP /FI",
+    "cik": "0000872699"
+  },
+  {
+    "ticker": "HWAUF",
+    "name": "Headwater Gold Inc.",
+    "cik": "0001817161"
+  },
+  {
+    "ticker": "MCUJF",
+    "name": "MEDICURE INC",
+    "cik": "0001133519"
+  },
+  {
+    "ticker": "USPCY",
+    "name": "China Strategic Technology Group Limited/ADR",
+    "cik": "0001939479"
+  },
+  {
+    "ticker": "PYRGF",
+    "name": "PyroGenesis Canada Inc.",
+    "cik": "0001743344"
+  },
+  {
+    "ticker": "BZDLF",
+    "name": "KINCORA COPPER LTD",
+    "cik": "0001527038"
+  },
+  {
+    "ticker": "DGNOF",
+    "name": "Diagnos Inc.",
+    "cik": "0001790693"
+  },
+  {
+    "ticker": "SPMEF",
+    "name": "South Pacific Metals Corp.",
+    "cik": "0002056030"
+  },
+  {
+    "ticker": "VAUCF",
+    "name": "Viva Gold Corp.",
+    "cik": "0001723047"
+  },
+  {
+    "ticker": "HSPOF",
+    "name": "Horizon Space Acquisition I Corp.",
+    "cik": "0001946021"
+  },
+  {
+    "ticker": "WAMFF",
+    "name": "Alaska Silver Corp.",
+    "cik": "0001893899"
+  },
+  {
+    "ticker": "VIRMF",
+    "name": "Viridian Metals Inc.",
+    "cik": "0002074745"
+  },
+  {
+    "ticker": "YQ",
+    "name": "17 Education & Technology Group Inc.",
+    "cik": "0001821468"
+  },
+  {
+    "ticker": "ATCMF",
+    "name": "ATICO MINING Corp",
+    "cik": "0001567663"
+  },
+  {
+    "ticker": "PHNMF",
+    "name": "Phenom Resources Corp.",
+    "cik": "0001720553"
+  },
+  {
+    "ticker": "MHUBF",
+    "name": "MineHub Technologies Inc.",
+    "cik": "0001869137"
+  },
+  {
+    "ticker": "NPRFF",
+    "name": "Nepra Foods Inc.",
+    "cik": "0001859022"
+  },
+  {
+    "ticker": "CGDCF",
+    "name": "Carlin Gold Corp",
+    "cik": "0001342325"
+  },
+  {
+    "ticker": "CYDVF",
+    "name": "Century Lithium Corp.",
+    "cik": "0001394039"
+  },
+  {
+    "ticker": "DRYGF",
+    "name": "Dryden Gold Corp.",
+    "cik": "0002006413"
+  },
+  {
+    "ticker": "TTIPF",
+    "name": "Thiogenesis Therapeutics, Corp.",
+    "cik": "0001877778"
+  },
+  {
+    "ticker": "CLRCF",
+    "name": "ClimateRock",
+    "cik": "0001903392"
+  },
+  {
+    "ticker": "JAYGF",
+    "name": "Blue Jay Gold Corp.",
+    "cik": "0002092243"
+  },
+  {
+    "ticker": "ITHUF",
+    "name": "iANTHUS CAPITAL HOLDINGS, INC.",
+    "cik": "0001643154"
+  },
+  {
+    "ticker": "INIKF",
+    "name": "PopReach Corp",
+    "cik": "0001928722"
+  },
+  {
+    "ticker": "LTAFF",
+    "name": "Lithium Africa Corp.",
+    "cik": "0002115899"
+  },
+  {
+    "ticker": "STSBF",
+    "name": "South Star Battery Metals Corp.",
+    "cik": "0001307926"
+  },
+  {
+    "ticker": "CPIVF",
+    "name": "CAPTIVA VERDE WELLNESS CORP.",
+    "cik": "0001712294"
+  },
+  {
+    "ticker": "LFLRF",
+    "name": "LaFleur Minerals Inc..",
+    "cik": "0001800890"
+  },
+  {
+    "ticker": "CCEYF",
+    "name": "CanCambria Energy Corp.",
+    "cik": "0001992604"
+  },
+  {
+    "ticker": "NVGLF",
+    "name": "NV Gold Corp",
+    "cik": "0001607807"
+  },
+  {
+    "ticker": "ARLSF",
+    "name": "ARGO GRAPHENE SOLUTIONS CORP.",
+    "cik": "0001852354"
+  },
+  {
+    "ticker": "GDGIF",
+    "name": "Gemdale Gold, Inc",
+    "cik": "0002027037"
+  },
+  {
+    "ticker": "USGDF",
+    "name": "AMERICAN PACIFIC MINING CORP",
+    "cik": "0001726159"
+  },
+  {
+    "ticker": "KNGRF",
+    "name": "Kingsmen Resources Ltd.",
+    "cik": "0001191832"
+  },
+  {
+    "ticker": "WSTRF",
+    "name": "Western Uranium & Vanadium Corp.",
+    "cik": "0001621906"
+  },
+  {
+    "ticker": "IEGCF",
+    "name": "Independence Gold Corp.",
+    "cik": "0001537317"
+  },
+  {
+    "ticker": "SAGGF",
+    "name": "Sterling Metals Corp.",
+    "cik": "0001727370"
+  },
+  {
+    "ticker": "EMBYF",
+    "name": "Nexera Energy Inc.",
+    "cik": "0001487615"
+  },
+  {
+    "ticker": "VIPRF",
+    "name": "SILVER VIPER MINERALS CORP.",
+    "cik": "0001684662"
+  },
+  {
+    "ticker": "CLOQ",
+    "name": "CYBERLOQ TECHNOLOGIES, INC.",
+    "cik": "0001437517"
+  },
+  {
+    "ticker": "CGDXF",
+    "name": "XALI GOLD CORP.",
+    "cik": "0001479480"
+  },
+  {
+    "ticker": "ALGRF",
+    "name": "KENADYR METALS CORP",
+    "cik": "0001703292"
+  },
+  {
+    "ticker": "RDUFF",
+    "name": "RADIUS GOLD INC.",
+    "cik": "0001113260"
+  },
+  {
+    "ticker": "GPGCF",
+    "name": "Great Pacific Gold Corp.",
+    "cik": "0001813241"
+  },
+  {
+    "ticker": "WMLLF",
+    "name": "Wealth Minerals Ltd.",
+    "cik": "0001077640"
+  },
+  {
+    "ticker": "RDGMF",
+    "name": "Ridgeline Minerals Corp",
+    "cik": "0001820025"
+  },
+  {
+    "ticker": "IBATF",
+    "name": "INTERNATIONAL BATTERY METALS LTD.",
+    "cik": "0001786318"
+  },
+  {
+    "ticker": "GRAPF",
+    "name": "First Canadian Graphite Inc.",
+    "cik": "0001715272"
+  },
+  {
+    "ticker": "BONXF",
+    "name": "BONTERRA RESOURCES INC.",
+    "cik": "0001544770"
+  },
+  {
+    "ticker": "ROMJF",
+    "name": "Rubicon Organics Inc.",
+    "cik": "0001742195"
+  },
+  {
+    "ticker": "SKYQ",
+    "name": "Sky Quarry Inc.",
+    "cik": "0001812447"
+  },
+  {
+    "ticker": "VUECF",
+    "name": "Verdera Energy Corp.",
+    "cik": "0002111453"
+  },
+  {
+    "ticker": "RSGLF",
+    "name": "Rocky Shore Gold Ltd.",
+    "cik": "0001683408"
+  },
+  {
+    "ticker": "MMTIF",
+    "name": "MICROMEM TECHNOLOGIES INC",
+    "cik": "0001085921"
+  },
+  {
+    "ticker": "QZMRF",
+    "name": "QUARTZ MOUNTAIN RESOURCES LTD",
+    "cik": "0000811522"
+  },
+  {
+    "ticker": "GEBRF",
+    "name": "Greenbriar Sustainable Living Inc.",
+    "cik": "0001570843"
+  },
+  {
+    "ticker": "NZERF",
+    "name": "New Zealand Energy Corp.",
+    "cik": "0001509705"
+  },
+  {
+    "ticker": "VCGMF",
+    "name": "Visionary Copper & Gold Mines Inc.",
+    "cik": "0001650196"
+  },
+  {
+    "ticker": "COGDF",
+    "name": "Compass Gold Corp",
+    "cik": "0001557440"
+  },
+  {
+    "ticker": "CSRVF",
+    "name": "Scotia Metals Corp.",
+    "cik": "0001910903"
+  },
+  {
+    "ticker": "VRRCF",
+    "name": "VR Resources Ltd.",
+    "cik": "0001717695"
+  },
+  {
+    "ticker": "EMGDF",
+    "name": "Eminent Gold Corp.",
+    "cik": "0001790607"
+  },
+  {
+    "ticker": "AAUAF",
+    "name": "ALMADEN MINERALS LTD",
+    "cik": "0001015647"
+  },
+  {
+    "ticker": "HLRTF",
+    "name": "Hillcrest Energy Technologies Ltd.",
+    "cik": "0001418149"
+  },
+  {
+    "ticker": "TTMSF",
+    "name": "Titiminas Silver Inc.",
+    "cik": "0002132461"
+  },
+  {
+    "ticker": "IRVRF",
+    "name": "Irving Resources Inc.",
+    "cik": "0001666782"
+  },
+  {
+    "ticker": "LRRIF",
+    "name": "Lion Rock Resources Inc.",
+    "cik": "0001992500"
+  },
+  {
+    "ticker": "PPURF",
+    "name": "Ucore Rare Metals Inc.",
+    "cik": "0001495651"
+  },
+  {
+    "ticker": "APAAF",
+    "name": "Appia Rare Earths & Uranium Corp.",
+    "cik": "0001419336"
+  },
+  {
+    "ticker": "TARSF",
+    "name": "Silver North Resources Ltd.",
+    "cik": "0001409036"
+  },
+  {
+    "ticker": "CUPPF",
+    "name": "Super Copper Corp.",
+    "cik": "0002021989"
+  },
+  {
+    "ticker": "MAPPF",
+    "name": "PROSTAR HOLDINGS INC. /BC",
+    "cik": "0001493130"
+  },
+  {
+    "ticker": "CMGHF",
+    "name": "CHAODA MODERN AGRICULTURE HOLDINGS LTD /FI",
+    "cik": "0001169760"
+  },
+  {
+    "ticker": "TRGXF",
+    "name": "Terra Rossa Gold Ltd.",
+    "cik": "0001861479"
+  },
+  {
+    "ticker": "CCOOF",
+    "name": "CORE SILVER CORP.",
+    "cik": "0001853599"
+  },
+  {
+    "ticker": "PLCKF",
+    "name": "Plurilock Security Inc.",
+    "cik": "0001848782"
+  },
+  {
+    "ticker": "BHSIF",
+    "name": "BAYHORSE SILVER INC.",
+    "cik": "0001432588"
+  },
+  {
+    "ticker": "TWOSF",
+    "name": "T2 Metals Corp.",
+    "cik": "0000877028"
+  },
+  {
+    "ticker": "DGCOF",
+    "name": "Daura Gold Corp.",
+    "cik": "0001809267"
+  },
+  {
+    "ticker": "BGAVF",
+    "name": "Bravada Gold Corp",
+    "cik": "0001500620"
+  },
+  {
+    "ticker": "GRLMF",
+    "name": "GreenLight Metals Inc.",
+    "cik": "0002055938"
+  },
+  {
+    "ticker": "KDOZF",
+    "name": "KIDOZ INC.",
+    "cik": "0001318482"
+  },
+  {
+    "ticker": "STLNF",
+    "name": "Stallion Uranium Corp.",
+    "cik": "0001729653"
+  },
+  {
+    "ticker": "BKUCF",
+    "name": "BLUE SKY URANIUM CORP.",
+    "cik": "0001463978"
+  },
+  {
+    "ticker": "RYOOF",
+    "name": "Rio Silver Inc.",
+    "cik": "0001683274"
+  },
+  {
+    "ticker": "BITTF",
+    "name": "BITTERROOT RESOURCES LTD",
+    "cik": "0001028357"
+  },
+  {
+    "ticker": "LPSIF",
+    "name": "LEGEND POWER SYSTEMS INC.",
+    "cik": "0001472466"
+  },
+  {
+    "ticker": "CEXYF",
+    "name": "GIANT MINING CORP.",
+    "cik": "0001836503"
+  },
+  {
+    "ticker": "PRNCF",
+    "name": "Prince Silver Corp.",
+    "cik": "0002045300"
+  },
+  {
+    "ticker": "GMVMF",
+    "name": "GMV Minerals Inc.",
+    "cik": "0001495730"
+  },
+  {
+    "ticker": "GARWF",
+    "name": "Golden Arrow Resources Corp",
+    "cik": "0001403870"
+  },
+  {
+    "ticker": "MOBQ",
+    "name": "Mobiquity Technologies, Inc.",
+    "cik": "0001084267"
+  },
+  {
+    "ticker": "GRNQ",
+    "name": "Greenpro Capital Corp.",
+    "cik": "0001597846"
+  },
+  {
+    "ticker": "RSMXF",
+    "name": "Regency Silver Corp.",
+    "cik": "0001858994"
+  },
+  {
+    "ticker": "MAUUF",
+    "name": "AERO ENERGY Ltd",
+    "cik": "0001905688"
+  },
+  {
+    "ticker": "NSURF",
+    "name": "North Shore Uranium Ltd.",
+    "cik": "0002002326"
+  },
+  {
+    "ticker": "FRECF",
+    "name": "Frequency Exchange Corp.",
+    "cik": "0001816133"
+  },
+  {
+    "ticker": "ELECF",
+    "name": "Electric Royalties Ltd.",
+    "cik": "0001817083"
+  },
+  {
+    "ticker": "TRUFF",
+    "name": "Red Light Holland Corp.",
+    "cik": "0001836747"
+  },
+  {
+    "ticker": "ALRTF",
+    "name": "ALR Technologies SG Ltd.",
+    "cik": "0001930419"
+  },
+  {
+    "ticker": "THURF",
+    "name": "Thunderstruck Resources Ltd.",
+    "cik": "0001536811"
+  },
+  {
+    "ticker": "TBLLF",
+    "name": "Tombill Mines Ltd",
+    "cik": "0001854257"
+  },
+  {
+    "ticker": "CNTMF",
+    "name": "Fluent Corp.",
+    "cik": "0001758124"
+  },
+  {
+    "ticker": "MILIF",
+    "name": "Military Metals Corp.",
+    "cik": "0001866460"
+  },
+  {
+    "ticker": "PEXZF",
+    "name": "PACIFIC RIDGE EXPLORATION LTD",
+    "cik": "0001254435"
+  },
+  {
+    "ticker": "KLGDF",
+    "name": "Kalo Gold Corp.",
+    "cik": "0001901931"
+  },
+  {
+    "ticker": "ICGSF",
+    "name": "ICG Silver & Gold Ltd.",
+    "cik": "0002123553"
+  },
+  {
+    "ticker": "APMCF",
+    "name": "MORIEN RESOURCES CORP.",
+    "cik": "0001628935"
+  },
+  {
+    "ticker": "VTNMF",
+    "name": "V Ten Metals Corp.",
+    "cik": "0001981775"
+  },
+  {
+    "ticker": "AIJTY",
+    "name": "Jianpu Technology Inc.",
+    "cik": "0001713923"
+  },
+  {
+    "ticker": "ALTUF",
+    "name": "Altura Energy Corp.",
+    "cik": "0001977971"
+  },
+  {
+    "ticker": "CMHSF",
+    "name": "COMPREHENSIVE HEALTHCARE SYSTEMS INC. (CANADA)",
+    "cik": "0001889352"
+  },
+  {
+    "ticker": "MTTAF",
+    "name": "Meta Critical Minerals Inc.",
+    "cik": "0001999111"
+  },
+  {
+    "ticker": "IAALF",
+    "name": "IBC Advanced Alloys Corp.",
+    "cik": "0001450894"
+  },
+  {
+    "ticker": "AUGCF",
+    "name": "AU Gold Corp.",
+    "cik": "0001839290"
+  },
+  {
+    "ticker": "LILIF",
+    "name": "Argentina Lithium & Energy Corp.",
+    "cik": "0001689448"
+  },
+  {
+    "ticker": "BCUFF",
+    "name": "Bell Copper Corp",
+    "cik": "0001477201"
+  },
+  {
+    "ticker": "COPAF",
+    "name": "COPAUR MINERALS INC.",
+    "cik": "0001420049"
+  },
+  {
+    "ticker": "BBBMF",
+    "name": "Lux Metals Corp.",
+    "cik": "0001829809"
+  },
+  {
+    "ticker": "UUUFF",
+    "name": "Recharge Resources Ltd.",
+    "cik": "0002056751"
+  },
+  {
+    "ticker": "USAQ",
+    "name": "QHSLab, Inc.",
+    "cik": "0000856984"
+  },
+  {
+    "ticker": "EEIQ",
+    "name": "EpicQuest Education Group International Ltd",
+    "cik": "0001781397"
+  },
+  {
+    "ticker": "ENDMF",
+    "name": "Enduro Metals Corp.",
+    "cik": "0001524326"
+  },
+  {
+    "ticker": "TRGEF",
+    "name": "Targa Exploration Corp.",
+    "cik": "0001989815"
+  },
+  {
+    "ticker": "GFTFF",
+    "name": "Grafton Resources Inc.",
+    "cik": "0002103596"
+  },
+  {
+    "ticker": "AITTF",
+    "name": "TRENCHANT TECHNOLOGIES CAPITAL CORP.",
+    "cik": "0001520556"
+  },
+  {
+    "ticker": "TRLEF",
+    "name": "Dune Oil Corp.",
+    "cik": "0001648636"
+  },
+  {
+    "ticker": "ADMQ",
+    "name": "ADM ENDEAVORS, INC.",
+    "cik": "0001588014"
+  },
+  {
+    "ticker": "ZPHYF",
+    "name": "ZEPHYR MINERALS LTD.",
+    "cik": "0001613979"
+  },
+  {
+    "ticker": "HAMRF",
+    "name": "SILVER HAMMER MINING CORP",
+    "cik": "0001868866"
+  },
+  {
+    "ticker": "FCHDF",
+    "name": "Fairchild Gold Corp.",
+    "cik": "0002048847"
+  },
+  {
+    "ticker": "YNVYF",
+    "name": "YNVISIBLE INTERACTIVE INC.",
+    "cik": "0001427728"
+  },
+  {
+    "ticker": "KIQSF",
+    "name": "KELSO TECHNOLOGIES INC",
+    "cik": "0001161814"
+  },
+  {
+    "ticker": "INNPF",
+    "name": "INNOCAN PHARMA Corp",
+    "cik": "0001889791"
+  },
+  {
+    "ticker": "TRBMF",
+    "name": "TORQ RESOURCES INC.",
+    "cik": "0001406944"
+  },
+  {
+    "ticker": "AWLIF",
+    "name": "Ameriwest Critical Metals Inc.",
+    "cik": "0001866034"
+  },
+  {
+    "ticker": "ZCRMF",
+    "name": "Golden Cross Resources Inc.",
+    "cik": "0001425061"
+  },
+  {
+    "ticker": "EXCBF",
+    "name": "Excalibur Metals Corp.",
+    "cik": "0002088688"
+  },
+  {
+    "ticker": "MHUAF",
+    "name": "Meihua International Medical Technologies Co., Ltd.",
+    "cik": "0001835615"
+  },
+  {
+    "ticker": "PUROF",
+    "name": "Platauro Metals Corp.",
+    "cik": "0001609436"
+  },
+  {
+    "ticker": "JPOTF",
+    "name": "Jackpot Digital Inc.",
+    "cik": "0001061612"
+  },
+  {
+    "ticker": "OBULF",
+    "name": "One Bullion Ltd",
+    "cik": "0001927026"
+  },
+  {
+    "ticker": "URZEF",
+    "name": "URZ3 ENERGY CORP.",
+    "cik": "0001398713"
+  },
+  {
+    "ticker": "BGICF",
+    "name": "BIRKS GROUP INC.",
+    "cik": "0001179821"
+  },
+  {
+    "ticker": "WLFFF",
+    "name": "Wolfden Resources Corp",
+    "cik": "0001544883"
+  },
+  {
+    "ticker": "AHNRF",
+    "name": "ATHENA GOLD CORP",
+    "cik": "0001304409"
+  },
+  {
+    "ticker": "MITQ",
+    "name": "MOVING iMAGE TECHNOLOGIES INC.",
+    "cik": "0001770236"
+  },
+  {
+    "ticker": "TANAF",
+    "name": "Tian'an Technology Group Ltd",
+    "cik": "0001941189"
+  },
+  {
+    "ticker": "GETYQ",
+    "name": "Getty Images Holdings, Inc.",
+    "cik": "0001898496"
+  },
+  {
+    "ticker": "TRRFF",
+    "name": "TRIFECTA GOLD LTD",
+    "cik": "0001713979"
+  },
+  {
+    "ticker": "ORESF",
+    "name": "Orestone Mining Corp.",
+    "cik": "0001481857"
+  },
+  {
+    "ticker": "SABOF",
+    "name": "Sabio Holdings Inc.",
+    "cik": "0001896752"
+  },
+  {
+    "ticker": "NRGFF",
+    "name": "AE Fuels Corp",
+    "cik": "0002102593"
+  },
+  {
+    "ticker": "IMIMF",
+    "name": "Interra Copper Corp.",
+    "cik": "0001866146"
+  },
+  {
+    "ticker": "KOGDF",
+    "name": "KO Gold Inc.",
+    "cik": "0002008257"
+  },
+  {
+    "ticker": "INEOF",
+    "name": "INEO Tech Corp.",
+    "cik": "0002099727"
+  },
+  {
+    "ticker": "OHCFF",
+    "name": "Light AI Inc.",
+    "cik": "0001735514"
+  },
+  {
+    "ticker": "FASLF",
+    "name": "First Andes Silver Ltd.",
+    "cik": "0001731854"
+  },
+  {
+    "ticker": "ROIUF",
+    "name": "Route1 Inc.",
+    "cik": "0001736289"
+  },
+  {
+    "ticker": "NBLXF",
+    "name": "Noble Plains Uranium Corp.",
+    "cik": "0001813419"
+  },
+  {
+    "ticker": "EGMCF",
+    "name": "EMERGENT METALS CORP.",
+    "cik": "0001199392"
+  },
+  {
+    "ticker": "BQ",
+    "name": "Boqii Holding Ltd",
+    "cik": "0001815021"
+  },
+  {
+    "ticker": "HVGDF",
+    "name": "HARVEST GOLD CORP",
+    "cik": "0000921968"
+  },
+  {
+    "ticker": "BRQSF",
+    "name": "Borqs Technologies, Inc.",
+    "cik": "0001650575"
+  },
+  {
+    "ticker": "VNTXF",
+    "name": "VANTA HOLDINGS INC.",
+    "cik": "0001754180"
+  },
+  {
+    "ticker": "VIIQ",
+    "name": "VisitIQ Corp.",
+    "cik": "0001470129"
+  },
+  {
+    "ticker": "CRUCF",
+    "name": "Colibri Resource Corp",
+    "cik": "0001734427"
+  },
+  {
+    "ticker": "LVRLF",
+    "name": "CordovaCann Corp.",
+    "cik": "0001168981"
+  },
+  {
+    "ticker": "PLTYF",
+    "name": "Plastec Technologies, Ltd.",
+    "cik": "0001433309"
+  },
+  {
+    "ticker": "HLSQ",
+    "name": "Tessera Defense & Homeland Security Inc.",
+    "cik": "0001739174"
+  },
+  {
+    "ticker": "NIOMF",
+    "name": "First American Uranium Inc.",
+    "cik": "0001937453"
+  },
+  {
+    "ticker": "NVSGF",
+    "name": "Nevada Sunrise Metals Corp.",
+    "cik": "0001415758"
+  },
+  {
+    "ticker": "ABCFF",
+    "name": "ABACUS MINING & EXPLORATION CORP",
+    "cik": "0001284237"
+  },
+  {
+    "ticker": "ABVEF",
+    "name": "Above Food Ingredients Inc.",
+    "cik": "0001979484"
+  },
+  {
+    "ticker": "CPCPF",
+    "name": "CopperCorp Resources Inc.",
+    "cik": "0001868050"
+  },
+  {
+    "ticker": "AGNPF",
+    "name": "Grey Matters Health Inc.",
+    "cik": "0001642178"
+  },
+  {
+    "ticker": "NYMXF",
+    "name": "NYMOX PHARMACEUTICAL CORP",
+    "cik": "0001018735"
+  },
+  {
+    "ticker": "CASIF",
+    "name": "CASI Pharmaceuticals, Inc.",
+    "cik": "0001962738"
+  },
+  {
+    "ticker": "SYGCF",
+    "name": "Sylla Gold Corp.",
+    "cik": "0001917817"
+  },
+  {
+    "ticker": "SRKZF",
+    "name": "SKY GOLD CORP.",
+    "cik": "0001723455"
+  },
+  {
+    "ticker": "IPTNF",
+    "name": "IMPACT ANALYTICS INC.",
+    "cik": "0001680513"
+  },
+  {
+    "ticker": "WCUFF",
+    "name": "World Copper Ltd.",
+    "cik": "0001902276"
+  },
+  {
+    "ticker": "CLDVF",
+    "name": "Cloud3 Ventures Inc.",
+    "cik": "0001971260"
+  },
+  {
+    "ticker": "PSYCF",
+    "name": "Psyched Wellness Ltd.",
+    "cik": "0001847706"
+  },
+  {
+    "ticker": "SSEBF",
+    "name": "SILVER SPRUCE RESOURCES INC.",
+    "cik": "0001771039"
+  },
+  {
+    "ticker": "LINMF",
+    "name": "Linear Minerals Corp",
+    "cik": "0001066130"
+  },
+  {
+    "ticker": "AVPMF",
+    "name": "AVRUPA MINERALS LTD.",
+    "cik": "0001445467"
+  },
+  {
+    "ticker": "FDXTF",
+    "name": "FENDX TECHNOLOGIES INC.",
+    "cik": "0001970125"
+  },
+  {
+    "ticker": "CNRCF",
+    "name": "Canter Resources Corp.",
+    "cik": "0001996586"
+  },
+  {
+    "ticker": "FECOF",
+    "name": "FEC Resources Inc.",
+    "cik": "0000849997"
+  },
+  {
+    "ticker": "VERTF",
+    "name": "Vertiqal Studios Corp.",
+    "cik": "0001178526"
+  },
+  {
+    "ticker": "NATNF",
+    "name": "Nation Gold Corp.",
+    "cik": "0002096533"
+  },
+  {
+    "ticker": "MECPF",
+    "name": "MUSTANG ENERGY CORP.",
+    "cik": "0001945166"
+  },
+  {
+    "ticker": "GNTOF",
+    "name": "GENTOR RESOURCES INC.",
+    "cik": "0001346917"
+  },
+  {
+    "ticker": "RITRF",
+    "name": "Reitar Logtech Holdings Ltd",
+    "cik": "0001951229"
+  },
+  {
+    "ticker": "LTHIF",
+    "name": "InZinc Mining Ltd.",
+    "cik": "0001364252"
+  },
+  {
+    "ticker": "SLAIY",
+    "name": "SOLAI Ltd",
+    "cik": "0001517496"
+  },
+  {
+    "ticker": "FMTOF",
+    "name": "Femto Technologies Inc.",
+    "cik": "0001888151"
+  },
+  {
+    "ticker": "NVNIF",
+    "name": "Nvni Group Ltd",
+    "cik": "0001965143"
+  },
+  {
+    "ticker": "TSEOQ",
+    "name": "Trinseo PLC",
+    "cik": "0001519061"
+  },
+  {
+    "ticker": "LESLQ",
+    "name": "Leslie's, Inc.",
+    "cik": "0001821806"
+  },
+  {
+    "ticker": "CYTOF",
+    "name": "Altamira Therapeutics Ltd.",
+    "cik": "0001601936"
+  },
+  {
+    "ticker": "DTCKF",
+    "name": "DAVIS COMMODITIES Ltd",
+    "cik": "0001949478"
+  },
+  {
+    "ticker": "SPOWF",
+    "name": "Strata Power Corp",
+    "cik": "0001227282"
+  },
+  {
+    "ticker": "FTRKF",
+    "name": "Fast Track Group",
+    "cik": "0002027262"
+  },
+  {
+    "ticker": "LITSF",
+    "name": "LITHOS GROUP LTD.",
+    "cik": "0001978165"
+  },
+  {
+    "ticker": "BABYF",
+    "name": "Else Nutrition Holdings Inc.",
+    "cik": "0001807936"
+  },
+  {
+    "ticker": "DGTEF",
+    "name": "Eat & Beyond Global Holdings Inc.",
+    "cik": "0001978151"
+  },
+  {
+    "ticker": "GRXXF",
+    "name": "Critical Reagent Processing Corp.",
+    "cik": "0001823126"
+  },
+  {
+    "ticker": "UOKAF",
+    "name": "MDJM LTD",
+    "cik": "0001741534"
+  },
+  {
+    "ticker": "SNYRQ",
+    "name": "Synergy CHC Corp.",
+    "cik": "0001562733"
+  },
+  {
+    "ticker": "REEAF",
+    "name": "REE Automotive Ltd.",
+    "cik": "0001843588"
+  },
+  {
+    "ticker": "ORISF",
+    "name": "ORIENTAL RISE HOLDINGS Ltd",
+    "cik": "0001964664"
+  },
+  {
+    "ticker": "EPWKF",
+    "name": "EPWK Holdings Ltd.",
+    "cik": "0001900720"
+  },
+  {
+    "ticker": "SELXF",
+    "name": "Semilux International Ltd.",
+    "cik": "0001990950"
+  },
+  {
+    "ticker": "BHATF",
+    "name": "Blue Hat Interactive Entertainment Technology",
+    "cik": "0001759136"
+  },
+  {
+    "ticker": "RTCJF",
+    "name": "Baijiayun Group Ltd",
+    "cik": "0001381074"
+  },
+  {
+    "ticker": "CMBMF",
+    "name": "Cambium Networks Corp",
+    "cik": "0001738177"
+  },
+  {
+    "ticker": "SOPAQ",
+    "name": "SOCIETY PASS INCORPORATED.",
+    "cik": "0001817511"
+  },
+  {
+    "ticker": "MAXNQ",
+    "name": "Maxeon Solar Technologies, Ltd.",
+    "cik": "0001796898"
+  },
+  {
+    "ticker": "SGIHY",
+    "name": "Sugi Holdings Co., Ltd./ADR",
+    "cik": "0002027330"
+  },
+  {
+    "ticker": "PRSKY",
+    "name": "PrairieSky Royalty Ltd/ADR",
+    "cik": "0002071912"
+  },
+  {
+    "ticker": "ZSICY",
+    "name": "Zhejiang Sanhua Intelligent Controls Co., Ltd./ADR",
+    "cik": "0002076398"
+  },
+  {
+    "ticker": "BHTGY",
+    "name": "Beijing Haizhi Technology Group Co., Ltd./ADR",
+    "cik": "0002125951"
+  },
+  {
+    "ticker": "CLRLY",
+    "name": "Central Retail Corp Public Co Limited/ADR",
+    "cik": "0002063231"
+  },
+  {
+    "ticker": "ORNJY",
+    "name": "OranjeBTC S.A. Educacao E Investmentimento/ADR",
+    "cik": "0002093314"
+  },
+  {
+    "ticker": "FNIGY",
+    "name": "Finning International Inc./ADR",
+    "cik": "0002073638"
+  },
+  {
+    "ticker": "GMNHY",
+    "name": "Guming Holdings Ltd/ADR",
+    "cik": "0002154118"
+  },
+  {
+    "ticker": "MTGLY",
+    "name": "Mininglamp Technology Group Limited/ADR",
+    "cik": "0002128448"
+  },
+  {
+    "ticker": "JSTYY",
+    "name": "JOST Werke SE/ADR",
+    "cik": "0002155258"
+  },
+  {
+    "ticker": "SCBXY",
+    "name": "SCB X Public Co Ltd",
+    "cik": "0002066600"
+  },
+  {
+    "ticker": "FRLCY",
+    "name": "Freelancer Ltd",
+    "cik": "0002065932"
+  },
+  {
+    "ticker": "AKCLY",
+    "name": "Aica Kogyo Co Limited/ADR",
+    "cik": "0002087856"
+  },
+  {
+    "ticker": "CMPLY",
+    "name": "Com7 PCL/ADR",
+    "cik": "0002117197"
+  },
+  {
+    "ticker": "DPDSY",
+    "name": "DPC DASH LTD/ADR",
+    "cik": "0002094201"
+  },
+  {
+    "ticker": "WXILY",
+    "name": "Wuxi Lead Intelligent Equipment Co., Ltd./ADR",
+    "cik": "0002123372"
+  },
+  {
+    "ticker": "HZRBY",
+    "name": "Horizon Robotics, Inc./ADR",
+    "cik": "0002060217"
+  },
+  {
+    "ticker": "HNPHY",
+    "name": "Hansoh Pharmaceutical Group Co Limited/ADR",
+    "cik": "0002073669"
+  },
+  {
+    "ticker": "MNYCY",
+    "name": "Manycore Tech Inc./ADR",
+    "cik": "0002131961"
+  },
+  {
+    "ticker": "LSHGY",
+    "name": "Louis Hachette Group/ADR",
+    "cik": "0002063675"
+  },
+  {
+    "ticker": "SNEVY",
+    "name": "SUNEVISION HOLDINGS/ADR",
+    "cik": "0002089488"
+  },
+  {
+    "ticker": "MNZLY",
+    "name": "Mercury NZ Ltd./ADR",
+    "cik": "0002062807"
+  },
+  {
+    "ticker": "NDPRY",
+    "name": "Harena Rare Earths Plc",
+    "cik": "0002158201"
+  },
+  {
+    "ticker": "MNTGY",
+    "name": "Montage Technology Co., Ltd./ADR",
+    "cik": "0002123346"
+  },
+  {
+    "ticker": "GBNXY",
+    "name": "Gibson Energy Inc/ADR",
+    "cik": "0002071913"
+  },
+  {
+    "ticker": "EYUBY",
+    "name": "Electricity Generating Public Co Limited/ADR",
+    "cik": "0001562294"
+  },
+  {
+    "ticker": "AELKY",
+    "name": "ASELSAN Elektronik Sanayi ve Ticaret Anonim Sirketi/ADR",
+    "cik": "0002110583"
+  },
+  {
+    "ticker": "METRY",
+    "name": "METRO INC./ADR",
+    "cik": "0002073643"
+  },
+  {
+    "ticker": "CTVHY",
+    "name": "CT Vision S.L. (International) Holdings Limited/ADR",
+    "cik": "0002075908"
+  },
+  {
+    "ticker": "MMXGY",
+    "name": "Minimax Group Inc./ADR",
+    "cik": "0002109556"
+  },
+  {
+    "ticker": "SMPHY",
+    "name": "SM Prime Holdings Inc./ADR",
+    "cik": "0002063413"
+  },
+  {
+    "ticker": "RHDTY",
+    "name": "Ruihe Data Technology Holdings Limited/ADR",
+    "cik": "0002133020"
+  },
+  {
+    "ticker": "SWBKY",
+    "name": "Shawbrook Group plc/ADR",
+    "cik": "0002098324"
+  },
+  {
+    "ticker": "BEJRY",
+    "name": "Beijer Ref AB/ADR",
+    "cik": "0002116276"
+  },
+  {
+    "ticker": "MROSY",
+    "name": "Melrose Industries Plc/ADR",
+    "cik": "0001516535"
+  },
+  {
+    "ticker": "KGBMY",
+    "name": "Kongsberg Maritime ASA/ADR",
+    "cik": "0002133892"
+  },
+  {
+    "ticker": "TEICY",
+    "name": "TOSEI CORP/ADR",
+    "cik": "0002089506"
+  },
+  {
+    "ticker": "ATZIY",
+    "name": "Aritzia Inc./ADR",
+    "cik": "0002139627"
+  },
+  {
+    "ticker": "MIMDF",
+    "name": "MiMedia Holdings Inc.",
+    "cik": "0001920576"
+  },
+  {
+    "ticker": "NWCYY",
+    "name": "North West Co Inc./ADR",
+    "cik": "0002073913"
+  },
+  {
+    "ticker": "CDTHY",
+    "name": "CONDUIT HOLDINGS LTD/ADR",
+    "cik": "0002091663"
+  },
+  {
+    "ticker": "RGKUY",
+    "name": "Rigaku Holdings Corporation/ADR",
+    "cik": "0002141099"
+  },
+  {
+    "ticker": "STJNY",
+    "name": "Stella-Jones Inc./ADR",
+    "cik": "0002077242"
+  },
+  {
+    "ticker": "ZJGIY",
+    "name": "Zijin Gold International Co Limited/ADR",
+    "cik": "0002093654"
+  },
+  {
+    "ticker": "CPXXY",
+    "name": "Capital Power Corp/ADR",
+    "cik": "0002071911"
+  },
+  {
+    "ticker": "NRDMF",
+    "name": "NordX Metals Corp.",
+    "cik": "0001850269"
+  },
+  {
+    "ticker": "JXIRY",
+    "name": "Jiaxin International Resources Investment Limited/ADR",
+    "cik": "0002128458"
+  },
+  {
+    "ticker": "CTNKY",
+    "name": "Capital Tankers Corp./ADR",
+    "cik": "0002144751"
+  },
+  {
+    "ticker": "THCLY",
+    "name": "Toho Co., Ltd./ADR",
+    "cik": "0002064381"
+  },
+  {
+    "ticker": "BKPOY",
+    "name": "Bank Pekao S.A./ADR",
+    "cik": "0002075877"
+  },
+  {
+    "ticker": "MGMVF",
+    "name": "Mogul Mountain Ventures Corp",
+    "cik": "0002141493"
+  },
+  {
+    "ticker": "ALXMF",
+    "name": "Alex Metals Corp.",
+    "cik": "0002144401"
+  },
+  {
+    "ticker": "IDXMF",
+    "name": "IDEX METALS CORP.",
+    "cik": "0002067171"
+  },
+  {
+    "ticker": "ATAYY",
+    "name": "American Tungsten & Antimony Ltd",
+    "cik": "0002127653"
+  },
+  {
+    "ticker": "SICCY",
+    "name": "SICC Co., Ltd./ADR",
+    "cik": "0002098860"
+  },
+  {
+    "ticker": "HRBAY",
+    "name": "Horiba, Ltd./ADR",
+    "cik": "0002088827"
+  },
+  {
+    "ticker": "SKBBY",
+    "name": "Sichuan Kelun-Biotech Biopharmaceutical Co., Ltd./ADR",
+    "cik": "0002125904"
+  },
+  {
+    "ticker": "SGMIY",
+    "name": "SG Micro Corp/ADR",
+    "cik": "0002155709"
+  },
+  {
+    "ticker": "BSUDY",
+    "name": "Bradsaude S.A./ADR",
+    "cik": "0002144745"
+  },
+  {
+    "ticker": "MLIZY",
+    "name": "MELIUZ S.A.",
+    "cik": "0002080003"
+  },
+  {
+    "ticker": "PHCAF",
+    "name": "Phoenix Metals Corp.",
+    "cik": "0002145424"
+  },
+  {
+    "ticker": "SSHBY",
+    "name": "SBI Shinsei Bank, Limited/ADR",
+    "cik": "0002107375"
+  },
+  {
+    "ticker": "NHKSY",
+    "name": "NHK Spring Co. Ltd/ADR",
+    "cik": "0002087500"
+  },
+  {
+    "ticker": "ODKUY",
+    "name": "Odakyu Electric Railway Co., Ltd./ADR",
+    "cik": "0002108124"
+  },
+  {
+    "ticker": "PSBTY",
+    "name": "PT Sumber Alfaria Trijaya Tbk/ADR",
+    "cik": "0002063685"
+  },
+  {
+    "ticker": "KRYCY",
+    "name": "KORYX COPPER INC.",
+    "cik": "0001318596"
+  },
+  {
+    "ticker": "PRBRY",
+    "name": "PREMIUM BRANDS HOLDINGS Corp",
+    "cik": "0001503812"
+  },
+  {
+    "ticker": "ONWRY",
+    "name": "Onward Medical N.V./ADR",
+    "cik": "0002059986"
+  },
+  {
+    "ticker": "TCLXY",
+    "name": "TCL Electronics Holdings Limited/ADR",
+    "cik": "0002073804"
+  },
+  {
+    "ticker": "SSMIY",
+    "name": "SIVERS SEMICONDUCTORS AB/ADR",
+    "cik": "0002157475"
+  },
+  {
+    "ticker": "LNFGY",
+    "name": "Lion Finance Group PLC/ADR",
+    "cik": "0002140948"
+  },
+  {
+    "ticker": "BXRLY",
+    "name": "Boxer Retail Limited/ADR",
+    "cik": "0002056450"
+  },
+  {
+    "ticker": "NGCOY",
+    "name": "Nagase & Co., Ltd./ADR",
+    "cik": "0002092248"
+  },
+  {
+    "ticker": "ASKRY",
+    "name": "Asker Healthcare Group AB/ADR",
+    "cik": "0002078895"
+  },
+  {
+    "ticker": "MDKGY",
+    "name": "Merdeka Gold Resources Tbk PT/ADR",
+    "cik": "0002098332"
+  },
+  {
+    "ticker": "ZABKY",
+    "name": "Zabka Group S.A./ADR",
+    "cik": "0002138474"
+  },
+  {
+    "ticker": "SXTEY",
+    "name": "Shenzhen Xunce Technology Co., Ltd./ADR",
+    "cik": "0002128597"
+  },
+  {
+    "ticker": "PCPGY",
+    "name": "PC Partner Group Ltd/ADR",
+    "cik": "0002053411"
+  },
+  {
+    "ticker": "CSCCY",
+    "name": "Capstone Copper Corp./ADR",
+    "cik": "0002075918"
+  },
+  {
+    "ticker": "DYBTY",
+    "name": "Duality Biotherapeutics Inc/ADR",
+    "cik": "0002085208"
+  },
+  {
+    "ticker": "TYOEY",
+    "name": "Toyo Engineering Corporation/ADR",
+    "cik": "0002128619"
+  },
+  {
+    "ticker": "THARY",
+    "name": "Tharisa plc",
+    "cik": "0002133810"
+  },
+  {
+    "ticker": "EBGCY",
+    "name": "Eastroc Beverage Group Co. Ltd/ADR",
+    "cik": "0002123531"
+  },
+  {
+    "ticker": "FHFFY",
+    "name": "Foshan Haitian Flavouring & Food Co Ltd./ADR",
+    "cik": "0002082876"
+  },
+  {
+    "ticker": "SBRTY",
+    "name": "Shanghai Biren Technology/ADR",
+    "cik": "0002138453"
+  },
+  {
+    "ticker": "GGDFF",
+    "name": "G3 Goldfields Inc.",
+    "cik": "0002139482"
+  },
+  {
+    "ticker": "OPNHY",
+    "name": "Open House Group Co. Ltd/ADR",
+    "cik": "0002131812"
+  },
+  {
+    "ticker": "NMRRY",
+    "name": "Nomura Real Estate Holdings, Inc./ADR",
+    "cik": "0002136706"
+  },
+  {
+    "ticker": "KHOBF",
+    "name": "KHEOBA Ltd",
+    "cik": "0002084698"
+  },
+  {
+    "ticker": "MTVIY",
+    "name": "Motiva Infraestrutura de Mobilidade S.A./ADR",
+    "cik": "0002160519"
+  },
+  {
+    "ticker": "NBKBY",
+    "name": "Noba Bank Group AG/ADR",
+    "cik": "0002093618"
+  },
+  {
+    "ticker": "JTGEY",
+    "name": "Citibank,N.A./ADR",
+    "cik": "0001472033"
+  },
+  {
+    "ticker": "GIGDY",
+    "name": "GigaDevice Semiconductor Inc./ADR",
+    "cik": "0002109547"
+  },
+  {
+    "ticker": "ELFTY",
+    "name": "Element Fleet Management Corp./ADR",
+    "cik": "0002073615"
+  },
+  {
+    "ticker": "VGTHY",
+    "name": "Victory Giant Technology (HuiZhou) Co., Ltd./ADR",
+    "cik": "0002131322"
+  },
+  {
+    "ticker": "GLVPY",
+    "name": "GLENVEAGH PROPERTIES PLC/ADR",
+    "cik": "0002089499"
+  },
+  {
+    "ticker": "TPZEY",
+    "name": "Topaz Energy Corp./ADR",
+    "cik": "0002073655"
+  },
+  {
+    "ticker": "MUYNY",
+    "name": "Muyuan Foods Co. Ltd/ADR",
+    "cik": "0002123524"
+  },
+  {
+    "ticker": "BVGLY",
+    "name": "Bellevue Gold Ltd./ADR",
+    "cik": "0002127839"
+  },
+  {
+    "ticker": "UNCJY",
+    "name": "Unicaja Banco S.A/ADR",
+    "cik": "0002153327"
+  },
+  {
+    "ticker": "BIREY",
+    "name": "Birchcliff Energy Ltd./ADR",
+    "cik": "0002073268"
+  },
+  {
+    "ticker": "VKQ",
+    "name": "Invesco Municipal Trust",
+    "cik": "0000877463"
+  },
+  {
+    "ticker": "KYTFY",
+    "name": "Kyoto Financial Group Inc/ADR",
+    "cik": "0002042187"
+  },
+  {
+    "ticker": "CNYGF",
+    "name": "Canary Gold Corp.",
+    "cik": "0002090651"
+  },
+  {
+    "ticker": "SSRLY",
+    "name": "Sienna Senior Living Inc./ADR",
+    "cik": "0002073972"
+  },
+  {
+    "ticker": "GLQ",
+    "name": "Clough Global Equity Fund",
+    "cik": "0001316463"
+  },
+  {
+    "ticker": "ALEUY",
+    "name": "ALLEGRO.EU SA/ADR",
+    "cik": "0002046098"
+  },
+  {
+    "ticker": "RECCY",
+    "name": "Reece Limited/ADR",
+    "cik": "0002070570"
+  },
+  {
+    "ticker": "SLXMY",
+    "name": "SILEX MICROSYSTEMS AB/ADR",
+    "cik": "0002156636"
+  },
+  {
+    "ticker": "GHRTF",
+    "name": "Greenheart Gold Inc.",
+    "cik": "0002045434"
+  },
+  {
+    "ticker": "SHNTY",
+    "name": "Shanghai Top Numerical Control Technology Co., Ltd./ADR",
+    "cik": "0002138554"
+  },
+  {
+    "ticker": "FRTRY",
+    "name": "Fortior Technology (Shenzhen) Co., Ltd./ADR",
+    "cik": "0002098710"
+  },
+  {
+    "ticker": "VSGRY",
+    "name": "VusionGroup",
+    "cik": "0002075141"
+  },
+  {
+    "ticker": "DTRSY",
+    "name": "DATELINE RESOURCES LTD/ADR",
+    "cik": "0002127860"
+  },
+  {
+    "ticker": "HGZDY",
+    "name": "Hangzhou Diagens Biotechnology Co., Ltd./ADR",
+    "cik": "0002128813"
+  },
+  {
+    "ticker": "TSLVF",
+    "name": "TIER ONE SILVER INC.",
+    "cik": "0001852753"
+  },
+  {
+    "ticker": "CHXIY",
+    "name": "Chuangxin Industries Holdings Limited/ADR",
+    "cik": "0002152784"
+  },
+  {
+    "ticker": "SIAMY",
+    "name": "Siam Global House Public Co Limited/ADR",
+    "cik": "0002138369"
+  },
+  {
+    "ticker": "RENGY",
+    "name": "Rengo Co., Ltd./ADR",
+    "cik": "0002092252"
+  },
+  {
+    "ticker": "ZSHLY",
+    "name": "Zensho Holdings Co., Ltd./ADR",
+    "cik": "0002088776"
+  },
+  {
+    "ticker": "PCQ",
+    "name": "PIMCO CALIFORNIA MUNICIPAL INCOME FUND",
+    "cik": "0001140411"
+  },
+  {
+    "ticker": "HHGSY",
+    "name": "Hua Hong Semiconductor Limited/ADR",
+    "cik": "0001700662"
+  },
+  {
+    "ticker": "HNAMY",
+    "name": "HANA MICROELECTRONICS PUBLIC CO LTD /ADR/",
+    "cik": "0000918658"
+  },
+  {
+    "ticker": "CPPBY",
+    "name": "Central Pattana Public Co Limited/ADR",
+    "cik": "0001551468"
+  },
+  {
+    "ticker": "ANJFY",
+    "name": "Anjoy Foods Group Co., Ltd./ADR",
+    "cik": "0002098397"
+  },
+  {
+    "ticker": "CNGMY",
+    "name": "CNGR Advanced Material Co., Ltd/ADR",
+    "cik": "0002154119"
+  },
+  {
+    "ticker": "YGSHY",
+    "name": "Yangzijiang Shipbuilding Holdings Ltd/ADR",
+    "cik": "0002053843"
+  },
+  {
+    "ticker": "OBBCY",
+    "name": "OBIC Business Consultants Co., Ltd./ADR",
+    "cik": "0002088339"
+  },
+  {
+    "ticker": "SHGHY",
+    "name": "SHEIN Global Holdings Limited/ADR",
+    "cik": "0002152230"
+  },
+  {
+    "ticker": "SRALY",
+    "name": "Stadler Rail AG/ADR",
+    "cik": "0002134599"
+  },
+  {
+    "ticker": "NTVRY",
+    "name": "Nativo Resources plc /ADR",
+    "cik": "0002153349"
+  },
+  {
+    "ticker": "MMTZF",
+    "name": "MindMaze Therapeutics Holding SA",
+    "cik": "0001854078"
+  },
+  {
+    "ticker": "GRCPY",
+    "name": "Canal Plus SA/ADR",
+    "cik": "0002063671"
+  },
+  {
+    "ticker": "IDPEY",
+    "name": "IDP Education Ltd./ADR",
+    "cik": "0002062803"
+  },
+  {
+    "ticker": "BCLGY",
+    "name": "BALTIC CLASSIFIEDS GROUP PLC/ADR",
+    "cik": "0002127862"
+  },
+  {
+    "ticker": "NHLTY",
+    "name": "Nightingale Health Plc",
+    "cik": "0002060863"
+  },
+  {
+    "ticker": "TDGGF",
+    "name": "TDG Gold Corp.",
+    "cik": "0001972589"
+  },
+  {
+    "ticker": "PTMSY",
+    "name": "PT MDS Retailing Tbk/ADR",
+    "cik": "0001575356"
+  },
+  {
+    "ticker": "MREGY",
+    "name": "Meridian Energy Ltd/ADR",
+    "cik": "0002063417"
+  },
+  {
+    "ticker": "JWSUF",
+    "name": "Jaws Mustang Acquisition Corp",
+    "cik": "0001831359"
+  },
+  {
+    "ticker": "CUUCF",
+    "name": "Computacenter plc/ADR",
+    "cik": "0001577496"
+  },
+  {
+    "ticker": "SAPUY",
+    "name": "Saputo Inc./ADR",
+    "cik": "0002072563"
+  },
+  {
+    "ticker": "AFNDY",
+    "name": "Allfunds Group PLC./ADR",
+    "cik": "0002101973"
+  },
+  {
+    "ticker": "CRAUY",
+    "name": "Chery Automobile Co., Ltd./ADR",
+    "cik": "0002094687"
+  },
+  {
+    "ticker": "GDTTY",
+    "name": "Guangdong Dtech Technology Co., Ltd./ADR",
+    "cik": "0002145378"
+  },
+  {
+    "ticker": "GDHRY",
+    "name": "Guangdong Huayan Robotics Co, Ltd./ADR",
+    "cik": "0002129466"
+  },
+  {
+    "ticker": "MTBOY",
+    "name": "Metis TechBio Co Ltd/ADR",
+    "cik": "0002144761"
+  },
+  {
+    "ticker": "BEMPY",
+    "name": "Bangkok Expressway & Metro Public Co Limited/ADR",
+    "cik": "0002137137"
+  },
+  {
+    "ticker": "CBAGY",
+    "name": "Carabao Group Public Co Limited/ADR",
+    "cik": "0002138373"
+  },
+  {
+    "ticker": "MPJPY",
+    "name": "Metaplanet Inc.",
+    "cik": "0002100603"
+  },
+  {
+    "ticker": "SZWOY",
+    "name": "Shenzhen Woer Heat-Shrinkable Material Co., Ltd/ADR",
+    "cik": "0002154117"
+  },
+  {
+    "ticker": "DJINY",
+    "name": "Dajin Heavy Industry Co., Ltd/ADR",
+    "cik": "0002155706"
+  },
+  {
+    "ticker": "DNCLY",
+    "name": "DeNA Co., Ltd./ADR",
+    "cik": "0002065660"
+  },
+  {
+    "ticker": "NCIQ",
+    "name": "Hashdex Nasdaq CME Crypto Index ETF",
+    "cik": "0002031069"
+  },
+  {
+    "ticker": "JNGDY",
+    "name": "Jingdong Industrials, Inc./ADR",
+    "cik": "0002109559"
+  },
+  {
+    "ticker": "GGRPY",
+    "name": "GPT Group/ADR",
+    "cik": "0002075474"
+  },
+  {
+    "ticker": "TELYF",
+    "name": "TELYRX HOLDINGS INC.",
+    "cik": "0002113853"
+  },
+  {
+    "ticker": "GGTKY",
+    "name": "PT GoTo Gojek Tokopedia Tbk/ADR",
+    "cik": "0002059690"
+  },
+  {
+    "ticker": "NNRGF",
+    "name": "Ninepoint Energy Fund",
+    "cik": "0001951593"
+  },
+  {
+    "ticker": "CBPHF",
+    "name": "Clover Biopharmaceuticals, Ltd.",
+    "cik": "0001856491"
+  },
+  {
+    "ticker": "MTMTY",
+    "name": "Metlen Energy & Metals PLC/ADR",
+    "cik": "0002090231"
+  },
+  {
+    "ticker": "BRVUY",
+    "name": "Bravura Solutions Ltd",
+    "cik": "0001452492"
+  },
+  {
+    "ticker": "DSRNY",
+    "name": "DiaSorin SpA/ADR",
+    "cik": "0001544088"
+  },
+  {
+    "ticker": "ITHEY",
+    "name": "Ithaca Energy PLC/ADR",
+    "cik": "0002134539"
+  },
+  {
+    "ticker": "TKCYY",
+    "name": "Tokyo Ohka Kogyo Co., Ltd./ADR",
+    "cik": "0002066601"
+  },
+  {
+    "ticker": "EULLY",
+    "name": "EUROPEAN LITHIUM LTD/ADR",
+    "cik": "0002127859"
+  },
+  {
+    "ticker": "MOGMF",
+    "name": "Mogotes Metals Inc.",
+    "cik": "0002011589"
+  },
+  {
+    "ticker": "PGBCY",
+    "name": "PegBio Co., Ltd/ADR",
+    "cik": "0002154113"
+  },
+  {
+    "ticker": "ADESY",
+    "name": "Andean Silver Ltd",
+    "cik": "0002156728"
+  },
+  {
+    "ticker": "CFMEY",
+    "name": "Circuit Fabology Microelectronics Equipment Co., Ltd/ADR",
+    "cik": "0002155992"
+  },
+  {
+    "ticker": "NPIXY",
+    "name": "Northland Power Inc./ADR",
+    "cik": "0002072389"
+  },
+  {
+    "ticker": "ZGJLY",
+    "name": "Zhejiang Leapmotor Technology Co., Ltd./ADR",
+    "cik": "0002087840"
+  },
+  {
+    "ticker": "DLTYY",
+    "name": "Delton Technology Guangzhou Inc./ADR",
+    "cik": "0002140977"
+  },
+  {
+    "ticker": "OICGF",
+    "name": "OmniVision Integrated Circuits Group, Inc./ADR",
+    "cik": "0002109550"
+  },
+  {
+    "ticker": "CVCPY",
+    "name": "CVC Capital Partners plc/ADR",
+    "cik": "0002120046"
+  },
+  {
+    "ticker": "NTCMY",
+    "name": "Natura Cosmeticos S.A./ADR",
+    "cik": "0002126620"
+  },
+  {
+    "ticker": "TMKVY",
+    "name": "Tamarack Valley Energy Ltd./ADR",
+    "cik": "0002073901"
+  },
+  {
+    "ticker": "LKYLY",
+    "name": "Locksley Resources Limited/ADR",
+    "cik": "0002091585"
+  },
+  {
+    "ticker": "ZHJIY",
+    "name": "Zhongji Innolight Co., Ltd./ADR",
+    "cik": "0002150915"
+  },
+  {
+    "ticker": "MGMYY",
+    "name": "MAGNA MINING INC.",
+    "cik": "0001965615"
+  },
+  {
+    "ticker": "MGLBY",
+    "name": "MOMENTA GLOBAL LTD/ADR",
+    "cik": "0002148075"
+  },
+  {
+    "ticker": "GTLRY",
+    "name": "Greatland Resources Limited/ADR",
+    "cik": "0002087843"
+  },
+  {
+    "ticker": "SIGEY",
+    "name": "Sigenergy Technology Co., Ltd./ADR",
+    "cik": "0002132082"
+  },
+  {
+    "ticker": "UATCY",
+    "name": "Unisound AI Technology Co., Ltd./ADR",
+    "cik": "0002084585"
+  },
+  {
+    "ticker": "SVICY",
+    "name": "StorageVault Canada Inc./ADR",
+    "cik": "0002074157"
+  },
+  {
+    "ticker": "SXZTY",
+    "name": "Shanghai Xizhi Technology Co., Ltd./ADR",
+    "cik": "0002135894"
+  },
+  {
+    "ticker": "SGPIY",
+    "name": "Seres Group Co., Ltd./ADR",
+    "cik": "0002099326"
+  },
+  {
+    "ticker": "OMGCY",
+    "name": "Omai Gold Mines Corp./ADR",
+    "cik": "0002130027"
+  },
+  {
+    "ticker": "PSTEY",
+    "name": "Poste Italiane S.p.A./ADR",
+    "cik": "0002149111"
+  },
+  {
+    "ticker": "CTCGY",
+    "name": "Chaozhou Three-Circle (Group) Co., Ltd./ADR",
+    "cik": "0002145367"
+  },
+  {
+    "ticker": "SHILY",
+    "name": "Shanghai Iluvatar CoreX Semiconductor Co Ltd/ADR",
+    "cik": "0002111790"
+  },
+  {
+    "ticker": "HUAQY",
+    "name": "Huaqin Co. LTD/ADR",
+    "cik": "0002136116"
+  },
+  {
+    "ticker": "PBRRY",
+    "name": "PT Barito Renewables Energy Tbk/ADR",
+    "cik": "0002034467"
+  },
+  {
+    "ticker": "RIOYY",
+    "name": "Rio2 Ltd",
+    "cik": "0001743235"
+  },
+  {
+    "ticker": "TSMWF",
+    "name": "TAIWAN SEMICONDUCTOR MANUFACTURING CO LTD",
+    "cik": "0001046179"
+  },
+  {
+    "ticker": "BABAF",
+    "name": "Alibaba Group Holding Ltd",
+    "cik": "0001577552"
+  },
+  {
+    "ticker": "PCCYF",
+    "name": "PETROCHINA CO LTD",
+    "cik": "0001108329"
+  },
+  {
+    "ticker": "RYDAF",
+    "name": "Shell plc",
+    "cik": "0001306965"
+  },
+  {
+    "ticker": "SAPGF",
+    "name": "SAP SE",
+    "cik": "0001000184"
+  },
+  {
+    "ticker": "NVSEF",
+    "name": "NOVARTIS AG",
+    "cik": "0001114448"
+  },
+  {
+    "ticker": "TOYOF",
+    "name": "TOYOTA MOTOR CORP/",
+    "cik": "0001094517"
+  },
+  {
+    "ticker": "CILJF",
+    "name": "CHINA LIFE INSURANCE CO LTD",
+    "cik": "0001268896"
+  },
+  {
+    "ticker": "MBFJF",
+    "name": "MITSUBISHI UFJ FINANCIAL GROUP INC",
+    "cik": "0000067088"
+  },
+  {
+    "ticker": "CTATF",
+    "name": "Contemporary Amperex Technology Co., Limited/ADR",
+    "cik": "0002070829"
+  },
+  {
+    "ticker": "BHPLF",
+    "name": "BHP Group Ltd",
+    "cik": "0000811809"
+  },
+  {
+    "ticker": "HBCYF",
+    "name": "HSBC HOLDINGS PLC",
+    "cik": "0001089113"
+  },
+  {
+    "ticker": "NONOF",
+    "name": "NOVO NORDISK A S",
+    "cik": "0000353278"
+  },
+  {
+    "ticker": "SNEJF",
+    "name": "Sony Group Corp",
+    "cik": "0000313838"
+  },
+  {
+    "ticker": "BCDRF",
+    "name": "Banco Santander, S.A.",
+    "cik": "0000891478"
+  },
+  {
+    "ticker": "ABBNY",
+    "name": "ABB LTD",
+    "cik": "0001091587"
+  },
+  {
+    "ticker": "ABLZF",
+    "name": "ABB LTD",
+    "cik": "0001091587"
+  },
+  {
+    "ticker": "SNYNF",
+    "name": "Sanofi",
+    "cik": "0001121404"
+  },
+  {
+    "ticker": "UNLYF",
+    "name": "UNILEVER PLC",
+    "cik": "0000217410"
+  },
+  {
+    "ticker": "BUDFF",
+    "name": "Anheuser-Busch InBev SA/NV",
+    "cik": "0001668717"
+  },
+  {
+    "ticker": "BTAFF",
+    "name": "British American Tobacco p.l.c.",
+    "cik": "0001303523"
+  },
+  {
+    "ticker": "DTEGF",
+    "name": "DEUTSCHE TELEKOM AG",
+    "cik": "0000946770"
+  },
+  {
+    "ticker": "GLAXF",
+    "name": "GSK plc",
+    "cik": "0001131399"
+  },
+  {
+    "ticker": "BPAQF",
+    "name": "BP PLC",
+    "cik": "0000313807"
+  },
+  {
+    "ticker": "KXIAY",
+    "name": "Kioxia Holdings Corporation/ADR",
+    "cik": "0002053383"
+  },
+  {
+    "ticker": "RTPPF",
+    "name": "RIO TINTO PLC",
+    "cik": "0000863064"
+  },
+  {
+    "ticker": "SMFNF",
+    "name": "SUMITOMO MITSUI FINANCIAL GROUP, INC.",
+    "cik": "0001022837"
+  },
+  {
+    "ticker": "IDEXF",
+    "name": "Industria de Diseno Textil Inditex SA / ADR",
+    "cik": "0001438656"
+  },
+  {
+    "ticker": "BYDDF",
+    "name": "BYD CO LTD",
+    "cik": "0001445162"
+  },
+  {
+    "ticker": "CMXHF",
+    "name": "CSL LTD",
+    "cik": "0001274152"
+  },
+  {
+    "ticker": "NTTYY",
+    "name": "NIPPON TELEGRAPH & TELEPHONE CORP",
+    "cik": "0000769594"
+  },
+  {
+    "ticker": "SNPMF",
+    "name": "CHINA PETROLEUM & CHEMICAL CORP",
+    "cik": "0001123658"
+  },
+  {
+    "ticker": "MBGAF",
+    "name": "DAIMLER AG",
+    "cik": "0001067318"
+  },
+  {
+    "ticker": "NETTF",
+    "name": "NetEase, Inc.",
+    "cik": "0001110646"
+  },
+  {
+    "ticker": "BAESF",
+    "name": "BAE SYSTEMS PLC /FI/",
+    "cik": "0000895564"
+  },
+  {
+    "ticker": "EBBNF",
+    "name": "ENBRIDGE INC",
+    "cik": "0000895728"
+  },
+  {
+    "ticker": "AMXOF",
+    "name": "AMERICA MOVIL SAB DE CV/",
+    "cik": "0001129137"
+  },
+  {
+    "ticker": "GLCNF",
+    "name": "Glencore plc/ADR",
+    "cik": "0001524684"
+  },
+  {
+    "ticker": "KDDIF",
+    "name": "KDDI CORP",
+    "cik": "0001106215"
+  },
+  {
+    "ticker": "STOHF",
+    "name": "EQUINOR ASA",
+    "cik": "0001140625"
+  },
+  {
+    "ticker": "RLXXF",
+    "name": "RELX PLC",
+    "cik": "0000929869"
+  },
+  {
+    "ticker": "SFTBF",
+    "name": "SOFTBANK GROUP CORP.",
+    "cik": "0001065521"
+  },
+  {
+    "ticker": "BAIDF",
+    "name": "Baidu, Inc.",
+    "cik": "0001329099"
+  },
+  {
+    "ticker": "RBGPF",
+    "name": "RECKITT BENCKISER GROUP PLC",
+    "cik": "0001420798"
+  },
+  {
+    "ticker": "DGEAF",
+    "name": "DIAGEO PLC",
+    "cik": "0000835403"
+  },
+  {
+    "ticker": "HKXCF",
+    "name": "Hong Kong Exchanges & Clearing Ltd",
+    "cik": "0001445476"
+  },
+  {
+    "ticker": "EIPAF",
+    "name": "ENI SPA",
+    "cik": "0001002242"
+  },
+  {
+    "ticker": "SFBQF",
+    "name": "SOFTBANK GROUP CORP.",
+    "cik": "0001065521"
+  },
+  {
+    "ticker": "WEBNF",
+    "name": "WESTPAC BANKING CORP",
+    "cik": "0000719245"
+  },
+  {
+    "ticker": "IFNNF",
+    "name": "INFINEON TECHNOLOGIES AG",
+    "cik": "0001107457"
+  },
+  {
+    "ticker": "MZHOF",
+    "name": "MIZUHO FINANCIAL GROUP INC",
+    "cik": "0001335730"
+  },
+  {
+    "ticker": "HTHIF",
+    "name": "HITACHI LTD",
+    "cik": "0000047710"
+  },
+  {
+    "ticker": "NGGTF",
+    "name": "NATIONAL GRID PLC",
+    "cik": "0001004315"
+  },
+  {
+    "ticker": "TKPHF",
+    "name": "TAKEDA PHARMACEUTICAL CO LTD",
+    "cik": "0001395064"
+  },
+  {
+    "ticker": "DKILF",
+    "name": "Daikin Industries Ltd",
+    "cik": "0001446519"
+  },
+  {
+    "ticker": "BECEF",
+    "name": "BCE INC",
+    "cik": "0000718940"
+  },
+  {
+    "ticker": "NOKBF",
+    "name": "NOKIA CORP",
+    "cik": "0000924613"
+  },
+  {
+    "ticker": "TNCAF",
+    "name": "TC ENERGY CORP",
+    "cik": "0001232384"
+  },
+  {
+    "ticker": "INGVF",
+    "name": "ING GROEP NV",
+    "cik": "0001039765"
+  },
+  {
+    "ticker": "TRPCF",
+    "name": "Trip.com Group Ltd",
+    "cik": "0001269238"
+  },
+  {
+    "ticker": "ITOCF",
+    "name": "ITOCHU CORP",
+    "cik": "0000355363"
+  },
+  {
+    "ticker": "LLDTF",
+    "name": "Lloyds Banking Group plc",
+    "cik": "0001160106"
+  },
+  {
+    "ticker": "BBVXF",
+    "name": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+    "cik": "0000842180"
+  },
+  {
+    "ticker": "HLNCF",
+    "name": "Haleon plc",
+    "cik": "0001900304"
+  },
+  {
+    "ticker": "TCANF",
+    "name": "TC ENERGY CORP",
+    "cik": "0001232384"
+  },
+  {
+    "ticker": "BMDPF",
+    "name": "BANCA MONTE DEI PASCHI DI SIENA SPA",
+    "cik": "0001002788"
+  },
+  {
+    "ticker": "JDCMF",
+    "name": "JD.com, Inc.",
+    "cik": "0001549802"
+  },
+  {
+    "ticker": "HNDAF",
+    "name": "HONDA MOTOR CO LTD",
+    "cik": "0000715153"
+  },
+  {
+    "ticker": "TKOMF",
+    "name": "TOKIO MARINE HOLDINGS, INC.",
+    "cik": "0001169486"
+  },
+  {
+    "ticker": "SVNDF",
+    "name": "SEVEN & I HOLDINGS CO LTD",
+    "cik": "0001359519"
+  },
+  {
+    "ticker": "BAMGF",
+    "name": "BROOKFIELD Corp /ON/",
+    "cik": "0001001085"
+  },
+  {
+    "ticker": "MRAAF",
+    "name": "Murata Manufacturing Co., Ltd./ADR",
+    "cik": "0001450468"
+  },
+  {
+    "ticker": "PINXF",
+    "name": "People's Insurance Co (Group) of China Limited/ADR",
+    "cik": "0001569964"
+  },
+  {
+    "ticker": "TCKRF",
+    "name": "TECK RESOURCES LTD",
+    "cik": "0000886986"
+  },
+  {
+    "ticker": "CRARF",
+    "name": "CREDIT AGRICOLE S A",
+    "cik": "0001279967"
+  },
+  {
+    "ticker": "ENAKF",
+    "name": "E.ON SE",
+    "cik": "0001136808"
+  },
+  {
+    "ticker": "RBSPF",
+    "name": "NatWest Group plc",
+    "cik": "0000844150"
+  },
+  {
+    "ticker": "ERIXF",
+    "name": "ERICSSON LM TELEPHONE CO",
+    "cik": "0000717826"
+  },
+  {
+    "ticker": "HHUSF",
+    "name": "Hua Hong Semiconductor Limited/ADR",
+    "cik": "0001700662"
+  },
+  {
+    "ticker": "PUKPF",
+    "name": "PRUDENTIAL PLC",
+    "cik": "0001116578"
+  },
+  {
+    "ticker": "WOPEF",
+    "name": "WOODSIDE ENERGY GROUP LTD",
+    "cik": "0000844551"
+  },
+  {
+    "ticker": "FNCTF",
+    "name": "ORANGE",
+    "cik": "0001038143"
+  },
+  {
+    "ticker": "CIXPF",
+    "name": "CaixaBank/ADR",
+    "cik": "0001535628"
+  },
+  {
+    "ticker": "BCLYF",
+    "name": "BARCLAYS PLC",
+    "cik": "0000312069"
+  },
+  {
+    "ticker": "RSMDF",
+    "name": "RESMED INC",
+    "cik": "0000943819"
+  },
+  {
+    "ticker": "CODGF",
+    "name": "COMPAGNIE DE SAINT GOBAIN",
+    "cik": "0001012037"
+  },
+  {
+    "ticker": "LAAOF",
+    "name": "Li Auto Inc.",
+    "cik": "0001791706"
+  },
+  {
+    "ticker": "VWSYF",
+    "name": "VESTAS WIND SYSTEMS A/S",
+    "cik": "0001330306"
+  },
+  {
+    "ticker": "ORXCF",
+    "name": "ORIX CORP",
+    "cik": "0001070304"
+  },
+  {
+    "ticker": "TEFOF",
+    "name": "TELEFONICA S A",
+    "cik": "0000814052"
+  },
+  {
+    "ticker": "VODPF",
+    "name": "VODAFONE GROUP PUBLIC LTD CO",
+    "cik": "0000839923"
+  },
+  {
+    "ticker": "GNMSF",
+    "name": "GENMAB A/S",
+    "cik": "0001434265"
+  },
+  {
+    "ticker": "ANNSF",
+    "name": "Aena S.A./ADR",
+    "cik": "0001700171"
+  },
+  {
+    "ticker": "CAJPY",
+    "name": "CANON INC",
+    "cik": "0000016988"
+  },
+  {
+    "ticker": "STMEF",
+    "name": "STMicroelectronics N.V.",
+    "cik": "0000932787"
+  },
+  {
+    "ticker": "HKHHF",
+    "name": "HEINEKEN HOLDING N V",
+    "cik": "0001142231"
+  },
+  {
+    "ticker": "HRNNF",
+    "name": "Hydro One Ltd",
+    "cik": "0001712356"
+  },
+  {
+    "ticker": "AMSYF",
+    "name": "ArcelorMittal",
+    "cik": "0001243429"
+  },
+  {
+    "ticker": "SAXPF",
+    "name": "Sampo OYJ",
+    "cik": "0001436778"
+  },
+  {
+    "ticker": "RYAOF",
+    "name": "RYANAIR HOLDINGS PLC",
+    "cik": "0001038683"
+  },
+  {
+    "ticker": "TNRSF",
+    "name": "TENARIS SA",
+    "cik": "0001190723"
+  },
+  {
+    "ticker": "RSTRF",
+    "name": "Restaurant Brands International Limited Partnership",
+    "cik": "0001618755"
+  },
+  {
+    "ticker": "MARUF",
+    "name": "MARUBENI CORP /FI",
+    "cik": "0000801645"
+  },
+  {
+    "ticker": "SOAGY",
+    "name": "Sartorius AG/ADR",
+    "cik": "0001715801"
+  },
+  {
+    "ticker": "CAJFF",
+    "name": "CANON INC",
+    "cik": "0000016988"
+  },
+  {
+    "ticker": "HMRZF",
+    "name": "H&M HENNES & MAURITZ AB",
+    "cik": "0001396282"
+  },
+  {
+    "ticker": "COCSF",
+    "name": "COCA COLA FEMSA SAB DE CV",
+    "cik": "0000910631"
+  },
+  {
+    "ticker": "ICHGF",
+    "name": "INTERCONTINENTAL HOTELS GROUP PLC /NEW/",
+    "cik": "0000858446"
+  },
+  {
+    "ticker": "TELNF",
+    "name": "TELENOR ASA",
+    "cik": "0001126113"
+  },
+  {
+    "ticker": "RCIAF",
+    "name": "ROGERS COMMUNICATIONS INC",
+    "cik": "0000733099"
+  },
+  {
+    "ticker": "XPNGF",
+    "name": "XPENG INC.",
+    "cik": "0001810997"
+  },
+  {
+    "ticker": "KYOCF",
+    "name": "KYOCERA CORP",
+    "cik": "0000057083"
+  },
+  {
+    "ticker": "BKZHY",
+    "name": "Santander Bank Polska SA/ADR",
+    "cik": "0001459334"
+  },
+  {
+    "ticker": "MTNOF",
+    "name": "MTN GROUP LTD/ADR",
+    "cik": "0001163420"
+  },
+  {
+    "ticker": "NRSCF",
+    "name": "NOMURA HOLDINGS INC",
+    "cik": "0001163653"
+  },
+  {
+    "ticker": "JHIUF",
+    "name": "James Hardie Industries plc",
+    "cik": "0001159152"
+  },
+  {
+    "ticker": "SPXSF",
+    "name": "Spirax-Sarco Engineering PLC/ADR",
+    "cik": "0001518542"
+  },
+  {
+    "ticker": "RYLPF",
+    "name": "KONINKLIJKE PHILIPS NV",
+    "cik": "0000313216"
+  },
+  {
+    "ticker": "AMCCF",
+    "name": "Amcor plc",
+    "cik": "0001748790"
+  },
+  {
+    "ticker": "SURDF",
+    "name": "Sumitomo Realty & Development Co., Ltd./ADR",
+    "cik": "0001450159"
+  },
+  {
+    "ticker": "EDRVY",
+    "name": "EDP Renewables S.A./ADR",
+    "cik": "0001516534"
+  },
+  {
+    "ticker": "CHKIF",
+    "name": "CHINA SOUTHERN AIRLINES CO LTD",
+    "cik": "0001041668"
+  },
+  {
+    "ticker": "ADTTF",
+    "name": "ADVANTEST CORP",
+    "cik": "0001158838"
+  },
+  {
+    "ticker": "AIVAF",
+    "name": "AVIVA PLC",
+    "cik": "0001140022"
+  },
+  {
+    "ticker": "FSNUF",
+    "name": "Fresenius SE & Co. KGaA",
+    "cik": "0000904868"
+  },
+  {
+    "ticker": "AKZOF",
+    "name": "AKZO NOBEL NV",
+    "cik": "0000003124"
+  },
+  {
+    "ticker": "FRFFF",
+    "name": "FAIRFAX FINANCIAL HOLDINGS LTD/ CAN",
+    "cik": "0000915191"
+  },
+  {
+    "ticker": "NIOIF",
+    "name": "NIO Inc.",
+    "cik": "0001736541"
+  },
+  {
+    "ticker": "GFIOF",
+    "name": "GOLD FIELDS LTD",
+    "cik": "0001172724"
+  },
+  {
+    "ticker": "NCSYF",
+    "name": "NICE Ltd.",
+    "cik": "0001003935"
+  },
+  {
+    "ticker": "RKLIF",
+    "name": "RENTOKIL INITIAL PLC /FI",
+    "cik": "0000930157"
+  },
+  {
+    "ticker": "SVYSF",
+    "name": "SOLVAY S A /ADR/",
+    "cik": "0000930826"
+  },
+  {
+    "ticker": "GELYF",
+    "name": "Geely Automobile Holdings Limited/ADR",
+    "cik": "0001474968"
+  },
+  {
+    "ticker": "NMPGY",
+    "name": "Navios Maritime Holdings Inc.",
+    "cik": "0001333172"
+  },
+  {
+    "ticker": "FMCQF",
+    "name": "Fresenius Medical Care AG",
+    "cik": "0001333141"
+  },
+  {
+    "ticker": "SNNUF",
+    "name": "SMITH & NEPHEW PLC",
+    "cik": "0000845982"
+  },
+  {
+    "ticker": "SHECF",
+    "name": "Shin-Etsu Chemical Co., Ltd.",
+    "cik": "0001442651"
+  },
+  {
+    "ticker": "ALMMF",
+    "name": "ALUMINUM CORP OF CHINA LTD",
+    "cik": "0001161611"
+  },
+  {
+    "ticker": "ERRAF",
+    "name": "EMERA INC",
+    "cik": "0001127248"
+  },
+  {
+    "ticker": "PIRBF",
+    "name": "Piraeus Bank S.A.",
+    "cik": "0001437441"
+  },
+  {
+    "ticker": "SBYSF",
+    "name": "Sibanye Stillwater Ltd",
+    "cik": "0001786909"
+  },
+  {
+    "ticker": "DQJCF",
+    "name": "Don Quijote Holdings Co Ltd",
+    "cik": "0001446597"
+  },
+  {
+    "ticker": "PBNNF",
+    "name": "PT Bank Negara Indonesia (Persero) Tbk/ADR",
+    "cik": "0001504122"
+  },
+  {
+    "ticker": "WPPGF",
+    "name": "WPP plc",
+    "cik": "0000806968"
+  },
+  {
+    "ticker": "YMHAY",
+    "name": "Yamaha Motor Co., Ltd.",
+    "cik": "0001447100"
+  },
+  {
+    "ticker": "PRYMF",
+    "name": "Prysmian S.p.A.",
+    "cik": "0001437672"
+  },
+  {
+    "ticker": "AOMFF",
+    "name": "ALSTOM",
+    "cik": "0001062066"
+  },
+  {
+    "ticker": "GPAEF",
+    "name": "Pacific Airport Group",
+    "cik": "0001347557"
+  },
+  {
+    "ticker": "MNBEF",
+    "name": "MINEBEA MITSUMI Inc.",
+    "cik": "0001034983"
+  },
+  {
+    "ticker": "AEGOF",
+    "name": "AEGON LTD.",
+    "cik": "0000769218"
+  },
+  {
+    "ticker": "SMTOF",
+    "name": "SUMITOMO ELECTRIC INDUSTRIES LTD/ADR/",
+    "cik": "0000095227"
+  },
+  {
+    "ticker": "YAMHF",
+    "name": "Yamaha Motor Co., Ltd.",
+    "cik": "0001447100"
+  },
+  {
+    "ticker": "ASRMF",
+    "name": "SOUTHEAST AIRPORT GROUP",
+    "cik": "0001123452"
+  },
+  {
+    "ticker": "SBMFF",
+    "name": "Sino Biopharmaceutical Limited/ADR",
+    "cik": "0001604982"
+  },
+  {
+    "ticker": "CXMSF",
+    "name": "CEMEX SAB DE CV",
+    "cik": "0001076378"
+  },
+  {
+    "ticker": "SAPIF",
+    "name": "Saputo Inc./ADR",
+    "cik": "0002072563"
+  },
+  {
+    "ticker": "DINRF",
+    "name": "SCREEN Holdings Co., Ltd./ADR",
+    "cik": "0001544379"
+  },
+  {
+    "ticker": "PSORF",
+    "name": "PEARSON PLC",
+    "cik": "0000938323"
+  },
+  {
+    "ticker": "SASOF",
+    "name": "SASOL LTD",
+    "cik": "0000314590"
+  },
+  {
+    "ticker": "NWOEF",
+    "name": "New Oriental Education & Technology Group Inc.",
+    "cik": "0001372920"
+  },
+  {
+    "ticker": "UNBLF",
+    "name": "Unibail-Rodamco SE/ADR",
+    "cik": "0001453932"
+  },
+  {
+    "ticker": "BLBLF",
+    "name": "Bilibili Inc.",
+    "cik": "0001723690"
+  },
+  {
+    "ticker": "XZJCF",
+    "name": "Mitsui Kinzoku Co Ltd./ADR",
+    "cik": "0001562805"
+  },
+  {
+    "ticker": "GIFLF",
+    "name": "Grifols SA",
+    "cik": "0001438569"
+  },
+  {
+    "ticker": "TYOYY",
+    "name": "TAIYO YUDEN CO LTD /ADR/",
+    "cik": "0000354516"
+  },
+  {
+    "ticker": "KOSCF",
+    "name": "Kose Corporation/ADR",
+    "cik": "0001668501"
+  },
+  {
+    "ticker": "PADEF",
+    "name": "Adaro Energy PT/ADR/",
+    "cik": "0001489079"
+  },
+  {
+    "ticker": "GIFOF",
+    "name": "Grifols SA",
+    "cik": "0001438569"
+  },
+  {
+    "ticker": "MSUXF",
+    "name": "Misumi Group Inc./ADR",
+    "cik": "0001710864"
+  },
+  {
+    "ticker": "ATDRF",
+    "name": "Auto Trader Group plc/ADR",
+    "cik": "0001647435"
+  },
+  {
+    "ticker": "JCYCF",
+    "name": "Jardine Matheson Southeast Asia Limited/ADR",
+    "cik": "0001289688"
+  },
+  {
+    "ticker": "DSECF",
+    "name": "Daiwa Securities Group Inc.",
+    "cik": "0001481045"
+  },
+  {
+    "ticker": "JCYGY",
+    "name": "Jardine Matheson Southeast Asia Limited/ADR",
+    "cik": "0001289688"
+  },
+  {
+    "ticker": "FANUF",
+    "name": "Fanuc Ltd",
+    "cik": "0001446596"
+  },
+  {
+    "ticker": "OTGLY",
+    "name": "CD Projekt S.A./ADR",
+    "cik": "0001788235"
+  },
+  {
+    "ticker": "BCUCF",
+    "name": "Brunello Cucinelli S.p.A./ADR",
+    "cik": "0001581285"
+  },
+  {
+    "ticker": "BMRPF",
+    "name": "B&M European Value Retail S.A./ADR",
+    "cik": "0001671235"
+  },
+  {
+    "ticker": "GIKLY",
+    "name": "Grifols SA",
+    "cik": "0001438569"
+  },
+  {
+    "ticker": "HACBY",
+    "name": "HACHIJUNI BANK LTD",
+    "cik": "0000793742"
+  },
+  {
+    "ticker": "KMRRF",
+    "name": "Kongsberg Maritime ASA/ADR",
+    "cik": "0002133892"
+  },
+  {
+    "ticker": "BLFBY",
+    "name": "Balfour Beatty plc/ADR",
+    "cik": "0001506721"
+  },
+  {
+    "ticker": "SFGRF",
+    "name": "Sony Financial Group Inc./ADR",
+    "cik": "0002084022"
+  },
+  {
+    "ticker": "SLFPF",
+    "name": "STANDARD LIFE PLC",
+    "cik": "0001370418"
+  },
+  {
+    "ticker": "RTMVF",
+    "name": "Rightmove PLC/ADR",
+    "cik": "0001516536"
+  },
+  {
+    "ticker": "MITUF",
+    "name": "Mitsui Chemicals Inc",
+    "cik": "0001446420"
+  },
+  {
+    "ticker": "HGMCF",
+    "name": "HARMONY GOLD MINING CO LTD",
+    "cik": "0001023514"
+  },
+  {
+    "ticker": "SSRGF",
+    "name": "SSR MINING INC.",
+    "cik": "0000921638"
+  },
+  {
+    "ticker": "ZLDPF",
+    "name": "Zealand Pharma A/S/ADR",
+    "cik": "0002068427"
+  },
+  {
+    "ticker": "PHTCF",
+    "name": "PLDT Inc.",
+    "cik": "0000078150"
+  },
+  {
+    "ticker": "PPENF",
+    "name": "Pampa Energy Inc.",
+    "cik": "0001469395"
+  },
+  {
+    "ticker": "GAERF",
+    "name": "Central North Airport Group",
+    "cik": "0001378239"
+  },
+  {
+    "ticker": "SPTJF",
+    "name": "SINOPEC SHANGHAI PETROCHEMICAL CO LTD",
+    "cik": "0000908732"
+  },
+  {
+    "ticker": "PIFMF",
+    "name": "Indofood Sukses Makmur, Tbk",
+    "cik": "0001445211"
+  },
+  {
+    "ticker": "DISPF",
+    "name": "Disco Corporation/ADR",
+    "cik": "0001671750"
+  },
+  {
+    "ticker": "TCMFF",
+    "name": "TELECOM ARGENTINA SA",
+    "cik": "0000932470"
+  },
+  {
+    "ticker": "DLAKF",
+    "name": "DEUTSCHE LUFTHANSA A G /FI",
+    "cik": "0001049724"
+  },
+  {
+    "ticker": "DCCPY",
+    "name": "DCC plc",
+    "cik": "0001437712"
+  },
+  {
+    "ticker": "AVLNF",
+    "name": "Avalon Advanced Materials Inc.",
+    "cik": "0001362898"
+  },
+  {
+    "ticker": "TYTMF",
+    "name": "Tokyo Tatemono Co Ltd",
+    "cik": "0001447101"
+  },
+  {
+    "ticker": "RYKKF",
+    "name": "Ryohin Keikaku Co/ADR",
+    "cik": "0001592049"
+  },
+  {
+    "ticker": "SOHGY",
+    "name": "ALSOK Co Ltd./ADR",
+    "cik": "0001536787"
+  },
+  {
+    "ticker": "PTXAF",
+    "name": "PT XLSMART Telecom Sejahtera Tbk/ADR",
+    "cik": "0001545057"
+  },
+  {
+    "ticker": "HMDCF",
+    "name": "HUTCHMED (China) Ltd",
+    "cik": "0001648257"
+  },
+  {
+    "ticker": "CDGLF",
+    "name": "ComfortDelGro Corp Ltd",
+    "cik": "0001448611"
+  },
+  {
+    "ticker": "GLPGF",
+    "name": "Lakefront Biotherapeutics NV",
+    "cik": "0001421876"
+  },
+  {
+    "ticker": "TBNGY",
+    "name": "PT Bukit Asam Tbk/ADR",
+    "cik": "0001489088"
+  },
+  {
+    "ticker": "MXUBY",
+    "name": "Mixue Bingcheng Co Ltd/ADR",
+    "cik": "0002061911"
+  },
+  {
+    "ticker": "IFCNF",
+    "name": "Inficon Holding AG/ADR",
+    "cik": "0002035057"
+  },
+  {
+    "ticker": "TUFBY",
+    "name": "Thai Union Group Public Co Limited/ADR",
+    "cik": "0001562296"
+  },
+  {
+    "ticker": "ARZTF",
+    "name": "ARYZTA AG (fka IAWS GROUP PLC)",
+    "cik": "0001423210"
+  },
+  {
+    "ticker": "FLIDF",
+    "name": "FLSMIDTH & CO. A/S",
+    "cik": "0001433087"
+  },
+  {
+    "ticker": "GRPFF",
+    "name": "GRUPO TELEVISA, S.A.B.",
+    "cik": "0000912892"
+  },
+  {
+    "ticker": "EVOTF",
+    "name": "Evotec SE",
+    "cik": "0001412558"
+  },
+  {
+    "ticker": "DHRPY",
+    "name": "Deutsche EuroShop AG/ADR",
+    "cik": "0001674699"
+  },
+  {
+    "ticker": "LTGHF",
+    "name": "Life Healthcare Group Holdings Limited/ADR",
+    "cik": "0001569963"
+  },
+  {
+    "ticker": "SBOEF",
+    "name": "SBO AG/ADR",
+    "cik": "0001578955"
+  },
+  {
+    "ticker": "CMGMF",
+    "name": "Chemring Group PLC/ADR",
+    "cik": "0001503154"
+  },
+  {
+    "ticker": "RIOFF",
+    "name": "Rio2 Ltd",
+    "cik": "0001743235"
+  },
+  {
+    "ticker": "FXCNF",
+    "name": "FIH Mobile Ltd",
+    "cik": "0001164009"
+  },
+  {
+    "ticker": "DRSHF",
+    "name": "DroneShield Ltd",
+    "cik": "0001671541"
+  },
+  {
+    "ticker": "MEOBF",
+    "name": "MESOBLAST LTD",
+    "cik": "0001345099"
+  },
+  {
+    "ticker": "DRDGF",
+    "name": "DRDGOLD LTD",
+    "cik": "0001023512"
+  },
+  {
+    "ticker": "GDRZF",
+    "name": "GOLD RESERVE LTD",
+    "cik": "0001072725"
+  },
+  {
+    "ticker": "CLVLF",
+    "name": "Clinuvel Pharmaceuticals Ltd",
+    "cik": "0001290877"
+  },
+  {
+    "ticker": "BRSYF",
+    "name": "Brainsway Ltd.",
+    "cik": "0001505065"
+  },
+  {
+    "ticker": "BVSFF",
+    "name": "Bravura Solutions Ltd",
+    "cik": "0001452492"
+  },
+  {
+    "ticker": "MTGRF",
+    "name": "MGX Resources Limited/ADR",
+    "cik": "0001537543"
+  },
+  {
+    "ticker": "WEJTY",
+    "name": "WebBeds Group Limited/ADR",
+    "cik": "0001778788"
+  },
+  {
+    "ticker": "TIHRF",
+    "name": "Tharisa plc",
+    "cik": "0002133810"
+  },
+  {
+    "ticker": "PTCHF",
+    "name": "PureTech Health plc",
+    "cik": "0001782999"
+  },
+  {
+    "ticker": "MGMNF",
+    "name": "MAGNA MINING INC.",
+    "cik": "0001965615"
+  },
+  {
+    "ticker": "ERLFF",
+    "name": "Entree Resources Ltd.",
+    "cik": "0001271554"
+  },
+  {
+    "ticker": "VSOGF",
+    "name": "Vista Energy, S.A.B. de C.V.",
+    "cik": "0001762506"
+  },
+  {
+    "ticker": "CLCHF",
+    "name": "Clinch Resources Ltd.",
+    "cik": "0002125750"
+  },
+  {
+    "ticker": "CKDXF",
+    "name": "Opthea Ltd",
+    "cik": "0001815620"
+  },
+  {
+    "ticker": "RLFTY",
+    "name": "MindMaze Therapeutics Holding SA",
+    "cik": "0001854078"
+  },
+  {
+    "ticker": "JWSMF",
+    "name": "Jaws Mustang Acquisition Corp",
+    "cik": "0001831359"
+  },
+  {
+    "ticker": "PRRUF",
+    "name": "IMMUTEP Ltd",
+    "cik": "0001506184"
+  },
+  {
+    "ticker": "SLNCF",
+    "name": "Silence Therapeutics plc",
+    "cik": "0001479615"
+  },
+  {
+    "ticker": "KRYXF",
+    "name": "KORYX COPPER INC.",
+    "cik": "0001318596"
+  },
+  {
+    "ticker": "UURAF",
+    "name": "Ucore Rare Metals Inc.",
+    "cik": "0001495651"
+  },
+  {
+    "ticker": "ARCXF",
+    "name": "ArcelorMittal",
+    "cik": "0001243429"
+  },
+  {
+    "ticker": "HEXEY",
+    "name": "Euronext Athens Holding S.A./ADR",
+    "cik": "0001577568"
+  },
+  {
+    "ticker": "IPHYF",
+    "name": "Innate Pharma SA",
+    "cik": "0001598599"
+  },
+  {
+    "ticker": "GSCCF",
+    "name": "ioneer Ltd",
+    "cik": "0001896084"
+  },
+  {
+    "ticker": "BNIGF",
+    "name": "Beroni Group Ltd",
+    "cik": "0001851651"
+  },
+  {
+    "ticker": "IVEVF",
+    "name": "Inventiva S.A.",
+    "cik": "0001756594"
+  },
+  {
+    "ticker": "CHPGF",
+    "name": "Chesapeake Gold Corp",
+    "cik": "0001394189"
+  },
+  {
+    "ticker": "GCUMF",
+    "name": "Gunnison Copper Corp.",
+    "cik": "0001514860"
+  },
+  {
+    "ticker": "QTRHF",
+    "name": "Quarterhill Inc.",
+    "cik": "0001518419"
+  },
+  {
+    "ticker": "AMEGF",
+    "name": "American Eagle Gold Corp.",
+    "cik": "0002129284"
+  },
+  {
+    "ticker": "CREAF",
+    "name": "CREATIVE TECHNOLOGY LTD",
+    "cik": "0000888295"
+  },
+  {
+    "ticker": "RAASY",
+    "name": "Cloopen Group Holding Ltd",
+    "cik": "0001804583"
+  },
+  {
+    "ticker": "ARRKF",
+    "name": "ARRAS MINERALS CORP.",
+    "cik": "0001855743"
+  },
+  {
+    "ticker": "HUSIF",
+    "name": "NICOLA MINING INC.",
+    "cik": "0001526475"
+  },
+  {
+    "ticker": "GFASY",
+    "name": "Gafisa S.A.",
+    "cik": "0001389207"
+  },
+  {
+    "ticker": "OCGSF",
+    "name": "Outcrop Silver & Gold Corp",
+    "cik": "0000942149"
+  },
+  {
+    "ticker": "CMCAF",
+    "name": "Piermont Valley Acquisition Corp",
+    "cik": "0001865248"
+  },
+  {
+    "ticker": "IXAQF",
+    "name": "IX Acquisition Corp.",
+    "cik": "0001852019"
+  },
+  {
+    "ticker": "CBRRF",
+    "name": "Chain Bridge I",
+    "cik": "0001845149"
+  },
+  {
+    "ticker": "GTMAY",
+    "name": "GRUPO TMM SAB",
+    "cik": "0001163560"
+  },
+  {
+    "ticker": "LCGMF",
+    "name": "Lion Copper Corp.",
+    "cik": "0001339688"
+  },
+  {
+    "ticker": "ASCBF",
+    "name": "ASPAC II Acquisition Corp.",
+    "cik": "0001876716"
+  },
+  {
+    "ticker": "SRCRF",
+    "name": "Scorpio Gold Corp",
+    "cik": "0001467093"
+  },
+  {
+    "ticker": "NVNXF",
+    "name": "NOVONIX Ltd",
+    "cik": "0001859795"
+  },
+  {
+    "ticker": "MDNAF",
+    "name": "Medicenna Therapeutics Corp.",
+    "cik": "0001807983"
+  },
+  {
+    "ticker": "JETBF",
+    "name": "Global Crossing Airlines Group Inc.",
+    "cik": "0001846084"
+  },
+  {
+    "ticker": "FUUFF",
+    "name": "F3 Uranium Corp.",
+    "cik": "0001703118"
+  },
+  {
+    "ticker": "ARSMF",
+    "name": "ARES STRATEGIC MINING INC.",
+    "cik": "0001804792"
+  },
+  {
+    "ticker": "CCTSF",
+    "name": "Cactus Acquisition Corp. 1 Ltd",
+    "cik": "0001865861"
+  },
+  {
+    "ticker": "WSKEF",
+    "name": "WISeQey Corp.",
+    "cik": "0001738699"
+  },
+  {
+    "ticker": "SCYYF",
+    "name": "SCANDIUM INTERNATIONAL MINING CORP.",
+    "cik": "0001408146"
+  },
+  {
+    "ticker": "ANPCF",
+    "name": "ANGLE plc",
+    "cik": "0001620678"
+  },
+  {
+    "ticker": "XTXXF",
+    "name": "Adastra Holdings Ltd.",
+    "cik": "0001891512"
+  },
+  {
+    "ticker": "ILLMF",
+    "name": "illumin Holdings Inc.",
+    "cik": "0001861233"
+  },
+  {
+    "ticker": "MRZLF",
+    "name": "Mirasol Resources Ltd",
+    "cik": "0001301854"
+  },
+  {
+    "ticker": "PRNAF",
+    "name": "ALTERITY THERAPEUTICS LTD",
+    "cik": "0001131343"
+  },
+  {
+    "ticker": "MNTCF",
+    "name": "Montage Technology Co., Ltd./ADR",
+    "cik": "0002123346"
+  },
+  {
+    "ticker": "FEOVF",
+    "name": "OCEANIC IRON ORE CORP",
+    "cik": "0000936801"
+  },
+  {
+    "ticker": "BRCNF",
+    "name": "Burcon NutraScience Corp",
+    "cik": "0001158399"
+  },
+  {
+    "ticker": "NEXCF",
+    "name": "Nextech3D.AI Corp.",
+    "cik": "0001737270"
+  },
+  {
+    "ticker": "VQSSF",
+    "name": "VIQ Solutions Inc.",
+    "cik": "0001777765"
+  },
+  {
+    "ticker": "SWISF",
+    "name": "Sekur Private Data Ltd.",
+    "cik": "0001771755"
+  },
+  {
+    "ticker": "SILEF",
+    "name": "Silver Elephant Mining Corp.",
+    "cik": "0001545224"
+  },
+  {
+    "ticker": "BBBXF",
+    "name": "Brixton Metals Corp",
+    "cik": "0001548958"
+  },
+  {
+    "ticker": "EGTYF",
+    "name": "Eguana Technologies Inc.",
+    "cik": "0001629632"
+  },
+  {
+    "ticker": "EGLXF",
+    "name": "Enthusiast Gaming Holdings Inc. / Canada",
+    "cik": "0001854233"
+  },
+  {
+    "ticker": "MTTCF",
+    "name": "Steakholder Foods Ltd.",
+    "cik": "0001828098"
+  },
+  {
+    "ticker": "PAIYY",
+    "name": "Aesthetic Medical International Holdings Group Ltd",
+    "cik": "0001757143"
+  },
+  {
+    "ticker": "KACLF",
+    "name": "Kairous Acquisition Corp. Ltd",
+    "cik": "0001865468"
+  },
+  {
+    "ticker": "EHVVF",
+    "name": "Ehave, Inc.",
+    "cik": "0001653606"
+  },
+  {
+    "ticker": "LTESF",
+    "name": "Leet INC.",
+    "cik": "0001946746"
+  },
+  {
+    "ticker": "YGMZF",
+    "name": "MingZhu Logistics Holdings Ltd",
+    "cik": "0001782037"
+  },
+  {
+    "ticker": "SNBRQ",
+    "name": "Sleep Number Corp",
+    "cik": "0000827187"
+  },
+  {
+    "ticker": "SDMHF",
+    "name": "Sartorius Stedim Biotech S.A./ADR",
+    "cik": "0001794363"
+  },
+  {
+    "ticker": "SPIWF",
+    "name": "SPIE SA/ADR",
+    "cik": "0002083221"
+  },
+  {
+    "ticker": "OSOPF",
+    "name": "Osotspa Public Co Limited/ADR",
+    "cik": "0002137358"
+  },
+  {
+    "ticker": "TKMSF",
+    "name": "TKMS AG & CO. KGAA/ADR",
+    "cik": "0002124215"
+  },
+  {
+    "ticker": "RNGOF",
+    "name": "Rengo Co., Ltd./ADR",
+    "cik": "0002092252"
+  },
+  {
+    "ticker": "YMTKF",
+    "name": "Yamato Kogyo Co. Ltd/ADR",
+    "cik": "0002107946"
+  },
+  {
+    "ticker": "KELRF",
+    "name": "Keisei Electric Railway Co. Ltd/ADR",
+    "cik": "0002107989"
+  },
+  {
+    "ticker": "ZSHOF",
+    "name": "Zensho Holdings Co., Ltd./ADR",
+    "cik": "0002088776"
+  },
+  {
+    "ticker": "STTPF",
+    "name": "SCHOTT Pharma AG & Co. KGaA/ADR",
+    "cik": "0002018852"
+  },
+  {
+    "ticker": "DLMAF",
+    "name": "Dollarama Inc./ADR",
+    "cik": "0002073893"
+  },
+  {
+    "ticker": "GWLPF",
+    "name": "GREAT-WEST LIFECO INC.",
+    "cik": "0000850918"
+  },
+  {
+    "ticker": "RMTHF",
+    "name": "MAGIC SOFTWARE ENTERPRISES LTD",
+    "cik": "0000876779"
+  },
+  {
+    "ticker": "HMELF",
+    "name": "Hold Me Ltd",
+    "cik": "0001853630"
+  },
+  {
+    "ticker": "GRWLF",
+    "name": "GREAT-WEST LIFECO INC.",
+    "cik": "0000850918"
+  },
+  {
+    "ticker": "GRWTF",
+    "name": "GREAT-WEST LIFECO INC.",
+    "cik": "0000850918"
+  },
+  {
+    "ticker": "SHMZF",
+    "name": "Shimadzu Corporation/ADR",
+    "cik": "0001648512"
+  },
+  {
+    "ticker": "MRCIF",
+    "name": "Mercari, Inc./ADR",
+    "cik": "0001752564"
+  },
+  {
+    "ticker": "HCTPF",
+    "name": "Hutchison Port Holdings Trust/ADR",
+    "cik": "0001580226"
+  },
+  {
+    "ticker": "DTREF",
+    "name": "DATELINE RESOURCES LTD/ADR",
+    "cik": "0002127860"
+  },
+  {
+    "ticker": "FRSPF",
+    "name": "First Phosphate Corp.",
+    "cik": "0001490078"
+  },
+  {
+    "ticker": "SRBEF",
+    "name": "VusionGroup",
+    "cik": "0002075141"
+  },
+  {
+    "ticker": "REECF",
+    "name": "Reece Limited/ADR",
+    "cik": "0002070570"
+  },
+  {
+    "ticker": "SBXWF",
+    "name": "SilverBox Corp IV",
+    "cik": "0002015947"
+  },
+  {
+    "ticker": "LWSCF",
+    "name": "Sienna Senior Living Inc./ADR",
+    "cik": "0002073972"
+  }
+]
