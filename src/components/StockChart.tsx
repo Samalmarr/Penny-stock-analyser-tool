@@ -62,26 +62,47 @@ export const StockChart: React.FC<StockChartProps> = ({ ticker, history = [], cu
     // Preserve history prop if available instead of wiping out to empty
     if (history && history.length > 0) {
       setPoints(history);
+    // Preserve authentic history prop if available
+    if (history && history.length > 0) {
+      setPoints(history);
     } else {
-      const basePrice = currentPrice || 0.021;
+      const basePrice = currentPrice || 0.020;
+      const isQ = ticker.endsWith('Q');
+      let seed = 0;
+      for (let i = 0; i < ticker.length; i++) seed = (seed << 5) - seed + ticker.charCodeAt(i);
+
+      const generated: HistoricalPricePoint[] = [];
       const now = new Date();
-      const generated = Array.from({ length: 12 }, (_, i) => {
-        const d = new Date(now.getFullYear(), now.getMonth() - (11 - i), 1);
-        const p = Math.max(0.0001, basePrice * (0.85 + Math.sin(i * 1.3) * 0.22));
-        return {
+      let p = isQ ? basePrice * 3.5 : basePrice * 1.15;
+
+      for (let i = 11; i >= 0; i--) {
+        const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+        const rand = (Math.sin(seed + i * 9301 + 49297) * 233280) % 1;
+        const trend = isQ ? -0.14 : (rand - 0.46) * 0.22;
+        const open = Number(p.toFixed(4));
+        p = Math.max(0.0001, p * (1 + trend));
+        const close = Number(p.toFixed(4));
+        const high = Number((Math.max(open, close) * (1 + Math.abs(rand) * 0.18)).toFixed(4));
+        const low = Number((Math.max(0.0001, Math.min(open, close) * (1 - Math.abs(rand) * 0.14))).toFixed(4));
+        const volume = Math.floor(18000 + Math.abs(rand * 85000));
+
+        generated.push({
           date: d.toISOString().slice(0, 7),
-          open: Number(p.toFixed(4)),
-          high: Number((p * 1.15).toFixed(4)),
-          low: Number((p * 0.9).toFixed(4)),
-          close: Number((p * 1.05).toFixed(4)),
-          volume: 45000 + (i * 18000)
-        };
-      });
+          open,
+          high,
+          low,
+          close,
+          volume
+        });
+      }
+
+      if (generated.length > 0) {
+        generated[generated.length - 1].close = basePrice;
+      }
       setPoints(generated);
     }
     setIsLiveYahoo(false);
     setLoading(false);
-  };
 
   const minPrice = points.length > 0 ? Math.min(...points.map(p => p.low)) * 0.94 : (currentPrice ? currentPrice * 0.8 : 0.0001);
   const maxPrice = points.length > 0 ? Math.max(...points.map(p => p.high)) * 1.06 : (currentPrice ? currentPrice * 1.2 : 0.01);
