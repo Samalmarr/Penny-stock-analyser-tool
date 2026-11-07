@@ -146,19 +146,36 @@ export default function App() {
       dilutionReason = 'Trading above $0.10. Standard dilution risk unless major secondary offerings or warrant exercises are filed.';
     }
 
+   const fallbackChart: any[] = [];
     const now = new Date();
-    const fallbackChart = Array.from({ length: 12 }, (_, i) => {
-      const d = new Date(now.getFullYear(), now.getMonth() - (11 - i), 1);
-      const baseP = price * (0.8 + Math.sin(i + 1) * 0.2);
-      return {
+    let p = isBankrupt ? price * 3.2 : price * 1.15;
+    let seed = 0;
+    for (let i = 0; i < cleanSymbol.length; i++) seed = (seed << 5) - seed + cleanSymbol.charCodeAt(i);
+
+    for (let i = 11; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      const rand = (Math.sin(seed + i * 9301 + 49297) * 233280) % 1;
+      const trend = isBankrupt ? -0.14 : (rand - 0.46) * 0.22;
+      const open = Number(p.toFixed(4));
+      p = Math.max(0.0001, p * (1 + trend));
+      const close = Number(p.toFixed(4));
+      const high = Number((Math.max(open, close) * (1 + Math.abs(rand) * 0.18)).toFixed(4));
+      const low = Number((Math.max(0.0001, Math.min(open, close) * (1 - Math.abs(rand) * 0.14))).toFixed(4));
+      const volume = Math.floor(18000 + Math.abs(rand * 85000));
+
+      fallbackChart.push({
         date: d.toISOString().slice(0, 7),
-        open: Number(baseP.toFixed(4)),
-        high: Number((baseP * 1.15).toFixed(4)),
-        low: Number((baseP * 0.9).toFixed(4)),
-        close: Number((baseP * 1.05).toFixed(4)),
-        volume: 450000 + i * 25000
-      };
-    });
+        open,
+        high,
+        low,
+        close,
+        volume
+      });
+    }
+
+    if (fallbackChart.length > 0) {
+      fallbackChart[fallbackChart.length - 1].close = price;
+    }
 
     return {
       success: true,
@@ -180,8 +197,7 @@ export default function App() {
       fullExchangeName: 'OTC Markets Group',
       dilutionRisk,
       dilutionReason,
-      chart: fallbackChart,
-      links: {
+      chart: (catalogStock?.chartHistory && catalogStock.chartHistory.length > 0) ? catalogStock.chartHistory : fallbackChart, {
         yahoo: `https://finance.yahoo.com/quote/${cleanSymbol}`,
         otc: `https://www.otcmarkets.com/stock/${cleanSymbol}/overview`,
         sec: `https://www.sec.gov/edgar/searchedgar/companysearch?companyName=${encodeURIComponent(cleanSymbol)}`,
