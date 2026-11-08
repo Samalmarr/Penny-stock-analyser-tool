@@ -45,6 +45,41 @@ interface RealAnalyticsData {
     referrer: string;
     device: 'desktop' | 'mobile';
   }[];
+  today?: {
+    date: string;
+    views: number;
+    uniques: number;
+    topTickers: { ticker: string; count: number }[];
+    topReferrers: { source: string; count: number }[];
+  };
+  yesterday?: {
+    date: string;
+    views: number;
+    uniques: number;
+    topTickers: { ticker: string; count: number }[];
+    topReferrers: { source: string; count: number }[];
+  };
+  past7Days?: {
+    views: number;
+    uniques: number;
+    dailyBreakdown: {
+      date: string;
+      label: string;
+      views: number;
+      uniques: number;
+      topTicker: string;
+      topReferrer: string;
+    }[];
+    topTickers: { ticker: string; count: number }[];
+    topReferrers: { source: string; count: number }[];
+  };
+  past30Days?: {
+    views: number;
+    uniques: number;
+    dailyTrend: { date: string; views: number; uniques: number }[];
+    topTickers: { ticker: string; count: number }[];
+    topReferrers: { source: string; count: number }[];
+  };
 }
 
 interface AdminDataViewProps {
@@ -405,8 +440,8 @@ export const AdminDataView: React.FC<AdminDataViewProps> = ({ onAnalyzeTicker, o
         </div>
       </section>
 
-      {/* KPI Cards (High density, compact) */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+      {/* KPI Cards: Today, Yesterday, Past 7 Days & Past Month */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
         <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 space-y-0.5">
           <div className="flex items-center justify-between text-slate-500 text-[10px]">
             <span>TODAY UNIQUE</span>
@@ -415,7 +450,7 @@ export const AdminDataView: React.FC<AdminDataViewProps> = ({ onAnalyzeTicker, o
           <div className="text-xl font-bold text-white font-mono">
             {data ? data.todayUniques : 0}
           </div>
-          <span className="text-[10px] text-emerald-400">Verified distinct visitors</span>
+          <span className="text-[10px] text-emerald-400">Visitors today</span>
         </div>
 
         <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 space-y-0.5">
@@ -429,20 +464,48 @@ export const AdminDataView: React.FC<AdminDataViewProps> = ({ onAnalyzeTicker, o
           <span className="text-[10px] text-slate-400">Pageviews today</span>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 space-y-0.5">
-          <div className="flex items-center justify-between text-slate-500 text-[10px]">
-            <span>TOTAL ALL-TIME UNIQUES</span>
-            <Globe className="w-3.5 h-3.5 text-emerald-400" />
+        <div className="bg-slate-900/90 border border-emerald-900/50 bg-emerald-950/20 rounded-lg p-3 space-y-0.5">
+          <div className="flex items-center justify-between text-slate-400 text-[10px]">
+            <span className="text-emerald-400 font-bold">YESTERDAY</span>
+            <Users className="w-3.5 h-3.5 text-emerald-400" />
           </div>
           <div className="text-xl font-bold text-white font-mono">
-            {data ? data.uniqueVisitors : 0}
+            {data?.yesterday ? data.yesterday.uniques : '—'}
           </div>
-          <span className="text-[10px] text-slate-400">Total unique people</span>
+          <span className="text-[10px] text-emerald-300 font-mono">
+            {data?.yesterday ? `${data.yesterday.views} views` : '—'}
+          </span>
         </div>
 
         <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 space-y-0.5">
           <div className="flex items-center justify-between text-slate-500 text-[10px]">
-            <span>TOTAL PAGEVIEWS</span>
+            <span>PAST 7 DAYS</span>
+            <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+          </div>
+          <div className="text-xl font-bold text-white font-mono">
+            {data?.past7Days ? data.past7Days.uniques : '—'}
+          </div>
+          <span className="text-[10px] text-slate-400 font-mono">
+            {data?.past7Days ? `${data.past7Days.views} views` : '—'}
+          </span>
+        </div>
+
+        <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 space-y-0.5">
+          <div className="flex items-center justify-between text-slate-500 text-[10px]">
+            <span>PAST 30 DAYS</span>
+            <Globe className="w-3.5 h-3.5 text-emerald-400" />
+          </div>
+          <div className="text-xl font-bold text-white font-mono">
+            {data?.past30Days ? data.past30Days.uniques : '—'}
+          </div>
+          <span className="text-[10px] text-slate-400 font-mono">
+            {data?.past30Days ? `${data.past30Days.views} views` : '—'}
+          </span>
+        </div>
+
+        <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 space-y-0.5">
+          <div className="flex items-center justify-between text-slate-500 text-[10px]">
+            <span>TOTAL ALL-TIME</span>
             <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
           </div>
           <div className="text-xl font-bold text-white font-mono">

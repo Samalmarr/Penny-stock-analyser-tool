@@ -19,8 +19,10 @@ import {
   ArrowRight,
   Info,
   BookOpen,
-  Lock
+  Lock,
+  Activity
 } from 'lucide-react';
+import { AnalyticsView } from './components/AnalyticsView';
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
 import { formatCurrency, formatLargeNumber, formatMarketCap } from './utils/formatters';
@@ -65,7 +67,7 @@ const POPULAR_SUGGESTIONS = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'analyser' | 'guides' | 'admin'>('analyser');
+  const [activeTab, setActiveTab] = useState<'analyser' | 'traffic' | 'guides' | 'admin'>('analyser');
   const [searchInput, setSearchInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -196,7 +198,8 @@ export default function App() {
       fullExchangeName: 'OTC Markets Group',
       dilutionRisk,
       dilutionReason,
-      chart: (catalogStock?.chartHistory && catalogStock.chartHistory.length > 0) ? catalogStock.chartHistory : fallbackChart, {
+      chart: (catalogStock?.chartHistory && catalogStock.chartHistory.length > 0) ? catalogStock.chartHistory : fallbackChart,
+      links: {
         yahoo: `https://finance.yahoo.com/quote/${cleanSymbol}`,
         otc: `https://www.otcmarkets.com/stock/${cleanSymbol}/overview`,
         sec: `https://www.sec.gov/edgar/searchedgar/companysearch?companyName=${encodeURIComponent(cleanSymbol)}`,
@@ -262,6 +265,8 @@ export default function App() {
     const search = window.location.search;
     if (path.startsWith('/guides')) {
       setActiveTab('guides');
+    } else if (path.startsWith('/traffic') || path.startsWith('/analytics')) {
+      setActiveTab('traffic');
     } else if (path.startsWith('/admin') || search.includes('admin=true') || search.includes('tab=admin')) {
       setActiveTab('admin');
     }
@@ -269,7 +274,7 @@ export default function App() {
     performAnalysis('YOOIF');
   }, []);
 
-  const handleTabChange = (tab: 'analyser' | 'guides' | 'admin') => {
+  const handleTabChange = (tab: 'analyser' | 'traffic' | 'guides' | 'admin') => {
     setActiveTab(tab);
     trackVisit(`/${tab}`);
   };
@@ -303,7 +308,7 @@ export default function App() {
           <nav className="flex items-center gap-1.5 font-mono text-xs">
             <button
               onClick={() => handleTabChange('analyser')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors cursor-pointer ${
                 activeTab === 'analyser'
                   ? 'bg-emerald-950 border border-emerald-600/80 text-emerald-300 shadow-xs'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
@@ -314,15 +319,28 @@ export default function App() {
             </button>
 
             <button
+              onClick={() => handleTabChange('traffic')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors cursor-pointer relative ${
+                activeTab === 'traffic'
+                  ? 'bg-emerald-950 border border-emerald-600/80 text-emerald-300 shadow-xs'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
+              }`}
+            >
+              <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Traffic Stats</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse ml-0.5" title="Live Real Tracking"></span>
+            </button>
+
+            <button
               onClick={() => handleTabChange('guides')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors cursor-pointer ${
                 activeTab === 'guides'
                   ? 'bg-emerald-950 border border-emerald-600/80 text-emerald-300 shadow-xs'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" />
-              <span>Weekly Diligence Blog</span>
+              <span>Weekly Blog</span>
             </button>
           </nav>
         </div>
@@ -330,6 +348,17 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-6 sm:py-8 space-y-6">
+        {/* Render Traffic Stats & SEO Launchpad */}
+        {activeTab === 'traffic' && (
+          <AnalyticsView
+            onAnalyzeTicker={(ticker) => {
+              setActiveTab('analyser');
+              setSearchInput(ticker);
+              performAnalysis(ticker);
+            }}
+          />
+        )}
+
         {/* Render Diligence Guides & Weekly Blog */}
         {activeTab === 'guides' && (
           <GuidesView
@@ -800,6 +829,14 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-3 text-[10px]">
+            <button
+              onClick={() => handleTabChange('traffic')}
+              className="text-slate-500 hover:text-emerald-400 transition-colors flex items-center gap-1 cursor-pointer font-mono"
+            >
+              <Activity className="w-2.5 h-2.5 text-emerald-400" />
+              <span>Traffic Stats</span>
+            </button>
+            <span className="text-slate-800">·</span>
             <a
               href="/rss.xml"
               target="_blank"

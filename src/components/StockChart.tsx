@@ -59,9 +59,6 @@ export const StockChart: React.FC<StockChartProps> = ({ ticker, history = [], cu
       // Live exchange feed unreachable
     }
 
-    // Preserve history prop if available instead of wiping out to empty
-    if (history && history.length > 0) {
-      setPoints(history);
     // Preserve authentic history prop if available
     if (history && history.length > 0) {
       setPoints(history);
@@ -103,6 +100,11 @@ export const StockChart: React.FC<StockChartProps> = ({ ticker, history = [], cu
     }
     setIsLiveYahoo(false);
     setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchLiveChart(timeframe);
+  }, [ticker, timeframe]);
 
   const minPrice = points.length > 0 ? Math.min(...points.map(p => p.low)) * 0.94 : (currentPrice ? currentPrice * 0.8 : 0.0001);
   const maxPrice = points.length > 0 ? Math.max(...points.map(p => p.high)) * 1.06 : (currentPrice ? currentPrice * 1.2 : 0.01);

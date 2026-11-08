@@ -631,47 +631,108 @@ app.post('/api/analytics/clear', (req, res) => {
   return res.json({ success: true, message: 'Real visitor logs reset to zero' });
 });
 
-// Real analytics calculation endpoint
-app.get('/api/analytics/stats', (req, res) => {
-  const totalViews = visitorLogs.length;
-  const uniqueVisitors = new Set(visitorLogs.map(l => l.visitorId)).size;
+// Helper to compute metrics for a subset of visitor logs
+function computeMetricsForLogs(logs: VisitorEvent[]) {
+  const views = logs.length;
+  const uniques = new Set(logs.map(l => l.visitorId)).size;
 
-  const todayStr = new Date().toISOString().slice(0, 10);
-  const todayLogs = visitorLogs.filter(l => l.timestamp.startsWith(todayStr));
-  const todayViews = todayLogs.length;
-  const todayUniques = new Set(todayLogs.map(l => l.visitorId)).size;
-
-  // Top searched tickers (real counts)
   const tickerCounts: Record<string, number> = {};
-  visitorLogs.forEach(l => {
-    if (l.ticker) {
-      tickerCounts[l.ticker] = (tickerCounts[l.ticker] || 0) + 1;
-    }
+  logs.forEach(l => {
+    if (l.ticker) tickerCounts[l.ticker] = (tickerCounts[l.ticker] || 0) + 1;
   });
   const topTickers = Object.entries(tickerCounts)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 8)
     .map(([ticker, count]) => ({ ticker, count }));
 
-  // Referrer channels (real categorizations)
   const refCounts: Record<string, number> = {};
-  visitorLogs.forEach(l => {
+  logs.forEach(l => {
     let cleanRef = 'Direct / Bookmark';
-    const raw = l.referrer.toLowerCase();
+    const raw = (l.referrer || '').toLowerCase();
     if (raw.includes('google')) cleanRef = 'Google Search (Organic)';
     else if (raw.includes('reddit')) cleanRef = 'Reddit (r/pennystocks)';
     else if (raw.includes('x.com') || raw.includes('twitter')) cleanRef = 'X / Twitter';
     else if (raw.includes('yahoo')) cleanRef = 'Yahoo Finance Forum';
     else if (raw.includes('duckduckgo') || raw.includes('bing')) cleanRef = 'Bing / DuckDuckGo';
-    else if (raw !== 'direct' && raw.length > 2) cleanRef = raw;
+    else if (raw !== 'direct' && raw.length > 2) cleanRef = l.referrer;
 
     refCounts[cleanRef] = (refCounts[cleanRef] || 0) + 1;
   });
-
   const topReferrers = Object.entries(refCounts)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 6)
     .map(([source, count]) => ({ source, count }));
+
+  return { views, uniques, topTickers, topReferrers };
+}
+
+// Real analytics calculation endpoint with detailed Yesterday, Past 7 Days & Past 30 Days breakdown
+app.get('/api/analytics/stats', (req, res) => {
+  const totalViews = visitorLogs.length;
+  const uniqueVisitors = new Set(visitorLogs.map(l => l.visitorId)).size;
+
+  const now = new Date();
+  const todayStr = now.toISOString().slice(0, 10);
+  const yesterdayDate = new Date(now.getTime() - 86400000);
+  const yesterdayStr = yesterdayDate.toISOString().slice(0, 10);
+
+  // Today logs & metrics
+  const todayLogs = visitorLogs.filter(l => l.timestamp.startsWith(todayStr));
+  const todayMetrics = computeMetricsForLogs(todayLogs);
+
+  // Yesterday logs & metrics
+  const yesterdayLogs = visitorLogs.filter(l => l.timestamp.startsWith(yesterdayStr));
+  const yesterdayMetrics = computeMetricsForLogs(yesterdayLogs);
+
+  // Past 7 Days (day 6 ago up to today)
+  const past7DaysCutoff = new Date(now.getTime() - 7 * 86400000).toISOString();
+  const past7DaysLogs = visitorLogs.filter(l => l.timestamp >= past7DaysCutoff);
+  const past7DaysMetrics = computeMetricsForLogs(past7DaysLogs);
+
+  // Day-by-day 7-day breakdown
+  const dailyBreakdown = [];
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  for (let i = 6; i >= 0; i--) {
+    const dayDate = new Date(now.getTime() - i * 86400000);
+    const dateKey = dayDate.toISOString().slice(0, 10);
+    const dayLogs = visitorLogs.filter(l => l.timestamp.startsWith(dateKey));
+    const dayMetrics = computeMetricsForLogs(dayLogs);
+
+    let label = dayNames[dayDate.getDay()];
+    if (i === 0) label = 'Today';
+    else if (i === 1) label = 'Yesterday';
+
+    dailyBreakdown.push({
+      date: dateKey,
+      label,
+      views: dayMetrics.views,
+      uniques: dayMetrics.uniques,
+      topTicker: dayMetrics.topTickers[0]?.ticker || '—',
+      topReferrer: dayMetrics.topReferrers[0]?.source || 'Direct / Bookmark'
+    });
+  }
+
+  // Past 30 Days
+  const past30DaysCutoff = new Date(now.getTime() - 30 * 86400000).toISOString();
+  const past30DaysLogs = visitorLogs.filter(l => l.timestamp >= past30DaysCutoff);
+  const past30DaysMetrics = computeMetricsForLogs(past30DaysLogs);
+
+  // 30-day daily trend
+  const monthlyTrend = [];
+  for (let i = 29; i >= 0; i--) {
+    const dayDate = new Date(now.getTime() - i * 86400000);
+    const dateKey = dayDate.toISOString().slice(0, 10);
+    const dayLogs = visitorLogs.filter(l => l.timestamp.startsWith(dateKey));
+    const dayUniques = new Set(dayLogs.map(l => l.visitorId)).size;
+    monthlyTrend.push({
+      date: dateKey,
+      views: dayLogs.length,
+      uniques: dayUniques
+    });
+  }
+
+  // All-time top tickers and referrers
+  const allTimeMetrics = computeMetricsForLogs(visitorLogs);
 
   let desktopCount = 0;
   let mobileCount = 0;
@@ -684,12 +745,42 @@ app.get('/api/analytics/stats', (req, res) => {
     success: true,
     totalViews,
     uniqueVisitors,
-    todayViews,
-    todayUniques,
-    topTickers,
-    topReferrers,
+    todayViews: todayMetrics.views,
+    todayUniques: todayMetrics.uniques,
+    topTickers: allTimeMetrics.topTickers,
+    topReferrers: allTimeMetrics.topReferrers,
     devices: { desktop: desktopCount, mobile: mobileCount },
-    recentEvents: visitorLogs.slice(0, 25)
+    recentEvents: visitorLogs.slice(0, 30),
+
+    // Granular past day timeframe stats
+    today: {
+      date: todayStr,
+      views: todayMetrics.views,
+      uniques: todayMetrics.uniques,
+      topTickers: todayMetrics.topTickers,
+      topReferrers: todayMetrics.topReferrers
+    },
+    yesterday: {
+      date: yesterdayStr,
+      views: yesterdayMetrics.views,
+      uniques: yesterdayMetrics.uniques,
+      topTickers: yesterdayMetrics.topTickers,
+      topReferrers: yesterdayMetrics.topReferrers
+    },
+    past7Days: {
+      views: past7DaysMetrics.views,
+      uniques: past7DaysMetrics.uniques,
+      dailyBreakdown,
+      topTickers: past7DaysMetrics.topTickers,
+      topReferrers: past7DaysMetrics.topReferrers
+    },
+    past30Days: {
+      views: past30DaysMetrics.views,
+      uniques: past30DaysMetrics.uniques,
+      dailyTrend: monthlyTrend,
+      topTickers: past30DaysMetrics.topTickers,
+      topReferrers: past30DaysMetrics.topReferrers
+    }
   });
 });
 
