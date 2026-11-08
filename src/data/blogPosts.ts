@@ -263,6 +263,10 @@ export const BLOG_POSTS: BlogPost[] = [
         {
           question: 'Why is trading volume sometimes low on YOOIF in the US?',
           answer: 'Most volume occurs on the Canadian home exchange (TSX-V: YOO). US retail brokerages route orders through OTC market makers who cross-trade with Toronto.'
+        },
+        {
+          question: 'Where do I find financial statements and filings for Canadian OTC stocks like YOOIF?',
+          answer: 'Unlike US domestic stocks that file on SEC EDGAR, Canadian dual-listed companies file official audited annual financials and MD&A reports with Canadian provincial regulators via SEDAR+ (sedarplus.ca) under SEC Rule 12g3-2(b) exemptions. Reports are also mirrored on the OTC Markets Disclosure Portal.'
         }
       ]
     }

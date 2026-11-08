@@ -20,19 +20,31 @@ import {
   Info,
   BookOpen,
   Lock,
-  Activity
+  Activity,
+  Globe,
+  Building2,
+  Landmark,
+  ShieldCheck
 } from 'lucide-react';
-import { AnalyticsView } from './components/AnalyticsView';
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { formatCurrency, formatLargeNumber, formatMarketCap } from './utils/formatters';
 import { INITIAL_PINK_STOCKS } from './data/stocksData';
+import { resolveStockJurisdiction, StockJurisdictionInfo } from './utils/stockJurisdiction';
 
 interface StockAnalysisResult {
   success: boolean;
   symbol: string;
   companyName: string;
+  country: string;
+  countryFlag: string;
+  primaryExchange: string;
+  homeMarketTicker?: string;
+  listingType: 'US_DOMESTIC_OTC' | 'CANADIAN_DUAL_LISTED' | 'FOREIGN_ADR' | 'US_EXCHANGE_LISTED' | 'BANKRUPTCY_OTC';
+  filingJurisdiction: 'SEC_EDGAR' | 'SEDAR_PLUS' | 'FOREIGN_DISCLOSURE';
+  filingAuthorityName: string;
+  regulatoryExemptionNote?: string;
   isBankrupt: boolean;
   bankruptcyStatus: string;
   bankruptcyDetails: string;
@@ -52,6 +64,8 @@ interface StockAnalysisResult {
     yahoo: string;
     otc: string;
     sec: string;
+    sedar?: string;
+    disclosure?: string;
     google: string;
   };
 }
@@ -68,7 +82,7 @@ const POPULAR_SUGGESTIONS = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'analyser' | 'traffic' | 'guides' | 'admin'>('analyser');
+  const [activeTab, setActiveTab] = useState<'analyser' | 'guides' | 'admin'>('analyser');
   const [searchInput, setSearchInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -179,10 +193,25 @@ export default function App() {
       fallbackChart[fallbackChart.length - 1].close = price;
     }
 
+    const jurisdictionInfo = resolveStockJurisdiction(
+      cleanSymbol,
+      catalogStock?.country,
+      catalogStock?.tier,
+      'OTC Markets Group'
+    );
+
     return {
       success: true,
       symbol: cleanSymbol,
       companyName: catalogStock?.name || `${cleanSymbol} (OTC Security)`,
+      country: jurisdictionInfo.country,
+      countryFlag: jurisdictionInfo.countryFlag,
+      primaryExchange: jurisdictionInfo.primaryExchange,
+      homeMarketTicker: jurisdictionInfo.homeMarketTicker,
+      listingType: jurisdictionInfo.listingType,
+      filingJurisdiction: jurisdictionInfo.filingJurisdiction,
+      filingAuthorityName: jurisdictionInfo.filingAuthorityName,
+      regulatoryExemptionNote: jurisdictionInfo.regulatoryExemptionNote,
       isBankrupt,
       bankruptcyStatus: isBankrupt ? 'BANKRUPT (Chapter 11 Proceedings / Q-Ticker)' : 'NOT BANKRUPT (Active Entity)',
       bankruptcyDetails: isBankrupt
@@ -195,17 +224,12 @@ export default function App() {
       fiftyTwoWeekLow: catalogStock?.low52w ?? (price * 0.4),
       volume: catalogStock?.volume ?? 650000,
       currency: 'USD',
-      exchange: catalogStock?.tier || 'OTC Markets',
-      fullExchangeName: 'OTC Markets Group',
+      exchange: jurisdictionInfo.primaryExchange || catalogStock?.tier || 'OTC Markets',
+      fullExchangeName: jurisdictionInfo.primaryExchange || 'OTC Markets Group',
       dilutionRisk,
       dilutionReason,
       chart: (catalogStock?.chartHistory && catalogStock.chartHistory.length > 0) ? catalogStock.chartHistory : fallbackChart,
-      links: {
-        yahoo: `https://finance.yahoo.com/quote/${cleanSymbol}`,
-        otc: `https://www.otcmarkets.com/stock/${cleanSymbol}/overview`,
-        sec: `https://www.sec.gov/edgar/searchedgar/companysearch?companyName=${encodeURIComponent(cleanSymbol)}`,
-        google: `https://www.google.com/finance/quote/${cleanSymbol}:OTCMKTS`
-      }
+      links: jurisdictionInfo.links
     };
   };
 
@@ -266,16 +290,14 @@ export default function App() {
     const search = window.location.search;
     if (path.startsWith('/guides')) {
       setActiveTab('guides');
-    } else if (path.startsWith('/traffic') || path.startsWith('/analytics')) {
-      setActiveTab('traffic');
-    } else if (path.startsWith('/admin') || search.includes('admin=true') || search.includes('tab=admin')) {
+    } else if (path.startsWith('/admin') || path.startsWith('/traffic') || path.startsWith('/analytics') || search.includes('admin=true') || search.includes('tab=admin')) {
       setActiveTab('admin');
     }
     trackVisit(path || '/');
     performAnalysis('YOOIF');
   }, []);
 
-  const handleTabChange = (tab: 'analyser' | 'traffic' | 'guides' | 'admin') => {
+  const handleTabChange = (tab: 'analyser' | 'guides' | 'admin') => {
     setActiveTab(tab);
     trackVisit(`/${tab}`);
   };
@@ -320,19 +342,6 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => handleTabChange('traffic')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors cursor-pointer relative ${
-                activeTab === 'traffic'
-                  ? 'bg-emerald-950 border border-emerald-600/80 text-emerald-300 shadow-xs'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
-              }`}
-            >
-              <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Traffic Stats</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse ml-0.5" title="Live Real Tracking"></span>
-            </button>
-
-            <button
               onClick={() => handleTabChange('guides')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-colors cursor-pointer ${
                 activeTab === 'guides'
@@ -341,7 +350,7 @@ export default function App() {
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" />
-              <span>Weekly Blog</span>
+              <span>Weekly Diligence Blog</span>
             </button>
           </nav>
         </div>
@@ -349,16 +358,6 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-6 sm:py-8 space-y-6">
-        {/* Render Traffic Stats & SEO Launchpad */}
-        {activeTab === 'traffic' && (
-          <AnalyticsView
-            onAnalyzeTicker={(ticker) => {
-              setActiveTab('analyser');
-              setSearchInput(ticker);
-              performAnalysis(ticker);
-            }}
-          />
-        )}
 
         {/* Render Diligence Guides & Weekly Blog */}
         {activeTab === 'guides' && (
@@ -487,9 +486,20 @@ export default function App() {
                     <h2 className="text-2xl sm:text-3xl font-bold font-mono tracking-tight text-white">
                       {result.symbol}
                     </h2>
-                    <span className="text-xs px-2.5 py-0.5 rounded font-mono font-semibold bg-slate-800 border border-slate-700 text-emerald-400">
-                      {result.fullExchangeName || result.exchange}
+                    {/* Country of Origin Badge */}
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-slate-800 border border-slate-700 text-slate-200">
+                      <span className="text-sm">{result.countryFlag || '🌐'}</span>
+                      <span>{result.country || 'International'}</span>
                     </span>
+                    {/* Primary Exchange Badge */}
+                    <span className="text-xs px-2.5 py-0.5 rounded font-mono font-semibold bg-emerald-950/70 border border-emerald-700/60 text-emerald-400">
+                      {result.primaryExchange || result.fullExchangeName || result.exchange}
+                    </span>
+                    {result.homeMarketTicker && (
+                      <span className="text-xs px-2 py-0.5 rounded font-mono font-semibold text-cyan-300 bg-cyan-950/60 border border-cyan-800/60">
+                        Home: {result.homeMarketTicker}
+                      </span>
+                    )}
                     <span className="text-xs px-2 py-0.5 rounded font-mono text-slate-400 bg-slate-950 border border-slate-800">
                       Currency: {result.currency}
                     </span>
@@ -499,7 +509,7 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Working External Action Links (Yahoo, OTC, SEC, Google) */}
+                {/* Working External Action Links (Yahoo, OTC, SEDAR+/SEC, Google) */}
                 <div className="flex items-center gap-2 flex-wrap">
                   <a
                     href={result.links.yahoo}
@@ -523,17 +533,46 @@ export default function App() {
                     <ExternalLink className="w-3 h-3 text-slate-400" />
                   </a>
 
-                  <a
-                    href={result.links.sec}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 font-mono text-xs font-semibold transition-colors shadow-xs"
-                    title={`Search official SEC EDGAR filings for ${result.symbol}`}
-                  >
-                    <FileText className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>SEC EDGAR</span>
-                    <ExternalLink className="w-3 h-3 text-slate-400" />
-                  </a>
+                  {/* Dynamic Filings Link: Canadian SEDAR+ vs US SEC EDGAR */}
+                  {result.filingJurisdiction === 'SEDAR_PLUS' ? (
+                    <>
+                      <a
+                        href={result.links.sedar || 'https://www.sedarplus.ca'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-950/70 hover:bg-rose-900 text-rose-200 hover:text-white border border-rose-700/70 font-mono text-xs font-semibold transition-colors shadow-xs"
+                        title={`Open official Canadian SEDAR+ regulatory filings for ${result.symbol}`}
+                      >
+                        <span className="text-xs">🇨🇦</span>
+                        <span>SEDAR+ (Canada)</span>
+                        <ExternalLink className="w-3 h-3 text-rose-400" />
+                      </a>
+
+                      <a
+                        href={result.links.disclosure || result.links.otc}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 font-mono text-xs font-semibold transition-colors shadow-xs"
+                        title={`View OTC alternative disclosure filings for ${result.symbol}`}
+                      >
+                        <FileText className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>OTC Filings</span>
+                        <ExternalLink className="w-3 h-3 text-slate-400" />
+                      </a>
+                    </>
+                  ) : (
+                    <a
+                      href={result.links.sec}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 font-mono text-xs font-semibold transition-colors shadow-xs"
+                      title={`Search official SEC EDGAR filings for ${result.symbol}`}
+                    >
+                      <FileText className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>SEC EDGAR</span>
+                      <ExternalLink className="w-3 h-3 text-slate-400" />
+                    </a>
+                  )}
 
                   <a
                     href={result.links.google}
@@ -546,6 +585,47 @@ export default function App() {
                     <ExternalLink className="w-3 h-3 text-slate-400" />
                   </a>
                 </div>
+              </div>
+
+              {/* Jurisdiction & Regulatory Filing Authority Banner */}
+              <div className="mt-4 p-3.5 rounded-xl border bg-slate-950/80 font-mono text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-slate-800">
+                <div className="flex items-start sm:items-center gap-2.5">
+                  <span className="text-2xl shrink-0">{result.countryFlag || '🌐'}</span>
+                  <div>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-bold text-white">
+                        {result.country} · {result.primaryExchange}
+                      </span>
+                      <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                        {result.filingAuthorityName}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-sans">
+                      {result.regulatoryExemptionNote}
+                    </p>
+                  </div>
+                </div>
+                {result.filingJurisdiction === 'SEDAR_PLUS' ? (
+                  <a
+                    href={result.links.sedar || 'https://www.sedarplus.ca'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-rose-950/90 hover:bg-rose-900 border border-rose-700 text-rose-200 text-xs font-bold transition-colors shadow-xs"
+                  >
+                    <span>Search SEDAR+ Filings</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-rose-400" />
+                  </a>
+                ) : (
+                  <a
+                    href={result.links.sec}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-bold transition-colors shadow-xs"
+                  >
+                    <span>Search SEC EDGAR</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                  </a>
+                )}
               </div>
 
               {/* 3 Core Metric Cards: Bankrupt Status, Market Cap / Live Price, Dilution Risk */}
@@ -735,28 +815,53 @@ export default function App() {
                </span>
              </a>
 
-             {/* SEC EDGAR */}
-             <a
-               href={result.links.sec}
-               target="_blank"
-               rel="noopener noreferrer"
-               className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-all group"
-             >
-               <div>
-                 <div className="flex items-center justify-between mb-1.5">
-                   <span className="font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs">
-                     SEC EDGAR Filings
-                   </span>
-                   <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+             {/* Dynamic Regulatory Filing Card: SEDAR+ for Canada vs SEC EDGAR for US */}
+             {result.filingJurisdiction === 'SEDAR_PLUS' ? (
+               <a
+                 href={result.links.sedar || 'https://www.sedarplus.ca'}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-rose-500/50 transition-all group"
+               >
+                 <div>
+                   <div className="flex items-center justify-between mb-1.5">
+                     <span className="font-bold text-white group-hover:text-rose-400 transition-colors flex items-center gap-1.5 text-xs">
+                       <span>🇨🇦</span>
+                       <span>SEDAR+ Filings (Canada)</span>
+                     </span>
+                     <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-rose-400 transition-colors" />
+                   </div>
+                   <p className="text-[11px] text-slate-400 leading-relaxed">
+                     Canadian audited annual financials, quarterly MD&As, and securities commission filings (SEC Rule 12g3-2(b)).
+                   </p>
                  </div>
-                 <p className="text-[11px] text-slate-400 leading-relaxed">
-                   Audited Form 10-K balance sheets, 10-Q quarterlies, 8-K material events, and Chapter 11 bankruptcy filings.
-                 </p>
-               </div>
-               <span className="text-[10px] text-emerald-400 font-bold mt-3 flex items-center gap-1">
-                 Search SEC Disclosures →
-               </span>
-             </a>
+                 <span className="text-[10px] text-rose-400 font-bold mt-3 flex items-center gap-1">
+                   Search Canadian SEDAR+ →
+                 </span>
+               </a>
+             ) : (
+               <a
+                 href={result.links.sec}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="flex flex-col justify-between p-3.5 bg-slate-950 hover:bg-slate-800/80 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-all group"
+               >
+                 <div>
+                   <div className="flex items-center justify-between mb-1.5">
+                     <span className="font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs">
+                       SEC EDGAR Filings
+                     </span>
+                     <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                   </div>
+                   <p className="text-[11px] text-slate-400 leading-relaxed">
+                     Audited Form 10-K balance sheets, 10-Q quarterlies, 8-K material events, and Chapter 11 bankruptcy filings.
+                   </p>
+                 </div>
+                 <span className="text-[10px] text-emerald-400 font-bold mt-3 flex items-center gap-1">
+                   Search SEC Disclosures →
+                 </span>
+               </a>
+             )}
            </div>
 
            {/* Informational Transparency Note */}
@@ -770,25 +875,50 @@ export default function App() {
 
             {/* Dilution & Diligence Checklist */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 font-mono text-xs space-y-3">
-              <h3 className="font-bold text-sm text-white flex items-center gap-2">
-                <Info className="w-4 h-4 text-emerald-400" />
-                Penny Stock Dilution Verification Guide for {result.symbol}
-              </h3>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-800">
+                <h3 className="font-bold text-sm text-white flex items-center gap-2">
+                  <Info className="w-4 h-4 text-emerald-400" />
+                  Penny Stock Dilution Verification Guide for {result.symbol}
+                </h3>
+                <span className="text-[11px] text-slate-400 font-mono">
+                  Origin: {result.countryFlag} {result.country} ({result.primaryExchange})
+                </span>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-300">
-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 space-y-1">
-                  <span className="text-emerald-400 font-bold block">1. Check Convertible Debt Notes</span>
-                  <p className="text-slate-400 leading-relaxed text-[11px]">
-                    Open SEC Form 10-Q / 8-K disclosures and search for promissory notes with 25%–50% variable discounts to the market price.
-                  </p>
-                </div>
+                {result.filingJurisdiction === 'SEDAR_PLUS' ? (
+                  <>
+                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 space-y-1">
+                      <span className="text-rose-400 font-bold block">1. Check SEDAR+ & OTC Filings for Warrants & Unit Offerings</span>
+                      <p className="text-slate-400 leading-relaxed text-[11px]">
+                        Review Canadian MD&A and OTC alternative disclosures for flow-through shares, private placement warrants, and unit financings.
+                      </p>
+                    </div>
 
-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 space-y-1">
-                  <span className="text-emerald-400 font-bold block">2. Verify Active Transfer Agent</span>
-                  <p className="text-slate-400 leading-relaxed text-[11px]">
-                    Visit the OTC Markets link above to confirm whether the company transfer agent has reported recent verified share counts.
-                  </p>
-                </div>
+                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 space-y-1">
+                      <span className="text-emerald-400 font-bold block">2. Dual-Listing CAD vs USD Arbitrage Check</span>
+                      <p className="text-slate-400 leading-relaxed text-[11px]">
+                        Compare volume and price on the Canadian home exchange (TSX-V in CAD) against US OTC (in USD) to detect cross-border dumping.
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 space-y-1">
+                      <span className="text-emerald-400 font-bold block">1. Check Convertible Debt Notes</span>
+                      <p className="text-slate-400 leading-relaxed text-[11px]">
+                        Open SEC Form 10-Q / 8-K disclosures and search for promissory notes with 25%–50% variable discounts to the market price.
+                      </p>
+                    </div>
+
+                    <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 space-y-1">
+                      <span className="text-emerald-400 font-bold block">2. Verify Active Transfer Agent</span>
+                      <p className="text-slate-400 leading-relaxed text-[11px]">
+                        Visit the OTC Markets link above to confirm whether the company transfer agent has reported recent verified share counts.
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -830,14 +960,6 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-3 text-[10px]">
-            <button
-              onClick={() => handleTabChange('traffic')}
-              className="text-slate-500 hover:text-emerald-400 transition-colors flex items-center gap-1 cursor-pointer font-mono"
-            >
-              <Activity className="w-2.5 h-2.5 text-emerald-400" />
-              <span>Traffic Stats</span>
-            </button>
-            <span className="text-slate-800">·</span>
             <a
               href="/rss.xml"
               target="_blank"
