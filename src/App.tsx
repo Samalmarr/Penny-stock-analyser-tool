@@ -25,6 +25,7 @@ import {
 import { AnalyticsView } from './components/AnalyticsView';
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { formatCurrency, formatLargeNumber, formatMarketCap } from './utils/formatters';
 import { INITIAL_PINK_STOCKS } from './data/stocksData';
 
@@ -866,6 +867,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+      <VercelAnalytics />
     </div>
   );
 }
