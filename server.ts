@@ -1635,10 +1635,14 @@ Return a strictly formatted JSON object:
 });
 
 async function startServer() {
-  if (process.env.NODE_ENV === 'production') {
+  const isDevLifecycle = process.env.npm_lifecycle_event === 'dev';
+  const distIndexPath = path.resolve(__dirname, 'dist', 'index.html');
+  const useProdStatic = process.env.NODE_ENV === 'production' || (!isDevLifecycle && fs.existsSync(distIndexPath));
+
+  if (useProdStatic) {
     app.use(express.static(path.resolve(__dirname, 'dist')));
     app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+      res.sendFile(distIndexPath);
     });
   } else {
     const viteModule = 'vite';
