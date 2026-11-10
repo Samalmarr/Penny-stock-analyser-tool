@@ -70,15 +70,22 @@ interface StockAnalysisResult {
   };
 }
 
-const POPULAR_SUGGESTIONS = [
-  { symbol: 'YOOIF', label: 'YOOIF (YANGAROO Inc.)' },
-  { symbol: 'FNMA', label: 'FNMA (Fannie Mae)' },
+interface TrendingPennyItem {
+  symbol: string;
+  label: string;
+  price?: number;
+  volume?: number;
+}
+
+const DEFAULT_MOST_VIEWED_PENNY_STOCKS: TrendingPennyItem[] = [
+  { symbol: 'PLUG', label: 'PLUG (Plug Power, Inc.)' },
+  { symbol: 'GRAB', label: 'GRAB (Grab Holdings)' },
+  { symbol: 'NIO', label: 'NIO (NIO Inc.)' },
+  { symbol: 'AMC', label: 'AMC (AMC Entertainment)' },
+  { symbol: 'ACHR', label: 'ACHR (Archer Aviation)' },
+  { symbol: 'DNN', label: 'DNN (Denison Mines)' },
   { symbol: 'AITX', label: 'AITX (Artificial Intelligence Tech)' },
-  { symbol: 'POET', label: 'POET (POET Technologies)' },
-  { symbol: 'CYDY', label: 'CYDY (CytoDyn Inc.)' },
-  { symbol: 'VNUE', label: 'VNUE (VNUE Inc.)' },
-  { symbol: 'BBBYQ', label: 'BBBYQ (Bed Bath - Bankrupt)' },
-  { symbol: 'SHLDQ', label: 'SHLDQ (Sears - Bankrupt)' }
+  { symbol: 'FNMA', label: 'FNMA (Fannie Mae)' }
 ];
 
 export default function App() {
@@ -87,12 +94,15 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<StockAnalysisResult | null>(null);
+  const [isExampleResult, setIsExampleResult] = useState(true);
+  const [mostViewedStocks, setMostViewedStocks] = useState<TrendingPennyItem[]>(DEFAULT_MOST_VIEWED_PENNY_STOCKS);
+  const [mostViewedSource, setMostViewedSource] = useState<string>('Yahoo Finance & StockAnalysis');
   const [recentSearches, setRecentSearches] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem('psa_recent_searches');
-      return saved ? JSON.parse(saved) : ['YOOIF', 'FNMA', 'AITX', 'BBBYQ'];
+      return saved ? JSON.parse(saved) : ['PLUG', 'NIO', 'AMC', 'AITX'];
     } catch {
-      return ['YOOIF', 'FNMA', 'AITX', 'BBBYQ'];
+      return ['PLUG', 'NIO', 'AMC', 'AITX'];
     }
   });
 
@@ -233,10 +243,11 @@ export default function App() {
     };
   };
 
-  const performAnalysis = async (query: string) => {
+  const performAnalysis = async (query: string, isExample = false) => {
     if (!query.trim()) return;
     setLoading(true);
     setError(null);
+    setIsExampleResult(isExample);
 
     const cleanQuery = query.trim().toUpperCase();
     trackVisit(`/stock/${cleanQuery}`, cleanQuery);
@@ -254,7 +265,7 @@ export default function App() {
         const data = await res.json();
         if (data && data.success) {
           setResult(data);
-          updateRecentSearches(data.symbol);
+          if (!isExample) updateRecentSearches(data.symbol);
           setLoading(false);
           return;
         }
@@ -263,13 +274,13 @@ export default function App() {
       // Gracefully fall back to built-in diligence analysis
       const fallback = analyzeStockClientFallback(query);
       setResult(fallback);
-      updateRecentSearches(fallback.symbol);
+      if (!isExample) updateRecentSearches(fallback.symbol);
     } catch (err: any) {
       // In case of any network timeout or serverless cold-start, seamlessly render client dilution audit
       try {
         const fallback = analyzeStockClientFallback(query);
         setResult(fallback);
-        updateRecentSearches(fallback.symbol);
+        if (!isExample) updateRecentSearches(fallback.symbol);
       } catch (innerErr) {
         setError('Could not analyze ticker. Please verify symbol formatting.');
         setResult(null);
@@ -281,10 +292,10 @@ export default function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    performAnalysis(searchInput);
+    performAnalysis(searchInput, false);
   };
 
-  // Initial load tracking & default ticker
+  // Initial load tracking, live most-viewed penny stocks & default top-searched example
   useEffect(() => {
     const path = window.location.pathname;
     const search = window.location.search;
@@ -294,7 +305,17 @@ export default function App() {
       setActiveTab('admin');
     }
     trackVisit(path || '/');
-    performAnalysis('YOOIF');
+    performAnalysis('PLUG', true);
+
+    fetch('/api/trending-penny-stocks')
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (data?.stocks && Array.isArray(data.stocks) && data.stocks.length > 0) {
+          setMostViewedStocks(data.stocks);
+          if (data.source) setMostViewedSource(data.source);
+        }
+      })
+      .catch(() => {});
   }, []);
 
   const handleTabChange = (tab: 'analyser' | 'guides' | 'admin') => {
@@ -311,7 +332,7 @@ export default function App() {
             className="flex items-center gap-2.5 cursor-pointer" 
             onClick={() => {
               handleTabChange('analyser');
-              performAnalysis('YOOIF');
+              performAnalysis(mostViewedStocks[0]?.symbol || 'PLUG', true);
             }}
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600/60 flex items-center justify-center font-bold font-mono text-emerald-400 text-sm shadow-sm">
@@ -398,7 +419,7 @@ export default function App() {
                 type="text"
                 value={searchInput}
                 onChange={e => setSearchInput(e.target.value)}
-                placeholder="Enter ticker (e.g. YOOIF, FNMA, AITX, BBBYQ) or paste https://finance.yahoo.com/quote/..."
+                placeholder="Enter ticker (e.g. PLUG, NIO, AITX, BBBYQ) or paste https://finance.yahoo.com/quote/..."
                 className="w-full bg-slate-950 border border-slate-700 hover:border-slate-600 focus:border-emerald-500 rounded-xl pl-11 pr-32 py-3.5 text-sm sm:text-base text-white placeholder-slate-500 font-mono focus:outline-none transition-all shadow-inner"
               />
               <button
@@ -412,20 +433,30 @@ export default function App() {
             </div>
           </form>
 
-          {/* Quick-Try Suggestions & Recent Searches */}
+          {/* Most Viewed Penny Stocks & Recent Searches */}
           <div className="mt-4 pt-3.5 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs font-mono">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-slate-500 text-[11px] font-semibold mr-1">QUICK PICKS:</span>
-              {POPULAR_SUGGESTIONS.map(item => (
+              <span
+                className="text-emerald-400 text-[11px] font-bold mr-1 flex items-center gap-1"
+                title={`Sourced live from ${mostViewedSource}`}
+              >
+                <TrendingUp className="w-3.5 h-3.5" />
+                MOST VIEWED PENNY STOCKS:
+              </span>
+              {mostViewedStocks.map(item => (
                 <button
                   key={item.symbol}
                   onClick={() => {
                     setSearchInput(item.symbol);
-                    performAnalysis(item.symbol);
+                    performAnalysis(item.symbol, false);
                   }}
-                  className="px-2.5 py-1 rounded bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-colors text-[11px]"
+                  title={item.price ? `${item.label} · $${item.price}` : item.label}
+                  className="px-2.5 py-1 rounded bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-emerald-600/60 text-slate-300 hover:text-white transition-colors text-[11px] flex items-center gap-1"
                 >
-                  {item.symbol}
+                  <span className="font-semibold">{item.symbol}</span>
+                  {item.price !== undefined && (
+                    <span className="text-[10px] text-slate-500">${item.price.toFixed(2)}</span>
+                  )}
                 </button>
               ))}
             </div>
@@ -483,6 +514,11 @@ export default function App() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
                 <div>
                   <div className="flex items-center gap-2.5 flex-wrap">
+                    {isExampleResult && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded font-mono text-[11px] font-bold uppercase tracking-wider bg-amber-950/80 border border-amber-600/70 text-amber-300">
+                        Example · Top Searched
+                      </span>
+                    )}
                     <h2 className="text-2xl sm:text-3xl font-bold font-mono tracking-tight text-white">
                       {result.symbol}
                     </h2>
@@ -925,6 +961,17 @@ export default function App() {
         )}
       </>
     )}
+
+        {/* Non-Financial Advice & Due Diligence Statement */}
+        <section className="rounded-xl border border-amber-700/50 bg-amber-950/25 p-4 sm:p-5 font-mono text-xs space-y-2 shadow-lg">
+          <div className="flex items-center gap-2 text-amber-300 font-bold text-xs sm:text-sm uppercase tracking-wider">
+            <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0" />
+            <span>Not Financial Advice · Do Your Own Research</span>
+          </div>
+          <p className="text-slate-200 font-sans text-xs sm:text-sm leading-relaxed">
+            This tool is for informational and educational purposes only and is <strong>not financial advice</strong>. Never gamble money you cannot afford to lose. Always spend <strong>at least 1 hour investigating a stock</strong> (filings, cash runway, debt, and share dilution) before you buy. Remember: <strong>only 1 in 100 penny stocks are worth buying</strong> — don&apos;t be impulsive.
+          </p>
+        </section>
 
         {/* Sponsored Partner Advertisement Banner */}
         <section className="pt-4 border-t border-slate-800/80">

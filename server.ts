@@ -36,6 +36,7 @@ app.use((req, res, next) => {
     req.url.startsWith('/seo/') ||
     req.url.startsWith('/analytics/') ||
     req.url.startsWith('/analyze-stock') ||
+    req.url.startsWith('/trending-penny-stocks') ||
     req.url.startsWith('/website/') ||
     req.url.startsWith('/yahoo/')
   )) {
@@ -545,6 +546,97 @@ app.get('/api/analyze-stock', async (req, res) => {
       ? catalogStock.chartHistory
       : generateServerFallbackChart(cleanSymbol, price || 0.021, isBankrupt),
     links: jurisdictionInfo.links
+  });
+});
+
+// 4d. Most Viewed & Most Active Penny Stocks Endpoint (Live Yahoo Finance Screener + Trending)
+let cachedTrendingPennyStocks: { updatedAt: number; source: string; stocks: Array<{ symbol: string; label: string; price?: number; volume?: number }> } | null = null;
+
+app.get('/api/trending-penny-stocks', async (req, res) => {
+  const now = Date.now();
+  if (cachedTrendingPennyStocks && now - cachedTrendingPennyStocks.updatedAt < 15 * 60 * 1000) {
+    return res.json(cachedTrendingPennyStocks);
+  }
+
+  const fallbackStocks = [
+    { symbol: 'PLUG', label: 'PLUG (Plug Power, Inc.)' },
+    { symbol: 'GRAB', label: 'GRAB (Grab Holdings)' },
+    { symbol: 'NIO', label: 'NIO (NIO Inc.)' },
+    { symbol: 'AMC', label: 'AMC (AMC Entertainment)' },
+    { symbol: 'ACHR', label: 'ACHR (Archer Aviation)' },
+    { symbol: 'DNN', label: 'DNN (Denison Mines)' },
+    { symbol: 'AITX', label: 'AITX (Artificial Intelligence Tech)' },
+    { symbol: 'FNMA', label: 'FNMA (Fannie Mae)' }
+  ];
+
+  try {
+    const [activesRes, trendingRes] = await Promise.allSettled([
+      fetch('https://query1.finance.yahoo.com/v1/finance/screener/predefined/saved?formatted=false&lang=en-US&region=US&scrIds=most_actives&count=60', {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+      }),
+      fetch('https://query1.finance.yahoo.com/v1/finance/trending/US?count=25', {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+      })
+    ]);
+
+    const trendingSet = new Set<string>();
+    if (trendingRes.status === 'fulfilled' && trendingRes.value.ok) {
+      const tData = await trendingRes.value.json();
+      const tQuotes = tData?.finance?.result?.[0]?.quotes || [];
+      for (const q of tQuotes) {
+        if (q?.symbol) trendingSet.add(String(q.symbol).toUpperCase());
+      }
+    }
+
+    const livePenny: Array<{ symbol: string; label: string; price?: number; volume?: number; isTrending?: boolean }> = [];
+    if (activesRes.status === 'fulfilled' && activesRes.value.ok) {
+      const aData = await activesRes.value.json();
+      const quotes = aData?.finance?.result?.[0]?.quotes || [];
+      for (const q of quotes) {
+        const sym = String(q?.symbol || '').toUpperCase();
+        const price = typeof q?.regularMarketPrice === 'number' ? q.regularMarketPrice : null;
+        if (sym && price !== null && price > 0 && price <= 5.0 && !sym.includes('=')) {
+          livePenny.push({
+            symbol: sym,
+            label: `${sym} (${q.shortName || q.longName || sym})`,
+            price: Number(price.toFixed(4)),
+            volume: q.regularMarketVolume || 0,
+            isTrending: trendingSet.has(sym)
+          });
+        }
+      }
+    }
+
+    if (livePenny.length >= 4) {
+      // Prioritize tickers that are BOTH in Yahoo Trending and Most Active under $5
+      livePenny.sort((a, b) => {
+        if (a.isTrending && !b.isTrending) return -1;
+        if (!a.isTrending && b.isTrending) return 1;
+        return (b.volume || 0) - (a.volume || 0);
+      });
+
+      const topStocks = livePenny.slice(0, 8).map(({ symbol, label, price, volume }) => ({
+        symbol,
+        label,
+        price,
+        volume
+      }));
+
+      cachedTrendingPennyStocks = {
+        updatedAt: now,
+        source: 'Yahoo Finance Most Active & Trending (Under $5)',
+        stocks: topStocks
+      };
+      return res.json(cachedTrendingPennyStocks);
+    }
+  } catch (err) {
+    console.warn('Failed to fetch live trending penny stocks:', err);
+  }
+
+  return res.json({
+    updatedAt: now,
+    source: 'Yahoo Finance & StockAnalysis Most Viewed Penny Stocks',
+    stocks: fallbackStocks
   });
 });
 
