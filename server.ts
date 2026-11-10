@@ -6,8 +6,7 @@ import net from 'net';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
-import { INITIAL_PINK_STOCKS } from './src/data/stocksData';
-import { resolveStockJurisdiction } from './src/utils/stockJurisdiction';
+import { resolveStockJurisdiction } from './src/utils/stockJurisdiction.ts';
 
 dotenv.config();
 
@@ -583,10 +582,21 @@ app.get('/api/analyze-stock', async (req, res) => {
     dilutionReason = 'Trading above $0.10. Standard dilution risk unless major secondary offerings or warrant exercises are filed.';
   }
 
-  const catalogStock = INITIAL_PINK_STOCKS.find(s => s.ticker.toUpperCase() === cleanSymbol);
+  let secCatalogName: string | undefined;
+  try {
+    const secListPath = path.resolve(__dirname, 'src', 'data', 'realSecOtcList.json');
+    if (fs.existsSync(secListPath)) {
+      const rawList = JSON.parse(fs.readFileSync(secListPath, 'utf-8'));
+      const found = Array.isArray(rawList)
+        ? rawList.find((s: any) => String(s?.ticker || '').toUpperCase() === cleanSymbol)
+        : null;
+      if (found?.name) secCatalogName = found.name;
+    }
+  } catch {}
+
   const jurisdictionInfo = resolveStockJurisdiction(
     cleanSymbol,
-    catalogStock?.country,
+    undefined,
     yahooQuote?.exchangeName,
     yahooQuote?.fullExchangeName
   );
@@ -594,7 +604,7 @@ app.get('/api/analyze-stock', async (req, res) => {
   return res.json({
     success: true,
     symbol: cleanSymbol,
-    companyName: yahooQuote?.longName || catalogStock?.name || `${cleanSymbol}`,
+    companyName: yahooQuote?.longName || secCatalogName || `${cleanSymbol}`,
     country: jurisdictionInfo.country,
     countryFlag: jurisdictionInfo.countryFlag,
     primaryExchange: jurisdictionInfo.primaryExchange,
@@ -611,11 +621,11 @@ app.get('/api/analyze-stock', async (req, res) => {
       ? 'The Q-suffix denotes an issuer in Chapter 11/7 bankruptcy proceedings. In almost all public reorganizations, existing common shares are cancelled for total loss.'
       : 'This stock trades without a bankruptcy Q-suffix and is an active trading entity.',
     hasLiveQuote: !!yahooQuote,
-    price: yahooQuote?.price ?? catalogStock?.price ?? null,
-    changePercent: yahooQuote?.changePercent ?? catalogStock?.changePercent ?? null,
-    fiftyTwoWeekHigh: yahooQuote?.fiftyTwoWeekHigh ?? catalogStock?.high52w ?? null,
-    fiftyTwoWeekLow: yahooQuote?.fiftyTwoWeekLow ?? catalogStock?.low52w ?? null,
-    volume: yahooQuote?.volume ?? catalogStock?.volume ?? null,
+    price: yahooQuote?.price ?? null,
+    changePercent: yahooQuote?.changePercent ?? null,
+    fiftyTwoWeekHigh: yahooQuote?.fiftyTwoWeekHigh ?? null,
+    fiftyTwoWeekLow: yahooQuote?.fiftyTwoWeekLow ?? null,
+    volume: yahooQuote?.volume ?? null,
     currency: yahooQuote?.currency || 'USD',
     exchange: jurisdictionInfo.primaryExchange || yahooQuote?.exchangeName || (cleanSymbol.length > 4 ? 'OTC Pink' : 'OTC'),
     fullExchangeName: jurisdictionInfo.primaryExchange || yahooQuote?.fullExchangeName || 'OTC Markets',
@@ -623,8 +633,6 @@ app.get('/api/analyze-stock', async (req, res) => {
     dilutionReason,
     chart: (yahooQuote?.history && yahooQuote.history.length > 0)
       ? yahooQuote.history
-      : (catalogStock?.chartHistory && catalogStock.chartHistory.length > 0)
-      ? catalogStock.chartHistory
       : generateServerFallbackChart(cleanSymbol, price || 0.021, isBankrupt),
     links: jurisdictionInfo.links
   });

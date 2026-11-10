@@ -1036,7 +1036,10 @@ export default function App() {
           </div>
         </div>
       </footer>
-      <VercelAnalytics />
+      {typeof window !== 'undefined' &&
+        !window.location.hostname.includes('run.app') &&
+        window.location.hostname !== 'localhost' &&
+        window.location.hostname !== '127.0.0.1' && <VercelAnalytics />}
     </div>
   );
 }
