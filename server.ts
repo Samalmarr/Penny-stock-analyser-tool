@@ -469,6 +469,101 @@ async function fetchYahooFinanceLive(symbol: string, range = '1y', interval = '1
 return null;
 }
 
+interface AnnualFinancialYear {
+  year: string;
+  asOfDate: string;
+  turnover: number | null;
+  profit: number | null;
+  debt: number | null;
+}
+
+async function fetchYahooAnnualFinancials(symbol: string): Promise<{
+  currency: string;
+  source: string;
+  years: AnnualFinancialYear[];
+} | null> {
+  const cleanSym = symbol.trim().toUpperCase();
+  const symbolCandidates = [cleanSym];
+  if (cleanSym === 'YOOIF') symbolCandidates.push('YOO.V');
+  if (cleanSym === 'YOO.V') symbolCandidates.push('YOOIF');
+  if (cleanSym.length === 5 && (cleanSym.endsWith('F') || cleanSym.endsWith('Y'))) {
+    symbolCandidates.push(cleanSym.slice(0, 4));
+  }
+
+  const nowSec = Math.floor(Date.now() / 1000);
+  const fiveYearsAgoSec = nowSec - 5 * 365 * 24 * 60 * 60;
+
+  for (const sym of symbolCandidates) {
+    const encSym = encodeURIComponent(sym);
+    const url = `https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/${encSym}?type=annualTotalRevenue,annualNetIncome,annualTotalDebt&period1=${fiveYearsAgoSec}&period2=${nowSec + 86400}`;
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      const res = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+        },
+        signal: controller.signal
+      });
+      clearTimeout(timeout);
+      if (!res.ok) continue;
+
+      const data = await res.json();
+      const results = data?.timeseries?.result;
+      if (!Array.isArray(results) || results.length === 0) continue;
+
+      const yearMap = new Map<string, AnnualFinancialYear>();
+      let detectedCurrency = 'USD';
+
+      for (const series of results) {
+        const typeKey = series?.meta?.type?.[0];
+        const items = typeKey ? series?.[typeKey] : null;
+        if (!Array.isArray(items)) continue;
+
+        for (const item of items) {
+          const asOfDate = item?.asOfDate;
+          const rawVal = item?.reportedValue?.raw;
+          if (!asOfDate || typeof rawVal !== 'number') continue;
+          if (item?.currencyCode) detectedCurrency = item.currencyCode;
+
+          const year = String(asOfDate).slice(0, 4);
+          const existing = yearMap.get(year) || {
+            year,
+            asOfDate,
+            turnover: null,
+            profit: null,
+            debt: null
+          };
+          if (asOfDate > existing.asOfDate) existing.asOfDate = asOfDate;
+
+          if (typeKey === 'annualTotalRevenue') existing.turnover = rawVal;
+          if (typeKey === 'annualNetIncome') existing.profit = rawVal;
+          if (typeKey === 'annualTotalDebt') existing.debt = rawVal;
+
+          yearMap.set(year, existing);
+        }
+      }
+
+      const years = Array.from(yearMap.values())
+        .filter(y => y.turnover !== null || y.profit !== null || y.debt !== null)
+        .sort((a, b) => b.asOfDate.localeCompare(a.asOfDate))
+        .slice(0, 3);
+
+      if (years.length > 0) {
+        return {
+          currency: detectedCurrency,
+          source: `Yahoo Finance (${sym})`,
+          years
+        };
+      }
+    } catch {
+      // Try next candidate
+    }
+  }
+
+  return null;
+}
+
 // 4. Dedicated Yahoo Finance Live Quote Endpoint
 app.get('/api/yahoo/quote', async (req, res) => {
   const { symbol, url } = req.query;
@@ -556,8 +651,11 @@ app.get('/api/analyze-stock', async (req, res) => {
 
   const isBankrupt = cleanSymbol.endsWith('Q');
 
-  // Fetch real live quote & history from Yahoo Finance
-  const yahooQuote = await fetchYahooFinanceLive(cleanSymbol, '1y', '1mo');
+  // Fetch real live quote, history & 3-year annual financials in parallel from Yahoo Finance
+  const [yahooQuote, annualFinancials] = await Promise.all([
+    fetchYahooFinanceLive(cleanSymbol, '1y', '1mo'),
+    fetchYahooAnnualFinancials(cleanSymbol)
+  ]);
 
   // Dilution assessment logic based on real prices and structure
   let dilutionRisk: 'CRITICAL' | 'HIGH' | 'MODERATE' | 'LOW' = 'MODERATE';
@@ -634,6 +732,7 @@ app.get('/api/analyze-stock', async (req, res) => {
     chart: (yahooQuote?.history && yahooQuote.history.length > 0)
       ? yahooQuote.history
       : generateServerFallbackChart(cleanSymbol, price || 0.021, isBankrupt),
+    annualFinancials,
     links: jurisdictionInfo.links
   });
 });

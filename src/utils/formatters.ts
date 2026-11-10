@@ -28,7 +28,16 @@ export function formatLargeNumber(num: number): string {
 
 export function formatMarketCap(mc: number): string {
   if (mc === 0) return '$0';
+  if (mc < 0) return `-$${formatLargeNumber(Math.abs(mc))}`;
   return `$${formatLargeNumber(mc)}`;
+}
+
+export function formatSignedCurrencyCompact(val: number | null | undefined, currency = 'USD'): string {
+  if (val === null || val === undefined || Number.isNaN(val)) return 'N/A';
+  const prefix = currency === 'CAD' ? 'CA$' : currency === 'GBP' ? '£' : currency === 'EUR' ? '€' : '$';
+  if (val === 0) return `${prefix}0`;
+  const sign = val < 0 ? '-' : '';
+  return `${sign}${prefix}${formatLargeNumber(Math.abs(val))}`;
 }
 
 export function copyToClipboard(text: string): Promise<boolean> {

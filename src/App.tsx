@@ -29,7 +29,7 @@ import {
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
-import { formatCurrency, formatLargeNumber, formatMarketCap } from './utils/formatters';
+import { formatCurrency, formatLargeNumber, formatMarketCap, formatSignedCurrencyCompact } from './utils/formatters';
 import { INITIAL_PINK_STOCKS } from './data/stocksData';
 import { resolveStockJurisdiction, StockJurisdictionInfo } from './utils/stockJurisdiction';
 
@@ -60,6 +60,17 @@ interface StockAnalysisResult {
   dilutionRisk: 'CRITICAL' | 'HIGH' | 'MODERATE' | 'LOW';
   dilutionReason: string;
   chart: any[] | null;
+  annualFinancials?: {
+    currency: string;
+    source: string;
+    years: {
+      year: string;
+      asOfDate: string;
+      turnover: number | null;
+      profit: number | null;
+      debt: number | null;
+    }[];
+  } | null;
   links: {
     yahoo: string;
     otc: string;
@@ -194,6 +205,7 @@ export default function App() {
       dilutionRisk,
       dilutionReason,
       chart: null,
+      annualFinancials: null,
       links: jurisdictionInfo.links
     };
   };
@@ -738,6 +750,90 @@ export default function App() {
              <span className="text-[10px] px-2 py-0.5 rounded font-bold bg-emerald-950/80 border border-emerald-600/60 text-emerald-300 self-start sm:self-center">
                OFFICIAL DATA FEEDS
              </span>
+           </div>
+
+           {/* 3-Year Annual Financials (Turnover, Profit & Debt) */}
+           <div className="bg-slate-950 rounded-xl border border-slate-800 p-4 font-mono">
+             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-800/80 mb-3">
+               <div className="flex items-center gap-2">
+                 <DollarSign className="w-4 h-4 text-emerald-400 shrink-0" />
+                 <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">
+                   Past 3 Years Financials (Turnover, Profit &amp; Debt)
+                 </h3>
+               </div>
+               {result.annualFinancials && (
+                 <span className="text-[10px] text-slate-400">
+                   Currency: <strong className="text-slate-200">{result.annualFinancials.currency}</strong> · Source: {result.annualFinancials.source}
+                 </span>
+               )}
+             </div>
+
+             {result.annualFinancials && result.annualFinancials.years.length > 0 ? (
+               <div className="overflow-x-auto">
+                 <table className="w-full text-left border-collapse text-xs">
+                   <thead>
+                     <tr className="border-b border-slate-800 text-[10px] uppercase tracking-wider text-slate-400">
+                       <th className="py-2 pr-4 font-semibold">Fiscal Year</th>
+                       <th className="py-2 px-4 font-semibold">Turnover (Revenue)</th>
+                       <th className="py-2 px-4 font-semibold">Profit / (Loss)</th>
+                       <th className="py-2 pl-4 font-semibold">Total Debt</th>
+                     </tr>
+                   </thead>
+                   <tbody className="divide-y divide-slate-800/60">
+                     {result.annualFinancials.years.map(fy => {
+                       const cur = result.annualFinancials?.currency || 'USD';
+                       return (
+                         <tr key={fy.asOfDate} className="hover:bg-slate-900/60 transition-colors">
+                           <td className="py-2.5 pr-4 font-bold text-white whitespace-nowrap">
+                             FY {fy.year}{' '}
+                             <span className="text-[10px] font-normal text-slate-500">({fy.asOfDate})</span>
+                           </td>
+                           <td className="py-2.5 px-4 text-slate-200 font-semibold whitespace-nowrap">
+                             {formatSignedCurrencyCompact(fy.turnover, cur)}
+                           </td>
+                           <td
+                             className={`py-2.5 px-4 font-semibold whitespace-nowrap ${
+                               fy.profit === null
+                                 ? 'text-slate-500'
+                                 : fy.profit >= 0
+                                 ? 'text-emerald-400'
+                                 : 'text-rose-400'
+                             }`}
+                           >
+                             {formatSignedCurrencyCompact(fy.profit, cur)}
+                           </td>
+                           <td className="py-2.5 pl-4 text-amber-300 font-semibold whitespace-nowrap">
+                             {formatSignedCurrencyCompact(fy.debt, cur)}
+                           </td>
+                         </tr>
+                       );
+                     })}
+                   </tbody>
+                 </table>
+               </div>
+             ) : (
+               <p className="text-[11px] text-slate-400 font-sans leading-relaxed">
+                 Reported 3-year annual turnover, profit, and debt statements are unavailable in live feeds for this ticker (common for delinquent, dark, or bankrupt shells). Check{' '}
+                 <a
+                   href={result.filingJurisdiction === 'SEDAR_PLUS' ? result.links.sedar || 'https://www.sedarplus.ca' : result.links.sec}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-emerald-400 underline hover:text-emerald-300"
+                 >
+                   {result.filingJurisdiction === 'SEDAR_PLUS' ? 'Canadian SEDAR+' : 'SEC EDGAR'}
+                 </a>{' '}
+                 or{' '}
+                 <a
+                   href={result.links.yahoo}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-emerald-400 underline hover:text-emerald-300"
+                 >
+                   Yahoo Finance
+                 </a>{' '}
+                 directly.
+               </p>
+             )}
            </div>
 
            {/* Real Financial & Chart Portals Grid */}
