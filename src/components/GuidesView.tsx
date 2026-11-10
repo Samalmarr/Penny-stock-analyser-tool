@@ -72,7 +72,7 @@ export const GuidesView: React.FC<GuidesViewProps> = ({ onAnalyzeTicker }) => {
                   'name': 'Penny Stock Analyser'
                 },
                 'keywords': selectedPost.targetKeywords.join(', ')
-              })
+              }).replace(/</g, '\\u003c')
             }}
           />
 

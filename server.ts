@@ -1,6 +1,8 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs';
+import dns from 'dns';
+import net from 'net';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
@@ -15,10 +17,14 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+app.disable('x-powered-by');
+app.use(express.json({ limit: '100kb' }));
 
-// Enable CORS for API requests
+// Security headers & CORS for API requests
 app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -27,6 +33,72 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// Lightweight in-memory rate limiter for write/proxy endpoints
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+function checkRateLimit(key: string, maxRequests: number, windowMs: number): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(key);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(key, { count: 1, resetAt: now + windowMs });
+    if (rateLimitMap.size > 5000) rateLimitMap.clear();
+    return true;
+  }
+  if (entry.count >= maxRequests) return false;
+  entry.count += 1;
+  return true;
+}
+
+// SSRF Protection: Block private, loopback, link-local, and metadata IPs
+function isPrivateOrReservedIp(ip: string): boolean {
+  if (net.isIPv4(ip)) {
+    const parts = ip.split('.').map(Number);
+    if (parts[0] === 10) return true; // 10.0.0.0/8
+    if (parts[0] === 127) return true; // 127.0.0.0/8 (loopback)
+    if (parts[0] === 0) return true; // 0.0.0.0/8
+    if (parts[0] === 169 && parts[1] === 254) return true; // 169.254.0.0/16 (link-local / cloud metadata)
+    if (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) return true; // 172.16.0.0/12
+    if (parts[0] === 192 && parts[1] === 168) return true; // 192.168.0.0/16
+    if (parts[0] >= 224) return true; // multicast / reserved
+    return false;
+  }
+  if (net.isIPv6(ip)) {
+    const norm = ip.toLowerCase();
+    if (norm === '::1' || norm === '::') return true;
+    if (norm.startsWith('fc') || norm.startsWith('fd')) return true; // unique local
+    if (norm.startsWith('fe80:')) return true; // link-local
+    if (norm.startsWith('::ffff:')) {
+      const v4 = norm.replace('::ffff:', '');
+      return isPrivateOrReservedIp(v4);
+    }
+    return false;
+  }
+  return true;
+}
+
+async function assertSafePublicUrl(rawUrl: string): Promise<URL> {
+  const parsed = new URL(rawUrl);
+  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+    throw new Error('Only HTTP/HTTPS URLs are permitted');
+  }
+  const hostname = parsed.hostname.toLowerCase();
+  if (
+    hostname === 'localhost' ||
+    hostname.endsWith('.localhost') ||
+    hostname.endsWith('.local') ||
+    hostname.endsWith('.internal')
+  ) {
+    throw new Error('Private or internal hostnames are not permitted');
+  }
+  if (net.isIP(hostname) && isPrivateOrReservedIp(hostname)) {
+    throw new Error('Private or reserved IP addresses are not permitted');
+  }
+  const resolved = await dns.promises.lookup(hostname, { all: true });
+  if (!resolved.length || resolved.some(r => isPrivateOrReservedIp(r.address))) {
+    throw new Error('Target resolves to a private or reserved network address');
+  }
+  return parsed;
+}
 
 app.enable('trust proxy');
 
@@ -58,7 +130,12 @@ if (process.env.GEMINI_API_KEY) {
 // 1. Live Website Health & Ping Checker API
 // Bypasses CORS to check if pink stock corporate website is really active or dead/parked
 app.post('/api/website/check', async (req, res) => {
-  const { url } = req.body;
+  const clientIp = req.ip || 'unknown';
+  if (!checkRateLimit(`webcheck:${clientIp}`, 30, 60_000)) {
+    return res.status(429).json({ error: 'Too many website check requests. Please wait a minute.' });
+  }
+
+  const { url } = req.body || {};
   if (!url || typeof url !== 'string') {
     return res.status(400).json({ error: 'URL is required' });
   }
@@ -70,6 +147,8 @@ app.post('/api/website/check', async (req, res) => {
 
   const startTime = Date.now();
   try {
+    await assertSafePublicUrl(formattedUrl);
+
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 6000);
 
@@ -80,7 +159,7 @@ app.post('/api/website/check', async (req, res) => {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
       },
-      redirect: 'follow',
+      redirect: 'manual',
       signal: controller.signal,
     });
 
@@ -158,10 +237,12 @@ app.get('/api/sec/filings', async (req, res) => {
   }
 
   try {
-    let cleanCik = cik ? String(cik).replace(/^0+/, '') : '';
+    let cleanCik = cik ? String(cik).replace(/\D/g, '').replace(/^0+/, '') : '';
     if (!cleanCik && ticker) {
-      // Return synthetic or default SEC CIK lookup
       cleanCik = '0000000000';
+    }
+    if (cleanCik.length > 10) {
+      return res.status(400).json({ error: 'Invalid CIK format' });
     }
     
     // SEC EDGAR requires padded 10-digit CIK
@@ -724,7 +805,12 @@ const visitorLogs: VisitorEvent[] = loadRealLogs();
 
 // Record incoming client tracking event (real data only)
 app.post('/api/analytics/track', (req, res) => {
-  const { path = '/', ticker, referrer = 'direct', device = 'desktop', visitorId = 'anon' } = req.body;
+  const clientIp = req.ip || 'unknown';
+  if (!checkRateLimit(`track:${clientIp}`, 120, 60_000)) {
+    return res.status(429).json({ error: 'Rate limit exceeded' });
+  }
+
+  const { path = '/', ticker, referrer = 'direct', device = 'desktop', visitorId = 'anon' } = req.body || {};
   
   const cleanRef = String(referrer || 'direct').trim().slice(0, 100);
   const cleanPath = String(path || '/').trim().slice(0, 100);
