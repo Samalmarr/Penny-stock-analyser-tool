@@ -1159,9 +1159,9 @@ app.get(['/rss.xml', '/feed.xml'], (req, res) => {
 // Search Engine Dispatch & Indexing Validator API (accepts GET/POST and supports both /api and root paths on Vercel)
 app.all(['/api/seo/ping-search-engines', '/seo/ping-search-engines'], async (req, res) => {
   try {
-    let host = req.get('host') || 'ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app';
+    let host = req.get('host') || 'pennystockanalysertool.vercel.app';
     if (host.includes('localhost') || host.includes('127.0.0.1')) {
-      host = 'ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app';
+      host = 'pennystockanalysertool.vercel.app';
     }
     const isHttps = req.secure || req.get('x-forwarded-proto') === 'https' || host.includes('run.app') || host.includes('vercel.app');
     const protocol = isHttps ? 'https' : 'http';

@@ -99,7 +99,7 @@ export const AdminDataView: React.FC<AdminDataViewProps> = ({ onAnalyzeTicker, o
   const [copiedSitemap, setCopiedSitemap] = useState(false);
   const [copiedRss, setCopiedRss] = useState(false);
 
-  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://ais-pre-4adkho2q3bpwvb45xirnc6-930259221517.europe-west2.run.app';
+  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://pennystockanalysertool.vercel.app';
   const sitemapUrl = `${currentOrigin}/sitemap.xml`;
   const rssUrl = `${currentOrigin}/rss.xml`;
 
