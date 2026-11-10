@@ -306,6 +306,28 @@ export const AdminDataView: React.FC<AdminDataViewProps> = ({ onAnalyzeTicker, o
         </div>
       )}
 
+      {/* Vercel Serverless Persistence & Real Analytics Notice */}
+      <div className="p-3.5 rounded-xl bg-slate-900 border border-cyan-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="space-y-1">
+          <div className="flex items-center gap-1.5 text-cyan-300 font-bold text-xs">
+            <AlertCircle className="w-4 h-4 shrink-0" />
+            <span>Vercel Subdomain Visitor Tracking Note</span>
+          </div>
+          <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
+            Vercel serverless functions reset <code className="text-cyan-300">/tmp</code> logs on cold starts, so in-app counters below may reset between requests. Permanent, real-time visitor &amp; X/Twitter referrer counts are recorded by <strong>Vercel Web Analytics</strong> in your Vercel Dashboard (make sure <strong>Push to GitHub</strong> is synced and Analytics is enabled on your Vercel project).
+          </p>
+        </div>
+        <a
+          href="https://vercel.com/dashboard"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shrink-0 inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-cyan-950 hover:bg-cyan-900 border border-cyan-700/70 text-cyan-200 font-mono text-[11px] font-bold transition-colors"
+        >
+          <span>Open Vercel Analytics</span>
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+      </div>
+
       {/* ========================================================================= */}
       {/* 1-CLICK SEARCH ENGINE INDEXING & RSS CONTROL CENTER (Direct Solution)     */}
       {/* ========================================================================= */}
