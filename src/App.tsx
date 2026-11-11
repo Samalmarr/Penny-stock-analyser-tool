@@ -24,12 +24,14 @@ import {
   Globe,
   Building2,
   Landmark,
-  ShieldCheck
+  ShieldCheck,
+  Copy,
+  Check
 } from 'lucide-react';
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
-import { formatCurrency, formatLargeNumber, formatMarketCap, formatSignedCurrencyCompact } from './utils/formatters';
+import { formatCurrency, formatLargeNumber, formatMarketCap, formatSignedCurrencyCompact, copyToClipboard } from './utils/formatters';
 import { INITIAL_PINK_STOCKS } from './data/stocksData';
 import { resolveStockJurisdiction, StockJurisdictionInfo } from './utils/stockJurisdiction';
 
@@ -106,6 +108,7 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<StockAnalysisResult | null>(null);
   const [isExampleResult, setIsExampleResult] = useState(true);
+  const [copiedShareLink, setCopiedShareLink] = useState(false);
   const [mostViewedStocks, setMostViewedStocks] = useState<TrendingPennyItem[]>(DEFAULT_MOST_VIEWED_PENNY_STOCKS);
   const [mostViewedSource, setMostViewedSource] = useState<string>('Yahoo Finance & StockAnalysis');
   const [recentSearches, setRecentSearches] = useState<string[]>(() => {
@@ -232,7 +235,15 @@ export default function App() {
         const data = await res.json();
         if (data && data.success) {
           setResult(data);
-          if (!isExample) updateRecentSearches(data.symbol);
+          if (!isExample) {
+            updateRecentSearches(data.symbol);
+            try {
+              const url = new URL(window.location.href);
+              url.searchParams.set('ticker', data.symbol);
+              window.history.replaceState(null, '', url.toString());
+              document.title = `${data.symbol} Stock Analysis – Bankruptcy, Dilution & 3-Year Financials | Penny Stock Analyser`;
+            } catch {}
+          }
           setLoading(false);
           return;
         }
@@ -262,17 +273,31 @@ export default function App() {
     performAnalysis(searchInput, false);
   };
 
-  // Initial load tracking, live most-viewed penny stocks & default top-searched example
+  // Initial load tracking, live most-viewed penny stocks & URL ticker / default example
   useEffect(() => {
     const path = window.location.pathname;
     const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const urlTicker = (
+      params.get('ticker') ||
+      params.get('symbol') ||
+      params.get('q') ||
+      (path.startsWith('/stock/') ? path.replace('/stock/', '').split('/')[0] : '')
+    ).trim().toUpperCase();
+
     if (path.startsWith('/guides')) {
       setActiveTab('guides');
     } else if (path.startsWith('/admin') || path.startsWith('/traffic') || path.startsWith('/analytics') || search.includes('admin=true') || search.includes('tab=admin')) {
       setActiveTab('admin');
     }
-    trackVisit(path || '/');
-    performAnalysis('PLUG', true);
+    trackVisit(path || '/', urlTicker || undefined);
+
+    if (urlTicker) {
+      setSearchInput(urlTicker);
+      performAnalysis(urlTicker, false);
+    } else {
+      performAnalysis('PLUG', true);
+    }
 
     fetch('/api/trending-penny-stocks')
       .then(res => res.ok ? res.json() : null)
@@ -489,6 +514,30 @@ export default function App() {
                     <h2 className="text-2xl sm:text-3xl font-bold font-mono tracking-tight text-white">
                       {result.symbol}
                     </h2>
+                    <button
+                      onClick={async () => {
+                        const shareUrl = `${window.location.origin}/?ticker=${encodeURIComponent(result.symbol)}`;
+                        const ok = await copyToClipboard(shareUrl);
+                        if (ok) {
+                          setCopiedShareLink(true);
+                          setTimeout(() => setCopiedShareLink(false), 2000);
+                        }
+                      }}
+                      title={`Copy direct link to ${result.symbol} analysis`}
+                      className="inline-flex items-center gap-1 px-2 py-0.5 rounded font-mono text-[11px] bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer"
+                    >
+                      {copiedShareLink ? (
+                        <>
+                          <Check className="w-3 h-3 text-emerald-400" />
+                          <span className="text-emerald-400">Copied Link</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3 h-3 text-slate-400" />
+                          <span>Share {result.symbol}</span>
+                        </>
+                      )}
+                    </button>
                     {/* Country of Origin Badge */}
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded font-mono text-xs font-semibold bg-slate-800 border border-slate-700 text-slate-200">
                       <span className="text-sm">{result.countryFlag || '🌐'}</span>

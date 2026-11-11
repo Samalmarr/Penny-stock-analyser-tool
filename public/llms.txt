@@ -1,0 +1,25 @@
+# Penny Stock Analyser
+
+> Free live due-diligence terminal for US and Canadian OTC, Pink Sheet, and sub-$5 penny stocks. Checks Chapter 11 bankruptcy Q-suffix status, live market quotes, 3-year annual financials (turnover, net profit/loss, and total debt), stock dilution risk, and jurisdiction-specific regulatory filings (US SEC EDGAR vs. Canadian SEDAR+ under SEC Rule 12g3-2(b)).
+
+## Key Features
+- **Live Bankruptcy Check**: Detects 5-letter Q-suffix tickers (`BBBYQ`, `SHLDQ`) indicating Chapter 11/7 bankruptcy proceedings.
+- **Past 3 Years Financials**: Live annual Turnover (Revenue), Net Profit/(Loss), and Total Debt from official company filings via Yahoo Finance fundamentals feeds.
+- **Direct Ticker Lookup URL**: Open any stock directly at `https://pennystockanalysertool.vercel.app/?ticker=TICKER` (for example, `https://pennystockanalysertool.vercel.app/?ticker=PLUG` or `https://pennystockanalysertool.vercel.app/?ticker=YOOIF`).
+- **US vs. International Jurisdiction Detection**: Automatically distinguishes US SEC EDGAR issuers from Canadian TSX-V / CSE dual-listed foreign ordinaries (`F`-suffix tickers) that file on Canadian SEDAR+ (`sedarplus.ca`).
+- **Zero Synthetic Data**: Never generates fake prices or simulated charts; links directly to Yahoo Finance, Google Finance, OTC Markets, SEC EDGAR, and SEDAR+.
+
+## Research Guides & Forensic Due Diligence
+- [How to Tell if a Penny Stock is Bankrupt: The Q-Suffix & Court Guide](https://pennystockanalysertool.vercel.app/guides/how-to-tell-if-penny-stock-is-bankrupt-q-suffix)
+- [Understanding Stock Dilution in OTC & Sub-Penny Stocks: Toxic Notes Explained](https://pennystockanalysertool.vercel.app/guides/understanding-stock-dilution-toxic-convertible-debt)
+- [How to Verify OTC Share Structure & Transfer Agent Reports](https://pennystockanalysertool.vercel.app/guides/how-to-verify-otc-share-structure-transfer-agents)
+- [Fannie Mae (FNMA) on OTCQB: Capital Structure & Treasury Warrant Dilution](https://pennystockanalysertool.vercel.app/guides/fannie-mae-fnma-otc-capital-structure-gse-analysis)
+- [YANGAROO Inc. (YOOIF / YOO.V): Canadian Interlisted Media Tech Breakdown](https://pennystockanalysertool.vercel.app/guides/yangaroo-yooif-canadian-dual-listing-filings-analysis)
+- [CytoDyn Inc. (CYDY): FDA Clinical Holds, SEC Subpoenas & Share Capital Audit](https://pennystockanalysertool.vercel.app/guides/cytodyn-cydy-clinical-holds-share-structure-audit)
+- [The Reverse Stock Split Trap: How 1-for-100 Splits Wipe Out Retail Traders](https://pennystockanalysertool.vercel.app/guides/reverse-stock-splits-toxic-dilution-trap)
+- [SEC Form 15 Deregistration & Dark Stocks: What Happens When an OTC Issuer Stops Filing?](https://pennystockanalysertool.vercel.app/guides/sec-form-15-deregistration-dark-otc-stocks)
+- [Nevada SOS Custodianship Shells & Reverse Mergers: How to Spot Scams vs Real Runners](https://pennystockanalysertool.vercel.app/guides/nevada-custodianship-reverse-merger-playbook)
+
+## Sitemaps & Feeds
+- Sitemap: https://pennystockanalysertool.vercel.app/sitemap.xml
+- RSS Feed: https://pennystockanalysertool.vercel.app/rss.xml

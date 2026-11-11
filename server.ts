@@ -1119,6 +1119,34 @@ Sitemap: ${req.protocol}://${req.get('host')}/sitemap.xml
 `);
 });
 
+// Serve llms.txt for AI/LLM search crawlers
+app.get('/llms.txt', (req, res) => {
+  const llmsPath = path.resolve(__dirname, 'public', 'llms.txt');
+  if (fs.existsSync(llmsPath)) {
+    res.type('text/plain');
+    return res.sendFile(llmsPath);
+  }
+  return res.status(404).send('Not found');
+});
+
+// Serve crawlable static HTML guides for search engines & AI crawlers
+app.get('/guides', (req, res, next) => {
+  const guideIndex = path.resolve(__dirname, 'public', 'guides', 'index.html');
+  if (fs.existsSync(guideIndex)) {
+    return res.sendFile(guideIndex);
+  }
+  next();
+});
+
+app.get('/guides/:slug', (req, res, next) => {
+  const safeSlug = String(req.params.slug || '').replace(/[^a-zA-Z0-9_-]/g, '');
+  const guideFile = path.resolve(__dirname, 'public', 'guides', `${safeSlug}.html`);
+  if (safeSlug && fs.existsSync(guideFile)) {
+    return res.sendFile(guideFile);
+  }
+  next();
+});
+
 // Automatic Google Search Console Verification Handler
 app.get(['/google1ab148f689da71d4.html', '/google1ab148f689da71d4'], (req, res) => {
   res.type('text/html');
