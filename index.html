@@ -79,8 +79,35 @@
     ]
     </script>
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="bg-slate-950 text-slate-100">
+    <div id="root">
+      <main style="max-width:960px;margin:0 auto;padding:32px 16px;font-family:system-ui,-apple-system,sans-serif;color:#e2e8f0;">
+        <header>
+          <h1>Penny Stock Analyser – OTC Dilution, Bankruptcy &amp; Financial Checker</h1>
+          <p>Free single-stock due diligence terminal for OTC, Pink Sheet, and micro-cap penny stocks. Check live Chapter 11 bankruptcy risk (Q-suffix alerts), share dilution risk, past 3 years turnover, net profit and debt, real market cap, and verified SEC EDGAR, SEDAR+, OTC Markets, and Yahoo Finance links.</p>
+        </header>
+        <section>
+          <h2>What You Can Check on Any Penny Stock</h2>
+          <ul>
+            <li>Chapter 11 / Chapter 7 bankruptcy Q-suffix alerts and delisting status</li>
+            <li>3-year historical turnover, net profit/loss, and total debt from live filings</li>
+            <li>Share structure dilution risk, reverse split history, and official transfer agent data</li>
+            <li>Direct links to SEC EDGAR, Canadian SEDAR+, OTC Markets, and Yahoo Finance</li>
+          </ul>
+        </section>
+        <nav aria-label="Due Diligence Guides">
+          <h2>OTC &amp; Penny Stock Due Diligence Guides</h2>
+          <ul>
+            <li><a href="/guides">All Penny Stock Research Guides</a></li>
+            <li><a href="/guides/how-to-tell-if-penny-stock-is-bankrupt-q-suffix">How to Tell if a Penny Stock is Bankrupt (Q-Suffix Guide)</a></li>
+            <li><a href="/guides/understanding-stock-dilution-toxic-convertible-debt">Understanding Stock Dilution &amp; Toxic Convertible Debt</a></li>
+            <li><a href="/guides/how-to-verify-otc-share-structure-transfer-agents">How to Verify OTC Share Structure &amp; Transfer Agents</a></li>
+            <li><a href="/guides/reverse-stock-splits-toxic-dilution-trap">The Reverse Stock Split &amp; Toxic Dilution Trap</a></li>
+            <li><a href="/guides/sec-form-15-deregistration-dark-otc-stocks">SEC Form 15 Deregistration &amp; Dark OTC Stocks</a></li>
+          </ul>
+        </nav>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
