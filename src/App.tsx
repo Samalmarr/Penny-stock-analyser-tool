@@ -1081,20 +1081,20 @@ export default function App() {
         {/* Sponsored Partner Advertisement Banner */}
         <section className="pt-4 border-t border-slate-800/80">
           <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 mb-1.5 px-1">
-            <span className="uppercase tracking-wider text-slate-400">Sponsored Partner · Free Web Class</span>
+            <span className="uppercase tracking-wider text-slate-400">Sponsored Partner · TradingView</span>
             <span className="text-slate-600">Advertisement</span>
           </div>
           <a
-            href="https://millionairepartnership.com/webclass-d24#aff=Earnliketate"
+            href="https://www.tradingview.com/black-friday/?aff_id=1174556"
             target="_blank"
             rel="noopener noreferrer sponsored"
             onClick={() => trackVisit('/ad/affiliate-banner', 'AFF_CLICK')}
-            className="block rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500/60 shadow-lg hover:shadow-amber-500/10 transition-all duration-200 group bg-slate-900"
-            title="Click to register for Free Web Class"
+            className="block rounded-xl overflow-hidden border border-slate-700 hover:border-sky-400/70 shadow-lg hover:shadow-sky-500/10 transition-all duration-200 group bg-white"
+            title="TradingView — The fastest way to follow markets"
           >
             <img
-              src="/assets/aistudio/image_f9e09ace.png"
-              alt="Free Limited-Time Web Class - How To Make An Additional $1,000 - $3,000 Per Day In Passive Income"
+              src="/assets/aistudio/image_955cf57f.png"
+              alt="TradingView - The fastest way to follow markets"
               className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-200"
               loading="lazy"
             />
