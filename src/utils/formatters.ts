@@ -40,27 +40,45 @@ export function formatSignedCurrencyCompact(val: number | null | undefined, curr
   return `${sign}${prefix}${formatLargeNumber(Math.abs(val))}`;
 }
 
-export function copyToClipboard(text: string): Promise<boolean> {
+export const PUBLIC_SITE_ORIGIN = 'https://pennystockanalysertool.vercel.app';
+
+export function getPublicSiteOrigin(): string {
+  if (typeof window === 'undefined') return PUBLIC_SITE_ORIGIN;
+  const host = window.location.hostname;
+  if (
+    host === 'localhost' ||
+    host === '127.0.0.1' ||
+    host.endsWith('.run.app')
+  ) {
+    return PUBLIC_SITE_ORIGIN;
+  }
+  return window.location.origin;
+}
+
+export async function copyToClipboard(text: string): Promise<boolean> {
   if (navigator.clipboard && window.isSecureContext) {
-    return navigator.clipboard.writeText(text).then(() => true).catch(() => false);
-  } else {
-    // Fallback for non-https or older contexts
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed';
-    textArea.style.left = '-999999px';
-    textArea.style.top = '-999999px';
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
     try {
-      const successful = document.execCommand('copy');
-      document.body.removeChild(textArea);
-      return Promise.resolve(successful);
-    } catch (err) {
-      document.body.removeChild(textArea);
-      return Promise.resolve(false);
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Fall back to textarea copy inside restricted iframes
     }
+  }
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-999999px';
+  textArea.style.top = '-999999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    const successful = document.execCommand('copy');
+    document.body.removeChild(textArea);
+    return successful;
+  } catch {
+    document.body.removeChild(textArea);
+    return false;
   }
 }
 

@@ -18,7 +18,7 @@ import {
   Sparkles,
   CalendarDays
 } from 'lucide-react';
-import { copyToClipboard } from '../utils/formatters';
+import { copyToClipboard, getPublicSiteOrigin } from '../utils/formatters';
 
 interface GuidesViewProps {
   onAnalyzeTicker: (ticker: string) => void;
@@ -39,7 +39,7 @@ export const GuidesView: React.FC<GuidesViewProps> = ({ onAnalyzeTicker }) => {
   });
 
   const handleShareArticle = async (post: BlogPost) => {
-    const url = `${window.location.origin}/guides/${post.slug}`;
+    const url = `${getPublicSiteOrigin()}/guides/${post.slug}`;
     const ok = await copyToClipboard(url);
     if (ok) {
       setCopiedLink(true);

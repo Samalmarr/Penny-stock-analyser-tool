@@ -31,7 +31,7 @@ import {
 import { GuidesView } from './components/GuidesView';
 import { AdminDataView } from './components/AdminDataView';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
-import { formatCurrency, formatLargeNumber, formatMarketCap, formatSignedCurrencyCompact, copyToClipboard } from './utils/formatters';
+import { formatCurrency, formatLargeNumber, formatMarketCap, formatSignedCurrencyCompact, copyToClipboard, getPublicSiteOrigin } from './utils/formatters';
 import { INITIAL_PINK_STOCKS } from './data/stocksData';
 import { resolveStockJurisdiction, StockJurisdictionInfo } from './utils/stockJurisdiction';
 
@@ -516,7 +516,7 @@ export default function App() {
                     </h2>
                     <button
                       onClick={async () => {
-                        const shareUrl = `${window.location.origin}/?ticker=${encodeURIComponent(result.symbol)}`;
+                        const shareUrl = `${getPublicSiteOrigin()}/?ticker=${encodeURIComponent(result.symbol)}`;
                         const ok = await copyToClipboard(shareUrl);
                         if (ok) {
                           setCopiedShareLink(true);
@@ -1078,12 +1078,13 @@ export default function App() {
           </p>
         </section>
 
-        {/* Sponsored Partner Advertisement Banner */}
-        <section className="pt-4 border-t border-slate-800/80">
-          <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 mb-1.5 px-1">
-            <span className="uppercase tracking-wider text-slate-400">Sponsored Partner · TradingView</span>
+        {/* Sponsored Partner Advertisement Banners */}
+        <section className="pt-4 border-t border-slate-800/80 space-y-3">
+          <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 px-1">
+            <span className="uppercase tracking-wider text-slate-400">Sponsored Partners · Charts &amp; Screeners</span>
             <span className="text-slate-600">Advertisement</span>
           </div>
+
           <a
             href="https://www.tradingview.com/black-friday/?aff_id=1174556"
             target="_blank"
@@ -1098,6 +1099,42 @@ export default function App() {
               className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-200"
               loading="lazy"
             />
+          </a>
+
+          <a
+            href="https://finviz.com/?affilId=888133749"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            onClick={() => trackVisit('/ad/finviz-banner', 'AFF_CLICK')}
+            className="flex items-center justify-between gap-4 rounded-xl border border-slate-700 hover:border-emerald-400/70 shadow-lg hover:shadow-emerald-500/10 transition-all duration-200 group bg-white px-5 sm:px-7 py-4 sm:py-5"
+            title="FINVIZ — Stock Screener, Market Maps & Financial Visualizations"
+          >
+            <div className="flex items-center gap-3.5 min-w-0">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#131722] flex items-center justify-center shrink-0 shadow-xs">
+                <svg viewBox="0 0 24 24" className="w-6 h-6" aria-hidden="true">
+                  <rect x="3" y="3" width="8" height="8" rx="1.5" fill="#10b981" />
+                  <rect x="13" y="3" width="8" height="5" rx="1.2" fill="#34d399" />
+                  <rect x="13" y="10" width="8" height="11" rx="1.5" fill="#ef4444" />
+                  <rect x="3" y="13" width="8" height="8" rx="1.5" fill="#059669" />
+                </svg>
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="font-sans font-extrabold text-lg sm:text-xl tracking-tight text-[#131722] leading-none">
+                    FINVIZ
+                  </span>
+                  <span className="hidden sm:inline-block text-[10px] font-mono font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    Screener &amp; Maps
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-[#434651] font-sans mt-1 truncate">
+                  Real-time stock screener, heatmaps &amp; news scanner
+                </p>
+              </div>
+            </div>
+            <span className="shrink-0 inline-flex items-center justify-center rounded-xl bg-[#131722] group-hover:bg-slate-800 text-white font-sans font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3 transition-transform duration-200 group-hover:scale-[1.02] whitespace-nowrap">
+              Open Screener
+            </span>
           </a>
         </section>
       </main>
