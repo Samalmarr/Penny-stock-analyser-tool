@@ -1148,7 +1148,22 @@ export default function App() {
             <span>Verified Links to Yahoo, OTC &amp; SEC</span>
           </div>
 
-          <div className="flex items-center gap-3 text-[10px]">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-[10px]">
+            <a
+              href="https://fazier.com/launches/pennystockanalysertool.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:opacity-90 transition-opacity"
+            >
+              <img
+                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light"
+                width={120}
+                alt="Fazier badge"
+                className="h-auto"
+                loading="lazy"
+              />
+            </a>
+            <span className="text-slate-800">·</span>
             <a
               href="/rss.xml"
               target="_blank"
