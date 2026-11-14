@@ -1137,6 +1137,29 @@ export default function App() {
             </span>
           </a>
         </section>
+
+        {/* Featured In / Directory Badges */}
+        <section className="pt-4 border-t border-slate-800/80 space-y-2.5">
+          <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 px-1">
+            <span className="uppercase tracking-wider text-slate-400">Featured In</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://fazier.com/launches/pennystockanalysertool.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:opacity-90 transition-opacity"
+            >
+              <img
+                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
+                width={250}
+                alt="Fazier badge"
+                className="h-auto"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </section>
       </main>
 
       {/* Minimal Footer with Small Discrete Admin Data Link */}
@@ -1148,22 +1171,7 @@ export default function App() {
             <span>Verified Links to Yahoo, OTC &amp; SEC</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 text-[10px]">
-            <a
-              href="https://fazier.com/launches/pennystockanalysertool.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center hover:opacity-90 transition-opacity"
-            >
-              <img
-                src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light"
-                width={120}
-                alt="Fazier badge"
-                className="h-auto"
-                loading="lazy"
-              />
-            </a>
-            <span className="text-slate-800">·</span>
+          <div className="flex items-center gap-3 text-[10px]">
             <a
               href="/rss.xml"
               target="_blank"
