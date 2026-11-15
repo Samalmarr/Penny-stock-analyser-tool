@@ -25,14 +25,173 @@ export interface BlogPost {
 }
 
 export const BLOG_PUBLISH_SCHEDULE = {
-  cadence: '1 New Post Every Week (Every Friday)',
-  currentWeek: 45,
-  totalPublished: 8,
-  nextDropDate: '2026-11-13',
-  nextDropTopic: 'Nevada SOS Custodianship Shells & Reverse Mergers: How to Spot Scams vs Real Runners'
+  cadence: '1–3 New Guides Every Week',
+  currentWeek: 46,
+  totalPublished: 12,
+  nextDropDate: '2026-11-20',
+  nextDropTopic: 'How to Read an SEC Form S-3 Shelf Registration Before a Small-Cap Dilution Drop'
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'plug-power-dilution-debt-guide',
+    slug: 'plug-power-plug-cash-burn-debt-dilution-analysis',
+    title: 'Plug Power (PLUG): Cash Burn, Total Debt & Share Dilution Check Before Buying',
+    description: 'How to evaluate Plug Power (PLUG) and cash-burning clean energy small-caps: checking 3-year turnover vs. net losses, total debt load, and SEC ATM share dilution filings.',
+    date: '2026-11-15',
+    weekNumber: 46,
+    readTime: '5 min read',
+    category: 'Ticker Deep Dive',
+    targetKeywords: ['plug power stock dilution', 'plug 3 year financials debt', 'is plug power going bankrupt', 'plug sec filings check', 'small cap cash burn analysis'],
+    featuredTicker: 'PLUG',
+    status: 'published',
+    content: {
+      summary: 'High-volume under-$5 NASDAQ stocks like Plug Power (PLUG) attract thousands of retail traders every week—but headline partnerships rarely tell the full story. Here is how to audit 3-year revenue, operating losses, debt obligations, and share count expansion before risking capital.',
+      keyTakeaways: [
+        'Always compare 3-year annual turnover growth against widening net losses and total debt before buying a high-volume turnaround stock.',
+        'At-the-Market (ATM) equity programs and Form S-3 shelf registrations allow capital-intensive issuers to sell millions of new shares into rallies.',
+        'Check SEC Form 10-K and 10-Q cash-on-hand versus quarterly operating cash burn to estimate financing risk.'
+      ],
+      sections: [
+        {
+          heading: '1. Revenue Growth vs. Persistent Net Losses',
+          body: [
+            'Many popular small-cap clean energy and EV stocks show growing top-line revenue while still posting heavy negative gross margins and deep annual net losses. A company can announce large multi-year deployment deals and still lose money on every unit delivered.',
+            'Pulling the past 3 fiscal years of Turnover, Profit/Loss, and Total Debt side-by-side quickly reveals whether losses are narrowing toward profitability or requiring ever-larger outside capital raises.'
+          ]
+        },
+        {
+          heading: '2. Watching ATM Offerings & Share Count Creep',
+          body: [
+            'Unlike dark OTC shells that use toxic floorless notes, NASDAQ-listed small-caps frequently raise cash through At-the-Market (ATM) equity distribution agreements, convertible senior notes, or discounted secondary offerings filed on SEC Form 8-K and Form S-3.',
+            'When an issuer regularly increases weighted-average diluted shares outstanding each year, existing holders own a smaller percentage of any eventual recovery—keeping overhead supply heavy whenever the stock rallies.'
+          ]
+        },
+        {
+          heading: '3. Checking Debt Load & Liquidity Runway on SEC EDGAR',
+          body: [
+            'Use the SEC EDGAR link on the PLUG profile to open the most recent Form 10-Q or Form 10-K. Focus on three lines: unrestricted cash and equivalents, operating cash outflow over the last 9–12 months, and near-term debt maturities.',
+            'If annual cash burn exceeds unrestricted cash, additional equity issuance or debt restructuring is usually on the horizon.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'Where can I check Plug Power (PLUG) 3-year revenue, profit, and debt?',
+          answer: 'Run PLUG inside Penny Stock Analyser to inspect the past 3 fiscal years of Turnover, Net Profit/(Loss), and Total Debt alongside direct links to SEC EDGAR filings.'
+        },
+        {
+          question: 'What is the main risk with high-volume sub-$5 NASDAQ stocks?',
+          answer: 'Even active NASDAQ stocks with well-known brands can suffer prolonged share-price pressure if heavy operating losses force repeated equity dilution or convertible debt financing.'
+        }
+      ]
+    }
+  },
+  {
+    id: 'archer-aviation-achr-runway-guide',
+    slug: 'archer-aviation-achr-cash-runway-warrants-dilution-check',
+    title: 'Archer Aviation (ACHR): Pre-Revenue Cash Runway, Warrants & Share Count Check',
+    description: 'Due diligence guide for Archer Aviation (ACHR) and pre-revenue eVTOL small-caps: reviewing 3-year expenses, total debt, warrant overhang, and SEC capital-raise filings.',
+    date: '2026-11-15',
+    weekNumber: 46,
+    readTime: '5 min read',
+    category: 'Ticker Deep Dive',
+    targetKeywords: ['achr stock dilution', 'archer aviation financials debt', 'achr warrants share count', 'pre revenue small cap risk', 'achr sec filings'],
+    featuredTicker: 'ACHR',
+    status: 'published',
+    content: {
+      summary: 'Pre-revenue aerospace and eVTOL tickers like Archer Aviation (ACHR) trade heavily on certification milestones and headline partnerships. Before chasing momentum, here is how to review multi-year losses, debt, and warrant dilution risk in SEC filings.',
+      keyTakeaways: [
+        'Pre-revenue companies typically show near-zero annual turnover alongside heavy R&D and FAA certification expenses.',
+        'Former SPAC mergers often carry outstanding public/private warrants and milestone share issuances that can expand the float.',
+        'Verify quarterly cash burn and total debt in the latest SEC Form 10-Q before holding through high-volatility swings.'
+      ],
+      sections: [
+        {
+          heading: '1. Understanding Pre-Revenue 3-Year Financials',
+          body: [
+            'When an aviation or deep-tech small-cap is still working through FAA type certification and manufacturing scale-up, zero or minimal turnover over the past 3 years is expected—what matters is how rapidly operating expenses and total debt are growing.',
+            'Comparing 3-year Net Loss and Total Debt trends helps separate companies funded primarily with equity partnerships from those taking on high-cost debt.'
+          ]
+        },
+        {
+          heading: '2. Warrant Overhang & Follow-On Offerings',
+          body: [
+            'Many modern small-cap mobility stocks went public via SPACs or strategic PIPE financings, leaving behind stock warrants and shelf registrations.',
+            'Before buying a breakout, open the SEC EDGAR link and search the latest 10-Q or 8-K for "warrants", "shares outstanding", and "shelf registration" to see potential dilution levels if the stock rallies above key strike prices.'
+          ]
+        },
+        {
+          heading: '3. Milestones vs. Liquidity',
+          body: [
+            'In pre-revenue stories, stock price can swing 20–40% in a week on flight-test headlines or institutional stake announcements. Pairing catalyst news with a quick check of balance-sheet debt and cash runway keeps position sizing realistic.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'Why does a pre-revenue stock show $0 turnover for 3 years?',
+          answer: 'Development-stage issuers cannot book commercial flight or vehicle sales until regulatory certification and initial deliveries begin, so funding comes from existing cash reserves, partners, or new share issuances.'
+        },
+        {
+          question: 'How do I check ACHR SEC filings fast?',
+          answer: 'Search ACHR in Penny Stock Analyser to view its 3-year profit/debt summary, live range, and one-click SEC EDGAR link for Form 10-K, 10-Q, and 8-K reports.'
+        }
+      ]
+    }
+  },
+  {
+    id: 'nasdaq-minimum-bid-rule-guide',
+    slug: 'nasdaq-1-dollar-minimum-bid-rule-reverse-split-warning',
+    title: 'NASDAQ $1 Minimum Bid Rule & 180-Day Extensions: Reverse Split & Delisting Guide',
+    description: 'What happens when a penny stock trades below $1.00 on NASDAQ: Listing Rule 5550(a)(2), 30-day deficiency notices, 180-day extensions, reverse split votes, and OTC delisting.',
+    date: '2026-11-15',
+    weekNumber: 46,
+    readTime: '5 min read',
+    category: 'Corporate Actions',
+    targetKeywords: ['nasdaq 1 dollar rule', '180 day extension penny stock', 'nasdaq deficiency notice 8k', 'sub 1 dollar stock reverse split', 'nasdaq delisting to otc'],
+    status: 'published',
+    content: {
+      summary: 'Whenever a popular NASDAQ stock drops under $1.00, traders immediately start arguing about delisting deadlines and reverse splits. Here is the exact timeline of NASDAQ Listing Rule 5550(a)(2) and how to spot warning signs in Form 8-K filings.',
+      keyTakeaways: [
+        'Closing below $1.00 for 30 consecutive business days triggers a formal NASDAQ deficiency notice (disclosed via SEC Form 8-K Item 3.01).',
+        'Companies generally receive an initial 180-calendar-day compliance window—and sometimes a second 180-day extension if transferred to NASDAQ Capital Market.',
+        'To regain $1.00 compliance (closing at or above $1.00 for 10+ consecutive business days), struggling issuers frequently resort to aggressive reverse stock splits.'
+      ],
+      sections: [
+        {
+          heading: '1. The 30-Day Trigger & Form 8-K Item 3.01',
+          body: [
+            'Under NASDAQ Listing Rule 5550(a)(2), listed shares must maintain a minimum closing bid price of $1.00 per share. Once a stock closes below $1.00 for 30 consecutive trading days, NASDAQ sends a written deficiency notice.',
+            'The company must disclose that notice to the public within 4 business days on SEC Form 8-K under Item 3.01 (Notice of Delisting or Failure to Satisfy a Continued Listing Rule).'
+          ]
+        },
+        {
+          heading: '2. The 180-Day Compliance Window & Second Extension',
+          body: [
+            'Receiving a deficiency notice does not mean immediate delisting. The issuer receives 180 calendar days to regain compliance by closing at $1.00 or higher for at least 10 consecutive business days (occasionally 20 days at NASDAQ discretion).',
+            'If the stock is still below $1.00 after 180 days, companies meeting other Capital Market equity standards may qualify for one additional 180-day grace period—typically by committing to cure the deficiency via a reverse stock split if needed.'
+          ]
+        },
+        {
+          heading: '3. Reverse Split Votes vs. OTC Delisting Risk',
+          body: [
+            'Watch DEF 14A proxy filings for special shareholder meetings authorizing a reverse split ratio (such as 1-for-10 up to 1-for-50). If compliance still fails or shareholders reject the split, NASDAQ issues a Staff Delisting Determination and the ticker drops to the OTC Pink or OTCQB market—often losing institutional liquidity overnight.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'How long must a stock stay above $1.00 to regain NASDAQ compliance?',
+          answer: 'Normally at least 10 consecutive business days with a closing bid price of $1.00 or higher, though NASDAQ staff can require up to 20 consecutive business days.'
+        },
+        {
+          question: 'Does a 180-day extension mean a stock is safe from dilution?',
+          answer: 'No. Many companies raise cash or execute reverse splits during the extension period, so always check 3-year debt, cash burn, and Form S-3 / 8-K dilution disclosures.'
+        }
+      ]
+    }
+  },
   {
     id: 'bankrupt-q-stocks-guide',
     slug: 'how-to-tell-if-penny-stock-is-bankrupt-q-suffix',
@@ -400,33 +559,50 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'nevada-custodianship-shells',
     slug: 'nevada-custodianship-reverse-merger-playbook',
     title: 'Nevada SOS Custodianship Shells & Reverse Mergers: How to Spot Scams vs Real Runners',
-    description: 'Scheduled Week 46 release: How NRS 78.347 custodianship petitions work in Nevada district courts, how shell cleaners reinstate charters, and reverse merger mechanics.',
+    description: 'How NRS 78.347 custodianship petitions work in Nevada district courts, how shell cleaners reinstate abandoned tickers, and reverse merger dilution red flags.',
     date: '2026-11-13',
     weekNumber: 46,
     readTime: '6 min read',
     category: 'Due Diligence',
     targetKeywords: ['nevada custodianship shells otc', 'nrs 78.347 custodianship', 'reverse merger shell stocks', 'shell cleaners otc'],
-    status: 'scheduled',
+    status: 'published',
     content: {
-      summary: 'Preview of our upcoming Week 46 investigation: Custodianship plays are one of the most profitable yet hazardous niches in penny stocks. Learn how to verify state court dockets before chasing shell rumors.',
+      summary: 'Custodianship shell plays are one of the highest-volatility niches in OTC penny stocks. Before chasing reverse-merger rumors, learn how Nevada Revised Statutes NRS 78.347 works and how to verify real court orders versus empty shell hype.',
       keyTakeaways: [
-        'Under Nevada Revised Statutes NRS 78.347, an interested shareholder can petition a state court to be appointed custodian of an abandoned corporation.',
-        'The custodian pays back taxes to reinstate the charter, cancels old insider shares, and markets the clean ticker as a reverse merger vehicle.',
-        'Scheduled publication on Friday, Nov 13, 2026 with full case studies on successful custodianship runners.'
+        'Under Nevada Revised Statutes NRS 78.347, a shareholder can petition a state district court to be appointed custodian of an abandoned or revoked Nevada corporation.',
+        'Legitimate custodians pay delinquent state fees to reinstate the charter, clean up disputed debt, and seek an operating private company for a reverse merger.',
+        'Always verify actual Clark County or Washoe County court docket approvals and check whether preferred control shares were issued to the custodian before buying.'
       ],
       sections: [
         {
-          heading: 'Upcoming Guide Preview',
+          heading: '1. What Is an NRS 78.347 Custodianship?',
           body: [
-            'This guide drops on Friday, November 13, 2026 as part of our weekly due diligence calendar.',
-            'We will examine exact Nevada District Court filings (Clark County / Washoe County), how to verify active custodianship orders, and how to verify if a private merger partner has audited financials ready.'
+            'Thousands of old OTC tickers incorporated in Nevada eventually go dark, stop paying Secretary of State renewal fees, and have their corporate charter revoked while the ticker still trades on Pink Limited or Expert Market.',
+            'Under Nevada law (NRS 78.347), an active shareholder can file a petition in Nevada District Court requesting appointment as corporate custodian to restore good standing and hold a shareholder meeting.'
+          ]
+        },
+        {
+          heading: '2. Real Shell Cleanups vs. Empty Pump Rumors',
+          body: [
+            'During a custodianship run, social media traders often hype "merger incoming" months before any court order is actually signed. Always verify on the Nevada Secretary of State (SilverFlume) business portal whether the entity status is Active and who is listed as officer/director.',
+            'Remember that even after a merger closes, bringing audited PCAOB financials to OTCQB or NASDAQ can take 6–18 months and frequently involves new convertible financing or reverse splits.'
+          ]
+        },
+        {
+          heading: '3. Checking Share Structure & Preferred Control Blocks',
+          body: [
+            'Review OTC Markets and SEC disclosures for newly created Super-Voting Preferred Stock (such as Series A Preferred carrying 51%+ voting control). Confirm authorized share limits and check whether prior toxic notes were legally discharged or still sit on the balance sheet.'
           ]
         }
       ],
       faqs: [
         {
-          question: 'When is this post releasing?',
-          answer: 'Scheduled for publication on Friday, November 13, 2026. Check back weekly for fresh diligence breakdowns.'
+          question: 'Do all Nevada custodianship stocks end in a reverse merger?',
+          answer: 'No. Many petitions are contested, dismissed by judges, or sit idle for years without ever closing an operating acquisition.'
+        },
+        {
+          question: 'Can Expert Market custodianship tickers be bought by retail traders?',
+          answer: 'Most US retail brokers restrict buying on SEC Rule 15c2-11 Expert Market tickers until the custodian restores current financial reporting on OTC Markets.'
         }
       ]
     }

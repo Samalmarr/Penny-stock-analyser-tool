@@ -2,46 +2,95 @@
 <?xml-stylesheet type="text/xsl" href="/rss.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Penny Stock Analyser – Weekly OTC Diligence Blog</title>
+  <title>Penny Stock Analyser – Weekly OTC &amp; Small-Cap Diligence Blog</title>
   <link>https://pennystockanalysertool.vercel.app/</link>
-  <description>Weekly deep-dive forensic research, bankruptcy Q-suffix guides, and dilution red flags for OTC and Pink Sheet traders.</description>
+  <description>Forensic research, bankruptcy Q-suffix guides, small-cap debt &amp; cash burn analysis, and dilution red flags.</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 07 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 15 Nov 2026 14:30:00 GMT</lastBuildDate>
   <atom:link href="https://pennystockanalysertool.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Plug Power (PLUG): Cash Burn, Total Debt & Share Dilution Check Before Buying]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/plug-power-plug-cash-burn-debt-dilution-analysis</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/plug-power-plug-cash-burn-debt-dilution-analysis</guid>
+    <pubDate>Sun, 15 Nov 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[How to evaluate Plug Power (PLUG) and cash-burning clean energy small-caps: checking 3-year turnover vs. net losses, total debt load, and SEC ATM share dilution filings.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[Archer Aviation (ACHR): Pre-Revenue Cash Runway, Warrants & Share Count Check]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/archer-aviation-achr-cash-runway-warrants-dilution-check</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/archer-aviation-achr-cash-runway-warrants-dilution-check</guid>
+    <pubDate>Sun, 15 Nov 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Due diligence guide for Archer Aviation (ACHR) and pre-revenue eVTOL small-caps: reviewing 3-year expenses, total debt, warrant overhang, and SEC capital-raise filings.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[NASDAQ $1 Minimum Bid Rule & 180-Day Extensions: Reverse Split & Delisting Guide]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/nasdaq-1-dollar-minimum-bid-rule-reverse-split-warning</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/nasdaq-1-dollar-minimum-bid-rule-reverse-split-warning</guid>
+    <pubDate>Sun, 15 Nov 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[What happens when a penny stock trades below $1.00 on NASDAQ: Listing Rule 5550(a)(2), 30-day deficiency notices, 180-day extensions, reverse split votes, and OTC delisting.]]></description>
+  </item>
   <item>
     <title><![CDATA[How to Tell if a Penny Stock is Bankrupt: The Q-Suffix & Court Guide]]></title>
     <link>https://pennystockanalysertool.vercel.app/guides/how-to-tell-if-penny-stock-is-bankrupt-q-suffix</link>
     <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/how-to-tell-if-penny-stock-is-bankrupt-q-suffix</guid>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Weekly forensic breakdown and diligence report on how to spot OTC bankruptcy proceedings and why Q-tickers face 100% equity wipeouts.]]></description>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Learn how to instantly spot bankrupt OTC and penny stocks using the FINRA 5-letter Q-suffix rule, Chapter 11 court filings, and SEC Form 8-K disclosures.]]></description>
   </item>
   <item>
     <title><![CDATA[Understanding Stock Dilution in OTC & Sub-Penny Stocks: Toxic Notes Explained]]></title>
     <link>https://pennystockanalysertool.vercel.app/guides/understanding-stock-dilution-toxic-convertible-debt</link>
     <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/understanding-stock-dilution-toxic-convertible-debt</guid>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[How floorless convertible promissory notes generate billions of newly printed shares that collapse penny stock valuations.]]></description>
+    <pubDate>Fri, 30 Oct 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[A deep dive into how toxic convertible debt and floorless promissory notes dilute penny stock shareholders and trigger endless reverse splits.]]></description>
   </item>
   <item>
     <title><![CDATA[How to Verify OTC Share Structure & Transfer Agent Reports]]></title>
     <link>https://pennystockanalysertool.vercel.app/guides/how-to-verify-otc-share-structure-transfer-agents</link>
     <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/how-to-verify-otc-share-structure-transfer-agents</guid>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Step-by-step verification guide for TA-verified share counts on OTC Markets, DTCC chill checks, and float disclosures.]]></description>
+    <pubDate>Fri, 23 Oct 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Learn how to verify real-time share structure on OTC Markets, identify DTC chills, and confirm transfer agent reporting compliance.]]></description>
   </item>
   <item>
     <title><![CDATA[Fannie Mae (FNMA) on OTCQB: Capital Structure & Treasury Warrant Dilution]]></title>
     <link>https://pennystockanalysertool.vercel.app/guides/fannie-mae-fnma-otc-capital-structure-gse-analysis</link>
     <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/fannie-mae-fnma-otc-capital-structure-gse-analysis</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Deep audit into Fannie Mae's conservatorship status, senior preferred stock liquidation preferences, and 79.9% Treasury warrant overhang.]]></description>
+    <pubDate>Fri, 16 Oct 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[A deep-dive analysis of Fannie Mae trading on the OTCQB: senior preferred liquidation preferences, conservatorship exit prospects, and common share dilution.]]></description>
   </item>
   <item>
     <title><![CDATA[YANGAROO Inc. (YOOIF / YOO.V): Canadian Interlisted Media Tech Breakdown]]></title>
     <link>https://pennystockanalysertool.vercel.app/guides/yangaroo-yooif-canadian-dual-listing-filings-analysis</link>
     <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/yangaroo-yooif-canadian-dual-listing-filings-analysis</guid>
-    <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Comprehensive forensic analysis of Canadian TSX-V: YOO and OTC: YOOIF dual-listing arbitrage, SEDAR+ filings, and broadcast SaaS revenues.]]></description>
+    <pubDate>Fri, 09 Oct 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Forensic breakdown of Toronto-based YANGAROO Inc. trading on TSX Venture as YOO.V and US OTC Pink as YOOIF: corporate filings, operations, and trading mechanics.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[CytoDyn Inc. (CYDY): FDA Clinical Holds, SEC Subpoenas & Share Capital Audit]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/cytodyn-cydy-clinical-holds-share-structure-audit</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/cytodyn-cydy-clinical-holds-share-structure-audit</guid>
+    <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Forensic audit of CytoDyn (CYDY) on OTCQB: leronlimab drug pipeline history, authorized share increases, and past Department of Justice civil investigations.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[The Reverse Stock Split Trap: How 1-for-100 Splits Wipe Out Retail Traders]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/reverse-stock-splits-toxic-dilution-trap</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/reverse-stock-splits-toxic-dilution-trap</guid>
+    <pubDate>Fri, 25 Sep 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Learn why 90%+ of penny stocks that execute large reverse splits continue declining, and how predatory noteholders exploit new share caps.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[SEC Form 15 Deregistration & Dark Stocks: What Happens When an OTC Issuer Stops Filing?]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/sec-form-15-deregistration-dark-otc-stocks</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/sec-form-15-deregistration-dark-otc-stocks</guid>
+    <pubDate>Fri, 18 Sep 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[What happens when a penny stock files SEC Form 15 to terminate registration, enters Pink Limited or Pink No Information, and loses broker quote visibility.]]></description>
+  </item>
+  <item>
+    <title><![CDATA[Nevada SOS Custodianship Shells & Reverse Mergers: How to Spot Scams vs Real Runners]]></title>
+    <link>https://pennystockanalysertool.vercel.app/guides/nevada-custodianship-reverse-merger-playbook</link>
+    <guid isPermaLink="true">https://pennystockanalysertool.vercel.app/guides/nevada-custodianship-reverse-merger-playbook</guid>
+    <pubDate>Fri, 13 Nov 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[How NRS 78.347 custodianship petitions work in Nevada district courts, how shell cleaners reinstate abandoned tickers, and reverse merger dilution red flags.]]></description>
   </item>
 </channel>
 </rss>
