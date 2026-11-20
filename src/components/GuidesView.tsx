@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BLOG_POSTS, BLOG_PUBLISH_SCHEDULE, BlogPost } from '../data/blogPosts';
+import { BLOG_POSTS, BLOG_PUBLISH_SCHEDULE, BlogPost, getRelatedGuides } from '../data/blogPosts';
 import { 
   BookOpen, 
   Clock, 
@@ -204,6 +204,33 @@ export const GuidesView: React.FC<GuidesViewProps> = ({ onAnalyzeTicker }) => {
             </div>
           )}
 
+          {/* Related Guides Internal Linking Block */}
+          <div className="pt-4 border-t border-slate-800 space-y-3">
+            <h3 className="font-mono text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+              <BookOpen className="w-4 h-4 text-emerald-400" /> Related Research Guides
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              {getRelatedGuides(selectedPost, 3).map(rel => (
+                <button
+                  key={rel.id}
+                  onClick={() => {
+                    setSelectedPost(rel);
+                    setExpandedFaq(null);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="text-left p-3 rounded-lg bg-slate-950 hover:bg-slate-800/80 border border-slate-800 hover:border-emerald-600/60 transition-colors cursor-pointer"
+                >
+                  <div className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider mb-1">
+                    {rel.category}
+                  </div>
+                  <div className="text-xs font-bold text-white leading-snug line-clamp-2">
+                    {rel.title}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Tags Footer */}
           <div className="pt-4 border-t border-slate-800 flex items-center gap-2 flex-wrap font-mono text-[11px] text-slate-400">
             <Tag className="w-3.5 h-3.5 text-slate-500" />
@@ -229,7 +256,7 @@ export const GuidesView: React.FC<GuidesViewProps> = ({ onAnalyzeTicker }) => {
                   <h2 className="text-base sm:text-lg font-bold text-white font-mono flex items-center gap-2">
                     WEEKLY PENNY STOCK DILIGENCE BLOG
                     <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-950 border border-emerald-700/80 text-emerald-300 font-bold uppercase tracking-wider">
-                      1 New Post / Week
+                      1–3 New Posts / Week
                     </span>
                   </h2>
                   <p className="text-slate-400 text-xs font-sans mt-0.5">

@@ -26,13 +26,129 @@ export interface BlogPost {
 
 export const BLOG_PUBLISH_SCHEDULE = {
   cadence: '1–3 New Guides Every Week',
-  currentWeek: 46,
-  totalPublished: 12,
-  nextDropDate: '2026-11-20',
-  nextDropTopic: 'How to Read an SEC Form S-3 Shelf Registration Before a Small-Cap Dilution Drop'
+  currentWeek: 47,
+  totalPublished: 14,
+  nextDropDate: '2026-11-27',
+  nextDropTopic: 'Reading Balance Sheets: Cash Runway vs. Short-Term Debt in Under-$5 Stocks'
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'beginners-5-step-penny-stock-checklist',
+    slug: 'beginners-5-step-penny-stock-due-diligence-checklist',
+    title: "Beginner's Guide: 5-Step Penny Stock Research Checklist Before Buying",
+    description: 'Evergreen 5-step checklist to research penny stocks and OTC tickers before buying: checking Q-suffix bankruptcy, 3-year revenue vs. debt, share dilution, and SEC/SEDAR+ filings.',
+    date: '2026-11-20',
+    weekNumber: 47,
+    readTime: '6 min read',
+    category: 'Due Diligence',
+    targetKeywords: ['beginners guide to penny stocks', 'how to research penny stocks', 'penny stock due diligence checklist', 'how to check otc stocks before buying', 'penny stock red flags'],
+    featuredTicker: 'PLUG',
+    status: 'published',
+    content: {
+      summary: 'Most losses in penny stocks happen when traders buy off a trending chart or social media post without checking the business underneath. Follow this simple 5-step due diligence checklist before risking capital on any under-$5 or OTC stock.',
+      keyTakeaways: [
+        'Always verify ticker suffixes first: a 5-letter symbol ending in Q warns of active bankruptcy proceedings.',
+        'Review 3 consecutive fiscal years of Turnover (Revenue), Net Profit/(Loss), and Total Debt instead of trusting one press release.',
+        'Check SEC Form S-3, Form 8-K, or SEDAR+ filings for convertible debt, ATM equity offerings, and reverse-split authorizations.'
+      ],
+      sections: [
+        {
+          heading: 'Step 1: Verify the Ticker Suffix & Exchange Tier',
+          body: [
+            'Before looking at a price chart, inspect the ticker symbol and exchange. A 5th-letter "Q" signals Chapter 11 or Chapter 7 bankruptcy, where existing common equity is usually extinguished. An "F" suffix typically identifies a foreign ordinary share (such as Canadian TSX-V/CSE issuers trading OTC under SEC Rule 12g3-2(b)).',
+            'On NASDAQ or NYSE, stocks trading under $1.00 face minimum bid deficiency notices and reverse-split pressure.'
+          ]
+        },
+        {
+          heading: 'Step 2: Check 3-Year Revenue, Profit & Debt Trends',
+          body: [
+            'Healthy small-caps grow annual revenue faster than debt. Compare the last 3 fiscal years side by side: if revenue is flat or shrinking while net losses and total debt keep climbing, the company usually survives by selling discounted shares to outside financiers.'
+          ]
+        },
+        {
+          heading: 'Step 3: Audit Share Dilution & Offering Risk',
+          body: [
+            'Check whether authorized shares dwarf outstanding shares or whether the company recently filed an SEC Form S-3 shelf registration or Form 8-K convertible note agreement. Frequent dilution acts like an anchor on rallies.'
+          ]
+        },
+        {
+          heading: 'Step 4: Confirm Primary Regulatory Filings (SEC EDGAR vs. SEDAR+)',
+          body: [
+            'Never rely solely on social media summaries. Open the official SEC EDGAR filings (Form 10-K, 10-Q, 8-K) for US issuers, or SEDAR+ filings for Canadian dual-listed companies, to verify cash on hand versus quarterly burn.'
+          ]
+        },
+        {
+          heading: 'Step 5: Check Liquidity & Position Sizing',
+          body: [
+            'Wide bid-ask spreads and sudden trading halts can trap retail orders. Only risk capital you can afford to lose completely, and spend time reviewing filings before entering.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'How long should you research a penny stock before buying?',
+          answer: 'Spend at least 30 to 60 minutes checking multi-year financials, debt, dilution disclosures, and recent SEC or SEDAR+ filings before taking a position.'
+        },
+        {
+          question: 'Can I run all 5 checks in one place for free?',
+          answer: 'Yes. Penny Stock Analyser combines live quotes, 3-year turnover/profit/debt tables, bankruptcy Q-suffix detection, dilution alerts, and direct SEC/SEDAR+/OTC links on one screen.'
+        }
+      ]
+    }
+  },
+  {
+    id: 'sec-form-s3-shelf-dilution-guide',
+    slug: 'sec-form-s3-shelf-registration-dilution-warning',
+    title: 'SEC Form S-3 Shelf Registrations: How to Spot an Offering Drop Before It Hits',
+    description: 'Learn how SEC Form S-3 shelf registrations, prospectus supplements (424B5), and At-the-Market (ATM) equity programs trigger sudden small-cap offering drops.',
+    date: '2026-11-20',
+    weekNumber: 47,
+    readTime: '5 min read',
+    category: 'Dilution',
+    targetKeywords: ['sec form s3 shelf registration', '424b5 prospectus dilution', 'at the market offering penny stock', 'how to spot stock offering before drop', 'small cap dilution filings'],
+    featuredTicker: 'ACHR',
+    status: 'published',
+    content: {
+      summary: 'Few things catch penny-stock traders off guard faster than an overnight 30% offering drop right after a strong rally. In most cases, the company disclosed the ability to sell those shares weeks or months earlier in an SEC Form S-3 shelf registration.',
+      keyTakeaways: [
+        'An SEC Form S-3 ("universal shelf") pre-registers a dollar amount of shares, warrants, or debt for up to 3 years.',
+        'When the company actually sells shares under that shelf, it files a Form 424B5 prospectus supplement—often pricing shares below market.',
+        'Small-caps under $75M public float face the "baby shelf rule" (Form S-3 General Instruction I.B.6), capping sales to 1/3 of public float over 12 months.'
+      ],
+      sections: [
+        {
+          heading: '1. What Is a Form S-3 Shelf Registration?',
+          body: [
+            'Form S-3 lets eligible public companies register common stock, preferred stock, warrants, and debt securities ahead of time ("on the shelf") so management can raise capital quickly without waiting weeks for SEC review on each deal.',
+            'Seeing an active S-3 on SEC EDGAR does not mean shares were dumped today—it means the gun is loaded whenever cash runs tight or the stock rallies.'
+          ]
+        },
+        {
+          heading: '2. Form 424B5 & At-the-Market (ATM) Supplements',
+          body: [
+            'Look inside EDGAR for Form 424B5 ("Prospectus filed pursuant to Rule 424(b)(5)"). These filings tell you whether the company just priced a discounted direct offering with warrants or activated an At-the-Market (ATM) sales agreement allowing a broker to drip new shares straight into daily volume.'
+          ]
+        },
+        {
+          heading: '3. Checking Cash Burn Before Chasing a Green Day',
+          body: [
+            'Before buying a sharp multi-day spike in a cash-burning small-cap, compare its 3-year Net Loss and Total Debt against unrestricted cash in the latest 10-Q. Companies with under 6–9 months of cash runway and an active Form S-3 frequently use high-volume spikes to raise money.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'Does filing Form S-3 immediately dilute shareholders?',
+          answer: 'Filing the S-3 creates an active shelf capacity, while actual dilution occurs when shares are sold via a 424B5 prospectus supplement, ATM sales, or warrant exercises.'
+        },
+        {
+          question: 'Where do I find S-3 and 424B5 filings for a stock?',
+          answer: 'Search the ticker in Penny Stock Analyser and click the direct SEC EDGAR button to filter recent registration statements (S-3) and prospectus supplements (424B5).'
+        }
+      ]
+    }
+  },
   {
     id: 'plug-power-dilution-debt-guide',
     slug: 'plug-power-plug-cash-burn-debt-dilution-analysis',
@@ -608,3 +724,10 @@ export const BLOG_POSTS: BlogPost[] = [
     }
   }
 ];
+
+export function getRelatedGuides(currentPost: BlogPost, limit = 3): BlogPost[] {
+  const others = BLOG_POSTS.filter(p => p.slug !== currentPost.slug);
+  const sameCategory = others.filter(p => p.category === currentPost.category);
+  const differentCategory = others.filter(p => p.category !== currentPost.category);
+  return [...sameCategory, ...differentCategory].slice(0, limit);
+}

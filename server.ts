@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
 import { resolveStockJurisdiction } from './src/utils/stockJurisdiction.ts';
+import { BLOG_POSTS } from './src/data/blogPosts.ts';
 
 dotenv.config();
 
@@ -1160,16 +1161,11 @@ app.get(/^\/google([a-zA-Z0-9_-]+)\.html$/, (req, res) => {
   res.send(`google-site-verification: google${code}.html`);
 });
 
-const WEEKLY_BLOG_SLUGS = [
-  { slug: 'how-to-tell-if-penny-stock-is-bankrupt-q-suffix', date: '2026-11-06', title: 'How to Tell if a Penny Stock is Bankrupt: The Q-Suffix & Court Guide' },
-  { slug: 'understanding-stock-dilution-toxic-convertible-debt', date: '2026-10-30', title: 'Understanding Stock Dilution in OTC & Sub-Penny Stocks: Toxic Notes Explained' },
-  { slug: 'how-to-verify-otc-share-structure-transfer-agents', date: '2026-10-23', title: 'How to Verify OTC Share Structure & Transfer Agent Reports' },
-  { slug: 'fannie-mae-fnma-otc-capital-structure-gse-analysis', date: '2026-10-16', title: 'Fannie Mae (FNMA) on OTCQB: Capital Structure & Treasury Warrant Dilution' },
-  { slug: 'yangaroo-yooif-canadian-dual-listing-filings-analysis', date: '2026-10-09', title: 'YANGAROO Inc. (YOOIF / YOO.V): Canadian Interlisted Media Tech Breakdown' },
-  { slug: 'cytodyn-cydy-clinical-holds-share-structure-audit', date: '2026-10-02', title: 'CytoDyn Inc. (CYDY): FDA Clinical Holds, SEC Subpoenas & Share Capital Audit' },
-  { slug: 'reverse-stock-splits-toxic-dilution-trap', date: '2026-09-25', title: 'The Reverse Stock Split Trap: How 1-for-100 Splits Wipe Out Retail Traders' },
-  { slug: 'sec-form-15-deregistration-dark-otc-stocks', date: '2026-09-18', title: 'SEC Form 15 Deregistration & Dark Stocks: What Happens When an OTC Issuer Stops Filing?' }
-];
+const WEEKLY_BLOG_SLUGS = BLOG_POSTS.map(post => ({
+  slug: post.slug,
+  date: post.date,
+  title: post.title
+}));
 
 app.get('/sitemap.xml', (req, res) => {
   res.type('application/xml');
